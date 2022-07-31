@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NewPlayer</title>
+    <link>https://chechih.github.io/</link>
+    <description>Recent content on NewPlayer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <copyright>NewPlayer</copyright>
+    <lastBuildDate>Wed, 20 Jul 2022 21:45:41 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Extensions Push GitHub</title>
+      <link>https://chechih.github.io/posts/Git_Extensions/Push/</link>
+      <pubDate>Wed, 20 Jul 2022 21:45:41 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/Git_Extensions/Push/</guid>
+      <description>還沒安裝 Git Extensions 的可以參考這篇 註冊 要在 GitHub 上 Push 當然也需要帳號拉~ 先到 GitHub 網站註冊， 還沒註冊的可以參考這個 GitHub 新增專案 再來就是點頭像，到專案去，按綠色的</description>
+    </item>
+    
+    <item>
+      <title>Git Extensions 安裝和 Commit</title>
+      <link>https://chechih.github.io/posts/Git_Extensions/Install/</link>
+      <pubDate>Wed, 20 Jul 2022 17:23:23 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/Git_Extensions/Install/</guid>
+      <description>為什麼要用 Git Extensions 呢，很簡單，因為 Git 指令我常常忘記XDDDD 而且他的 UI 很棒(?)外貌協會(X) 下載 先到這裡安裝，安裝完畢後，選擇一個資料夾右鍵 Create</description>
+    </item>
+    
+    <item>
+      <title>使用 GitHub 製作個人網站</title>
+      <link>https://chechih.github.io/posts/GitHub/GitHub-Page-Build/</link>
+      <pubDate>Tue, 19 Jul 2022 21:43:22 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/GitHub/GitHub-Page-Build/</guid>
+      <description>GitHub 上只能架設靜態網站，如果想要架設動態的可能要去找其他的地方，但如果只是要架靜態網站是個不錯的選擇。 建立帳號 要在 GitHub 上架網站當然需要一個帳號拉</description>
+    </item>
+    
+    <item>
+      <title>GitHub 帳號註冊</title>
+      <link>https://chechih.github.io/posts/GitHub/Register/</link>
+      <pubDate>Tue, 19 Jul 2022 13:11:51 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/GitHub/Register/</guid>
+      <description>建立帳號 要在 GitHub 帳號~ 當然先到 GitHub 網站， 右上方辦理，如下圖: 按進去後就會看到，很炫的註冊網站， 值得注意的是中間的 username 那邊會是之後 git 上去資料夾的根目</description>
+    </item>
+    
+  </channel>
+</rss>

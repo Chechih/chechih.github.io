@@ -3,26 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://chechih.github.io/categories/</loc>
-    <lastmod>2022-07-30T21:20:33+08:00</lastmod>
+    <lastmod>2022-08-01T20:05:01+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://chechih.github.io/posts/WebBuild/Hugo/</loc>
-    <lastmod>2022-07-30T21:20:33+08:00</lastmod>
+    <loc>https://chechih.github.io/posts/WebBuild/HugoWebBuildToGitHub/</loc>
+    <lastmod>2022-08-01T20:05:01+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://chechih.github.io/</loc>
-    <lastmod>2022-07-30T21:20:33+08:00</lastmod>
+    <lastmod>2022-08-01T20:05:01+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://chechih.github.io/posts/</loc>
-    <lastmod>2022-07-30T21:20:33+08:00</lastmod>
+    <lastmod>2022-08-01T20:05:01+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://chechih.github.io/categories/%E7%B6%B2%E7%AB%99%E5%BB%BA%E7%BD%AE/</loc>
+    <lastmod>2022-08-01T20:05:01+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/posts/WebBuild/Hugo/</loc>
     <lastmod>2022-07-30T21:20:33+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

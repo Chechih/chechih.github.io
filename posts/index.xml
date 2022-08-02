@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Sat, 30 Jul 2022 21:20:33 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Aug 2022 20:05:01 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 建置到 GitHub Page</title>
+      <link>https://chechih.github.io/posts/WebBuild/HugoWebBuildToGitHub/</link>
+      <pubDate>Mon, 01 Aug 2022 20:05:01 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/WebBuild/HugoWebBuildToGitHub/</guid>
+      <description>這裡會介紹建置好的 Hugo 網站，Push 到 GitHub Page 上 產生靜態檔案 先移到 Hugo 的資料夾(hugo new site myweb 產生的資料夾)， cd myweb 執行 hugo 就會看到 Hugo 資料夾裡面的 public 資料</description>
+    </item>
+    
     <item>
       <title>Hugo 建置</title>
       <link>https://chechih.github.io/posts/WebBuild/Hugo/</link>

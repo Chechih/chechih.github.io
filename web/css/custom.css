@@ -130,12 +130,7 @@
 .category-img{
   display: inline-block;
   text-align: center;
-  width: 23%;
 }
-
-.category-img img{
-  width: 5rem;
-}   
 
 .category-title{
   display: inline-block;
@@ -150,6 +145,68 @@
 
 .category-item:hover{
   opacity: .5;
+}
+
+.hover-white:hover {
+  color: #dddddd;
+}
+
+nav, footer, .description-title-text{
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -o-user-select:none;
+  user-select:none;
+  /*禁止反白*/
+}
+
+.navbar-fixed-top{
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  border-bottom: 2px solid rgba(99,99,99,0.4);
+  box-shadow: 0 1px 6px 1px rgba(0,0,0,0.2);
+}
+
+.link:focus{
+  outline: none;
+}
+
+.title-post-box:hover{
+  box-shadow: rgb(50 50 93 / 75%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
+}
+
+.card-item:hover{
+  box-shadow: rgb(136 165 191 / 75%) 6px 2px 16px 0px, rgb(255 255 255 / 80%) -6px -2px 16px 0px;
+}
+
+.allposts-btn-container, footer, header, .page-link{
+  position: relative;
+}
+.single-page, .about-container{
+  background: #f9f9fb;
+  position: relative;
+  padding: 20px;
+  box-shadow: 0 0 15px 5px #aaa;
+}
+main{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+@keyframes typing {
+  from { width: 0; }
+}
+@keyframes caret {
+  50% { border-color: transparent; }
+}
+h1.description-title-text {
+  width: 8em;
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+  border-right: .05em solid;
+  animation: typing 3s steps(8),
+             caret 1s steps(1) infinite;
 }
 
 @media (max-width: 768px)

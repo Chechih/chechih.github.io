@@ -22,9 +22,13 @@
 
 
 
-  <link rel="stylesheet" href="/web/css/custom.css?bust=123?bust=202207230266">
+  <link rel="stylesheet" href="/web/css/custom.css?bust=202307121250">
 
 
+
+<script src="/web/js/jparticles@3.4.0/browser/jparticles.base.js"></script>
+
+<script src="/web/js/jparticles@3.4.0/browser/particle.js"></script>
 
     
     
@@ -53,14 +57,126 @@
 	
   </head>
 
-  <body class="ma0 avenir bg-near-white">
-
+  <body class="ma0 avenir bg-near-white" style="background-color: #E7E9EB;">
+    <div class="particle-background" style="width: 100%; height: 100%; position: fixed;"></div>
+    <script>
+      
+      new JParticles.Particle(".particle-background", {
+        color: "#25bfff",
+        
+        proximity: 90,
+        
+        range: 100,
+    });
+      </script>
     
    
   
 
   <header>
-    <div class="bg-blue">
+    <div class="bg-blue navbar-fixed-top">
+      <nav class="pv1 ph3 ph4-ns" role="navigation">
+  <script>
+    function showList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');
+      if(eList.style.display == 'grid')
+      {
+        hideList();
+        return;
+      }
+      eList.style.display = 'grid'
+      var oParentRect = eParent.getBoundingClientRect();
+      var oTipRect = eList.getBoundingClientRect();
+      var fOriginalX = oParentRect.x;
+      var fOriginalY = oParentRect.y + oParentRect.height;
+  
+      eList.style.left = '0px';
+      eList.style.top = fOriginalY + 'px';
+      window.addEventListener("scroll", hideList);
+      window.addEventListener('resize', hideList);
+    }
+    function hideList() {
+      var eList = document.getElementById('mobile-mainmenu-list');
+      window.removeEventListener("scroll", hideList);
+      window.removeEventListener('resize', hideList);
+      eList.style.display = 'none'
+    }
+  </script>
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        NewPlayer
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList()">
+          <svg class="svg-inline--fa fa-bars fa-w-14 mobile-menu-btn-fa" aria-hidden="true" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+        </button>
+        <ul id="mobile-mainmenu-list" class="mobile-menu-list">
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/" title="Home 頁" onclick="">
+              Home
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/posts/" title="Posts 頁" onclick="">
+              Posts
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/categories/" title="分類 頁" onclick="">
+              分類
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/about/" title="關於 頁" onclick="">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+        <ul class="pl0 mr3 pc-menu-items">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="Home 頁">
+              Home
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts 頁">
+              Posts
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分類 頁">
+              分類
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="關於 頁">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</nav>
+
+    </div>
+    <div class="bg-black-60 headerbar-wrap">
       <nav class="pv1 ph3 ph4-ns" role="navigation">
   <script>
     function showList() {
@@ -170,7 +286,7 @@
       
   <div style="min-height: calc(100vh - 8rem);">
     
-    <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <article class="flex-l flex-wrap justify-between mw8 center ph3 single-page">
       <header class="mt4 w-100">
         <aside class="instapaper_ignoref b helvetica tracked">
             
@@ -232,7 +348,7 @@
     <footer class="bg-blue bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://chechih.github.io/" >
-    &copy;  NewPlayer 2022 
+    &copy;  NewPlayer 2023 
   </a>
     <div>
 <div class="ananke-socials">

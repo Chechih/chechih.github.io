@@ -70,9 +70,10 @@
     <div class="bg-blue navbar-fixed-top">
       <nav class="pv1 ph3 ph4-ns" role="navigation">
   <script>
-    function showList() {
+    function showList(x) {
       var eParent = document.getElementById('mobile-mainmenu-btn');
-      var eList = document.getElementById('mobile-mainmenu-list');
+      var eList = document.getElementById('mobile-mainmenu-list');      
+      x.classList.toggle("change");
       if(eList.style.display == 'grid')
       {
         hideList();
@@ -96,6 +97,30 @@
       eList.style.display = 'none'
     }
   </script>
+  <style>
+    .mobile-mainmenu-btn {
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 4px;
+      background-color: aliceblue;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+    </style>
   <div class="flex-l justify-between items-center center">
     <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
       
@@ -106,8 +131,10 @@
       
 
       
-        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList()">
-          <svg class="svg-inline--fa fa-bars fa-w-14 mobile-menu-btn-fa" aria-hidden="true" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
         </button>
         <ul id="mobile-mainmenu-list" class="mobile-menu-list">
           
@@ -172,9 +199,10 @@
     <div class="bg-black-60 headerbar-wrap">
       <nav class="pv1 ph3 ph4-ns" role="navigation">
   <script>
-    function showList() {
+    function showList(x) {
       var eParent = document.getElementById('mobile-mainmenu-btn');
-      var eList = document.getElementById('mobile-mainmenu-list');
+      var eList = document.getElementById('mobile-mainmenu-list');      
+      x.classList.toggle("change");
       if(eList.style.display == 'grid')
       {
         hideList();
@@ -198,6 +226,30 @@
       eList.style.display = 'none'
     }
   </script>
+  <style>
+    .mobile-mainmenu-btn {
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 4px;
+      background-color: aliceblue;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+    </style>
   <div class="flex-l justify-between items-center center">
     <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
       
@@ -208,8 +260,10 @@
       
 
       
-        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList()">
-          <svg class="svg-inline--fa fa-bars fa-w-14 mobile-menu-btn-fa" aria-hidden="true" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
         </button>
         <ul id="mobile-mainmenu-list" class="mobile-menu-list">
           

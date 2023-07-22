@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Mon, 01 Aug 2022 20:05:01 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Jul 2023 01:10:33 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1. Two Sum</title>
+      <link>https://chechih.github.io/posts/LeetCode/1.Two_Sum/</link>
+      <pubDate>Sun, 23 Jul 2023 01:10:33 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/1.Two_Sum/</guid>
+      <description>問題 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order. Example 1: Input: nums = [2,7,11,15], target = 9 Output: [0,1] Explanation: Because nums[0] + nums[1] ==</description>
+    </item>
+    
     <item>
       <title>Hugo 建置到 GitHub Page</title>
       <link>https://chechih.github.io/posts/WebBuild/HugoWebBuildToGitHub/</link>

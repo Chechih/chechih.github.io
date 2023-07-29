@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Thu, 27 Jul 2023 11:59:11 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Jul 2023 11:09:12 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3. Longest Substring Without Repeating Characters</title>
+      <link>https://chechih.github.io/posts/LeetCode/3.Longest_Substring_Without_Repeating_Characters/</link>
+      <pubDate>Sat, 29 Jul 2023 11:09:12 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/3.Longest_Substring_Without_Repeating_Characters/</guid>
+      <description>問題 Given a string s, find the length of the longest substring without repeating characters. 翻譯 給定一個字符串s，找到最長的不含重複字符的子串的長度。 Example 1: Input: s = &amp;quot;abcabcbb&amp;quot; Output: 3 Explanation: The answer is &amp;quot;abc&amp;quot;, with the length of 3. Example 2: Input: s = &amp;quot;bbbbb&amp;quot; Output:</description>
+    </item>
+    
     <item>
       <title>2. Add Two Numbers</title>
       <link>https://chechih.github.io/posts/LeetCode/2.-Add_Two_Numbers/</link>

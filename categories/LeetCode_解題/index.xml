@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Sat, 29 Jul 2023 11:09:12 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/LeetCode_%E8%A7%A3%E9%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Jul 2023 23:41:09 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/LeetCode_%E8%A7%A3%E9%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>4. Median of Two Sorted Arrays</title>
+      <link>https://chechih.github.io/posts/LeetCode/4.-Median_of_Two_Sorted_Arrays/</link>
+      <pubDate>Sun, 30 Jul 2023 23:41:09 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/4.-Median_of_Two_Sorted_Arrays/</guid>
+      <description>問題 Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)). 翻譯 給定兩個已排序的數組 nums1 和 nums2，它們的大小分別為 m 和 n。請返回這兩個</description>
+    </item>
+    
     <item>
       <title>3. Longest Substring Without Repeating Characters</title>
       <link>https://chechih.github.io/posts/LeetCode/3.Longest_Substring_Without_Repeating_Characters/</link>

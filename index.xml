@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Sun, 30 Jul 2023 23:41:09 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 31 Jul 2023 23:46:49 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>5. Longest Palindromic Substring</title>
+      <link>https://chechih.github.io/posts/LeetCode/5.Longest_Palindromic_Substring/</link>
+      <pubDate>Mon, 31 Jul 2023 23:46:49 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/5.Longest_Palindromic_Substring/</guid>
+      <description>問題 Given a string s, return the longest palindromic substring in s. 翻譯 給定一個字符串 s，請返回 s 中最長的回文字串。 Example 1: Input: s = &amp;quot;babad&amp;quot; Output: &amp;quot;bab&amp;quot; Explanation: &amp;quot;aba&amp;quot; is also a valid answer. Example 2: Input: s = &amp;quot;cbbd&amp;quot; Output: &amp;quot;bb&amp;quot; Constraints: 1 &amp;lt;= s.length &amp;lt;= 1000 s consist of only</description>
+    </item>
+    
     <item>
       <title>4. Median of Two Sorted Arrays</title>
       <link>https://chechih.github.io/posts/LeetCode/4.-Median_of_Two_Sorted_Arrays/</link>

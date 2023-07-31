@@ -400,7 +400,7 @@ Output: [0]
 Output: [8,9,9,9,0,0,0,1]
 </code></pre>
 <h3 id="想法">想法</h3>
-<p>一開始想到的方法是直接把鏈結串列，全部轉成整數，然後相加，再轉回去，超級暴力XDDD
+<p>一開始想到的方法是直接把鏈結串列，全部轉成整數，然後相加，再轉回去，超級暴力XDDD<br>
 可是觀察後發現，其實題目有提示，他就是一般的加法直式，從個位數十位數一直上去，只是要處理下進位問題，還有要小心 l1,比 l2 長，或是 l2 比 l1 長，導致導致沒有抓到數字變 null，ex: Example 3 。</p>
 <h3 id="解法">解法</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:

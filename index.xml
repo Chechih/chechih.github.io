@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Mon, 31 Jul 2023 23:46:49 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Aug 2023 15:30:02 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>6. Zigzag Conversion</title>
+      <link>https://chechih.github.io/posts/LeetCode/6.Zigzag_Conversion/</link>
+      <pubDate>Thu, 03 Aug 2023 15:30:02 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/6.Zigzag_Conversion/</guid>
+      <description>問題 The string &amp;ldquo;PAYPALISHIRING&amp;rdquo; is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility) P A H N A P L S I I G Y I R And then read line by line: &amp;ldquo;PAHNAPLSIIGYIR&amp;rdquo; Write the code that will take a string and make this conversion given a number of</description>
+    </item>
+    
     <item>
       <title>5. Longest Palindromic Substring</title>
       <link>https://chechih.github.io/posts/LeetCode/5.Longest_Palindromic_Substring/</link>

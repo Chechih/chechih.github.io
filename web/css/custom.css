@@ -254,3 +254,13 @@ h1.description-title-text {
     display: none;
   }  
 }
+
+sub {
+  vertical-align: -0.6em;
+  font-size: 0.6em;
+}
+
+sup {
+  vertical-align: 0.6em;
+  font-size: 0.6em;
+}

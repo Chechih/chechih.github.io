@@ -5,9 +5,18 @@
     <link>https://chechih.github.io/posts/</link>
     <description>Recent content in Posts on NewPlayer</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-tw</language>
+    <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Thu, 03 Aug 2023 15:30:02 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Aug 2023 11:00:08 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>7. Reverse Integer</title>
+      <link>https://chechih.github.io/posts/LeetCode/7.Reverse_Integer/</link>
+      <pubDate>Fri, 04 Aug 2023 11:00:08 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/7.Reverse_Integer/</guid>
+      <description>問題 Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231 , 231 - 1], then return 0. Assume the environment does not allow you to store 64-bit integers (signed or unsigned). 翻譯 給定一個帶符號的 32 位整數 x，請將其數</description>
+    </item>
+    
     <item>
       <title>6. Zigzag Conversion</title>
       <link>https://chechih.github.io/posts/LeetCode/6.Zigzag_Conversion/</link>
@@ -28,10 +37,10 @@
     
     <item>
       <title>4. Median of Two Sorted Arrays</title>
-      <link>https://chechih.github.io/posts/LeetCode/4.-Median_of_Two_Sorted_Arrays/</link>
+      <link>https://chechih.github.io/posts/LeetCode/4.Median_of_Two_Sorted_Arrays/</link>
       <pubDate>Sun, 30 Jul 2023 23:41:09 +0800</pubDate>
       
-      <guid>https://chechih.github.io/posts/LeetCode/4.-Median_of_Two_Sorted_Arrays/</guid>
+      <guid>https://chechih.github.io/posts/LeetCode/4.Median_of_Two_Sorted_Arrays/</guid>
       <description>問題 Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)). 翻譯 給定兩個已排序的數組 nums1 和 nums2，它們的大小分別為 m 和 n。請返回這兩個</description>
     </item>
     
@@ -46,10 +55,10 @@
     
     <item>
       <title>2. Add Two Numbers</title>
-      <link>https://chechih.github.io/posts/LeetCode/2.-Add_Two_Numbers/</link>
+      <link>https://chechih.github.io/posts/LeetCode/2.Add_Two_Numbers/</link>
       <pubDate>Thu, 27 Jul 2023 11:59:11 +0800</pubDate>
       
-      <guid>https://chechih.github.io/posts/LeetCode/2.-Add_Two_Numbers/</guid>
+      <guid>https://chechih.github.io/posts/LeetCode/2.Add_Two_Numbers/</guid>
       <description>問題 You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list. You may assume the two numbers do not contain any leading zero, except the number 0 itself. 翻譯 您被給予兩個非空的鏈</description>
     </item>
     

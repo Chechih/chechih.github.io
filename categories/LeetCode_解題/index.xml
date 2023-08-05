@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Fri, 04 Aug 2023 11:00:08 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/LeetCode_%E8%A7%A3%E9%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Aug 2023 01:10:55 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/LeetCode_%E8%A7%A3%E9%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>8. String to Integer (atoi)</title>
+      <link>https://chechih.github.io/posts/LeetCode/8.String_to_Integeratoi/</link>
+      <pubDate>Sun, 06 Aug 2023 01:10:55 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/8.String_to_Integeratoi/</guid>
+      <description>問題 Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++&amp;rsquo;s atoi function). The algorithm for myAtoi(string s) is as follows: Read in and ignore any leading whitespace. Check if the next character (if not already at the end of the string) is &amp;rsquo;-&amp;rsquo; or &amp;rsquo;+&amp;rsquo;. Read this character in if it is either. This determines if the final result is negative</description>
+    </item>
+    
     <item>
       <title>7. Reverse Integer</title>
       <link>https://chechih.github.io/posts/LeetCode/7.Reverse_Integer/</link>

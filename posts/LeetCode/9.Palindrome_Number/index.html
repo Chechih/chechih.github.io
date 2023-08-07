@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>LeetCode_解題 | NewPlayer</title>
+    <title>9. Palindrome Number | NewPlayer</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="The last theme you&#39;ll ever need. Maybe.">
+    <meta name="description" content="問題 Given an integer x, return true if x is a palindrome, and false otherwise. Follow up: Could you solve it without converting the integer to a string? 翻譯 給定一個整數 x，如果 x 是一個 回文數(即正序和倒序讀都相同) ，則返回 true，否">
     <meta name="generator" content="Hugo 0.116.1">
     
     
@@ -39,19 +39,19 @@
 
     
     
-      <link href="/categories/LeetCode_%E8%A7%A3%E9%A1%8C/index.xml" rel="alternate" type="application/rss+xml" title="NewPlayer" />
-      <link href="/categories/LeetCode_%E8%A7%A3%E9%A1%8C/index.xml" rel="feed" type="application/rss+xml" title="NewPlayer" />
-      
-    
-    
-    <meta property="og:title" content="LeetCode_解題" />
-<meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://chechih.github.io/categories/LeetCode_%E8%A7%A3%E9%A1%8C/" />
-<meta itemprop="name" content="LeetCode_解題">
-<meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="LeetCode_解題"/>
-<meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
+    <meta property="og:title" content="9. Palindrome Number" />
+<meta property="og:description" content="問題 Given an integer x, return true if x is a palindrome, and false otherwise. Follow up: Could you solve it without converting the integer to a string? 翻譯 給定一個整數 x，如果 x 是一個 回文數(即正序和倒序讀都相同) ，則返回 true，否" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chechih.github.io/posts/LeetCode/9.Palindrome_Number/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-08-07T23:41:36+08:00" />
+<meta property="article:modified_time" content="2023-08-07T23:41:36+08:00" />
+<meta itemprop="name" content="9. Palindrome Number">
+<meta itemprop="description" content="問題 Given an integer x, return true if x is a palindrome, and false otherwise. Follow up: Could you solve it without converting the integer to a string? 翻譯 給定一個整數 x，如果 x 是一個 回文數(即正序和倒序讀都相同) ，則返回 true，否"><meta itemprop="datePublished" content="2023-08-07T23:41:36+08:00" />
+<meta itemprop="dateModified" content="2023-08-07T23:41:36+08:00" />
+<meta itemprop="wordCount" content="585">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="9. Palindrome Number"/>
+<meta name="twitter:description" content="問題 Given an integer x, return true if x is a palindrome, and false otherwise. Follow up: Could you solve it without converting the integer to a string? 翻譯 給定一個整數 x，如果 x 是一個 回文數(即正序和倒序讀都相同) ，則返回 true，否"/>
 
 	
   </head>
@@ -69,6 +69,8 @@
     });
       </script>
     
+   
+  
 
   <header>
     <div class="bg-blue navbar-fixed-top">
@@ -329,179 +331,117 @@
 </nav>
 
     </div>
-    
   </header>
+
+
 
     <main role="main">
       
+  <div style="min-height: calc(100vh - 8rem);">
+    
+    <article class="flex-l flex-wrap justify-between mw8 center ph3 single-page">
+      <header class="mt4 w-100">
+        <aside class="instapaper_ignoref b helvetica tracked">
+            
+        </aside>
+        
+
+
+
+
+
+
+
+
+
+
+
+        <h1 class="f1 athelas mt3 mb1">9. Palindrome Number</h1>
+        <div class="categories">
+          📁 
+          
+            
+              <a style="text-decoration: none;" href="/categories/LeetCode_%E8%A7%A3%E9%A1%8C">LeetCode_解題</a>
+            
+          
+        </div>
+        
+        
+        
+        <time class="f6 mv4 dib tracked" datetime="2023-08-07T23:41:36+08:00">八月 7, 2023</time>
+        
+
+        
+        
+      </header>
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><h3 id="問題">問題</h3>
+<p>Given an integer <strong>x</strong>, return <strong>true</strong> if <strong>x</strong> is a <em><strong>palindrome</strong></em>, and <strong>false</strong> otherwise.</p>
+<p><strong>Follow up</strong>: Could you solve it without converting the integer to a string?</p>
+<h3 id="翻譯">翻譯</h3>
+<p>給定一個整數 <strong>x</strong>，如果 <strong>x</strong> 是一個 <em><strong>回文數(即正序和倒序讀都相同)</strong></em> ，則返回 <strong>true</strong>，否則返回 <strong>false</strong>。</p>
+<p><strong>追問</strong>: 您是否能夠在不將整數轉換為字符串的情況下解決這個問題？</p>
+<h5 id="example-1">Example 1:</h5>
+<pre><code>Input: x = 121
+Output: true
+Explanation: 121 reads as 121 from left to right and from right to left.
+</code></pre>
+<h5 id="example-2">Example 2:</h5>
+<pre><code>Input: x = -121
+Output: false
+Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
+</code></pre>
+<h5 id="example-3">Example 3:</h5>
+<pre><code>Input: x = 10
+Output: false
+Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
+</code></pre>
+<h5 id="constraints">Constraints:</h5>
+<ul>
+<li>-2<sup>31</sup> &lt;= x &lt;= 2<sup>31</sup> - 1</li>
+</ul>
+<h3 id="想法">想法</h3>
+<p>這一題最一開始的想法是，直接轉字串，然後去比對XDDD如下:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isPalindrome</span>(self, x: int) <span style="color:#f92672">-&gt;</span> bool:
+</span></span><span style="display:flex;"><span>        str_x <span style="color:#f92672">=</span> str(x)<span style="color:#75715e">#轉字串</span>
+</span></span><span style="display:flex;"><span>        str_x_leg <span style="color:#f92672">=</span> len(str_x)<span style="color:#75715e">#字串長度</span>
+</span></span><span style="display:flex;"><span>        left <span style="color:#f92672">=</span> str_x[:str_x_leg <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>]<span style="color:#75715e">#字串左半邊</span>
+</span></span><span style="display:flex;"><span>        right <span style="color:#f92672">=</span> str_x[str_x_leg <span style="color:#f92672">//</span> <span style="color:#ae81ff">2</span>:] <span style="color:#66d9ef">if</span> str_x_leg <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> str_x[str_x_leg<span style="color:#f92672">//</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>:]<span style="color:#75715e">#字串右半邊</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> right[len(right)::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> left<span style="color:#75715e">#右邊反轉比對香不相等</span>
+</span></span></code></pre></div><p>然後解完也通過了，突然看到下方有一行，<strong>追問: 您是否能夠在不將整數轉換為字符串的情況下解決這個問題？</strong>，好吧，那我就試試不用字串解解看!?<br>
+觀察了一下，發現其實把數字整個反轉，然後和原本的數字比對，相等他就是回文了，至於怎麼反轉呢?<br>
+只要設定個迴圈，每次進去時，把新值乘上 10，再加上 Mode 10的舊值，且舊值每次除 10，一直反覆到把舊值歸零就反轉了。</p>
+<h3 id="解法">解法</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isPalindrome</span>(self, x: int) <span style="color:#f92672">-&gt;</span> bool:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span><span style="color:#75715e"># 從範例看起來, 負號一定不是, 直接不考慮</span>
+</span></span><span style="display:flex;"><span>        comparison_val <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#75715e"># 反轉後的數字</span>
+</span></span><span style="display:flex;"><span>        original_val <span style="color:#f92672">=</span> x<span style="color:#75715e"># 原始值存一份</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:<span style="color:#75715e"># 開始翻轉數字</span>
+</span></span><span style="display:flex;"><span>            comparison_val <span style="color:#f92672">*=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>            comparison_val <span style="color:#f92672">+=</span> x <span style="color:#f92672">%</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>            x <span style="color:#f92672">//=</span> <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> comparison_val <span style="color:#f92672">==</span> original_val<span style="color:#75715e"># 如果翻轉後的數字和原始數字相等就是回文了</span>
+</span></span></code></pre></div><p>Github 同步網址:<br>
+<a href="https://github.com/Chechih/LeetCode_Py/tree/master/9.Palindrome_Number">https://github.com/Chechih/LeetCode_Py/tree/master/9.Palindrome_Number</a></p>
+<ul class="pa0">
   
-    <article class="cf pa4-m" style=
-    "background: inear-gradient(to top, #37ecba 0%, #72afd3 100%);; text-align: center;">
-      <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links mid-gray">
-        <h2>LeetCode_解題</h2>
-      </div>
-    </article>
-  
-      <div style="min-height: calc(100vh - 14rem);">
-        <div class="mw8 center">
-          <section class="ph4 pa4">
-            
-              <div class="relative w-100  mb4">
-                <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/9.Palindrome_Number/" class="link black dim">
-        9. Palindrome Number
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Given an integer x, return true if x is a palindrome, and false otherwise. Follow up: Could you solve it without converting the integer to a string? 翻譯 給定一個整數 x，如果 x 是一個 回文數(即正序和倒序讀都相同) ，則返回 true，否
-    </div>
-    <a href="/posts/LeetCode/9.Palindrome_Number/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
-
-              </div>
-            
-              <div class="relative w-100  mb4">
-                <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/8.String_to_Integeratoi/" class="link black dim">
-        8. String to Integer (atoi)
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++&rsquo;s atoi function). The algorithm for myAtoi(string s) is as follows: Read in and ignore any leading whitespace. Check if the next character (if not already at the end of the string) is &rsquo;-&rsquo; or &rsquo;+&rsquo;. Read this character in if it is either. This determines if the final result is negative
-    </div>
-    <a href="/posts/LeetCode/8.String_to_Integeratoi/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
-
-              </div>
-            
-              <div class="relative w-100  mb4">
-                <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/7.Reverse_Integer/" class="link black dim">
-        7. Reverse Integer
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231 , 231 - 1], then return 0. Assume the environment does not allow you to store 64-bit integers (signed or unsigned). 翻譯 給定一個帶符號的 32 位整數 x，請將其數
-    </div>
-    <a href="/posts/LeetCode/7.Reverse_Integer/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
-
-              </div>
-            
-              <div class="relative w-100  mb4">
-                <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/6.Zigzag_Conversion/" class="link black dim">
-        6. Zigzag Conversion
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 The string &ldquo;PAYPALISHIRING&rdquo; is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility) P A H N A P L S I I G Y I R And then read line by line: &ldquo;PAHNAPLSIIGYIR&rdquo; Write the code that will take a string and make this conversion given a number of
-    </div>
-    <a href="/posts/LeetCode/6.Zigzag_Conversion/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
-
-              </div>
-            
-              <div class="relative w-100  mb4">
-                <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/5.Longest_Palindromic_Substring/" class="link black dim">
-        5. Longest Palindromic Substring
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Given a string s, return the longest palindromic substring in s. 翻譯 給定一個字符串 s，請返回 s 中最長的回文字串。 Example 1: Input: s = &quot;babad&quot; Output: &quot;bab&quot; Explanation: &quot;aba&quot; is also a valid answer. Example 2: Input: s = &quot;cbbd&quot; Output: &quot;bb&quot; Constraints: 1 &lt;= s.length &lt;= 1000 s consist of only
-    </div>
-    <a href="/posts/LeetCode/5.Longest_Palindromic_Substring/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
-
-              </div>
-            
-              <div class="relative w-100  mb4">
-                <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/4.Median_of_Two_Sorted_Arrays/" class="link black dim">
-        4. Median of Two Sorted Arrays
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)). 翻譯 給定兩個已排序的數組 nums1 和 nums2，它們的大小分別為 m 和 n。請返回這兩個
-    </div>
-    <a href="/posts/LeetCode/4.Median_of_Two_Sorted_Arrays/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
-
-              </div>
-            
-              <div class="relative w-100  mb4">
-                <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/3.Longest_Substring_Without_Repeating_Characters/" class="link black dim">
-        3. Longest Substring Without Repeating Characters
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Given a string s, find the length of the longest substring without repeating characters. 翻譯 給定一個字符串s，找到最長的不含重複字符的子串的長度。 Example 1: Input: s = &quot;abcabcbb&quot; Output: 3 Explanation: The answer is &quot;abc&quot;, with the length of 3. Example 2: Input: s = &quot;bbbbb&quot; Output:
-    </div>
-    <a href="/posts/LeetCode/3.Longest_Substring_Without_Repeating_Characters/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
-
-              </div>
-            
-              <div class="relative w-100  mb4">
-                <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/2.Add_Two_Numbers/" class="link black dim">
-        2. Add Two Numbers
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list. You may assume the two numbers do not contain any leading zero, except the number 0 itself. 翻譯 您被給予兩個非空的鏈
-    </div>
-    <a href="/posts/LeetCode/2.Add_Two_Numbers/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
-
-              </div>
-            
-              <div class="relative w-100  mb4">
-                <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/1.Two_Sum/" class="link black dim">
-        1. Two Sum
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order. 翻譯 給定一個整數數組，返回兩個數字
-    </div>
-    <a href="/posts/LeetCode/1.Two_Sum/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
-
-              </div>
-            
-          </section>
+</ul>
+<div class="mt6 instapaper_ignoref">
+        
         </div>
       </div>
+
+      <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+    </article>
+  </div>
 
     </main>
     <footer class="bg-blue bottom-0 w-100 pa3" role="contentinfo">

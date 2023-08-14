@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>10. Regular Expression Matching | NewPlayer</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="問題 Given an input string s and a pattern p, implement regular expression matching with support for &rsquo;.&rsquo; and &rsquo;*&rsquo; where: &rsquo;.&rsquo; Matches any single character.​​​​ &rsquo;*&rsquo; Matches zero or more of the preceding element. The matching should cover the entire input string (not partial). 翻譯 給定輸入字符串 s 和">
+    <meta name="generator" content="Hugo 0.116.1">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+
+  <link rel="stylesheet" href="/web/css/custom.css?bust=202308051248">
+
+
+
+<script src="/web/js/jparticles@3.4.0/browser/jparticles.base.js"></script>
+
+<script src="/web/js/jparticles@3.4.0/browser/particle.js"></script>
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="10. Regular Expression Matching" />
+<meta property="og:description" content="問題 Given an input string s and a pattern p, implement regular expression matching with support for &rsquo;.&rsquo; and &rsquo;*&rsquo; where: &rsquo;.&rsquo; Matches any single character.​​​​ &rsquo;*&rsquo; Matches zero or more of the preceding element. The matching should cover the entire input string (not partial). 翻譯 給定輸入字符串 s 和" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chechih.github.io/posts/LeetCode/10.Regular_Expression_Matching/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-08-15T01:48:33+08:00" />
+<meta property="article:modified_time" content="2023-08-15T01:48:33+08:00" />
+<meta itemprop="name" content="10. Regular Expression Matching">
+<meta itemprop="description" content="問題 Given an input string s and a pattern p, implement regular expression matching with support for &rsquo;.&rsquo; and &rsquo;*&rsquo; where: &rsquo;.&rsquo; Matches any single character.​​​​ &rsquo;*&rsquo; Matches zero or more of the preceding element. The matching should cover the entire input string (not partial). 翻譯 給定輸入字符串 s 和"><meta itemprop="datePublished" content="2023-08-15T01:48:33+08:00" />
+<meta itemprop="dateModified" content="2023-08-15T01:48:33+08:00" />
+<meta itemprop="wordCount" content="1644">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="10. Regular Expression Matching"/>
+<meta name="twitter:description" content="問題 Given an input string s and a pattern p, implement regular expression matching with support for &rsquo;.&rsquo; and &rsquo;*&rsquo; where: &rsquo;.&rsquo; Matches any single character.​​​​ &rsquo;*&rsquo; Matches zero or more of the preceding element. The matching should cover the entire input string (not partial). 翻譯 給定輸入字符串 s 和"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white" style="background-color: #E7E9EB;">
+    <div class="particle-background" style="width: 100%; height: 100%; position: fixed;"></div>
+    <script>
+      
+      new JParticles.Particle(".particle-background", {
+        color: "#25bfff",
+        
+        proximity: 90,
+        
+        range: 100,
+    });
+      </script>
+    
+   
+  
+
+  <header>
+    <div class="bg-blue navbar-fixed-top">
+      <nav class="pv1 ph3 ph4-ns" role="navigation">
+  <script>
+    function showList(x) {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');      
+      x.classList.toggle("change");
+      if(eList.style.display == 'grid')
+      {
+        hideList();
+        return;
+      }
+      eList.style.display = 'grid'
+      var oParentRect = eParent.getBoundingClientRect();
+      var oTipRect = eList.getBoundingClientRect();
+      var fOriginalX = oParentRect.x;
+      var fOriginalY = oParentRect.y + oParentRect.height;
+  
+      eList.style.left = '0px';
+      eList.style.top = fOriginalY + 'px';
+      window.addEventListener("scroll", hideList);
+      window.addEventListener('resize', hideList);
+    }
+    function hideList() {
+      var eList = document.getElementById('mobile-mainmenu-list');
+      window.removeEventListener("scroll", hideList);
+      window.removeEventListener('resize', hideList);
+      eList.style.display = 'none'
+    }
+  </script>
+  <style>
+    .mobile-mainmenu-btn {
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 4px;
+      background-color: aliceblue;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+    </style>
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        NewPlayer
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </button>
+        <ul id="mobile-mainmenu-list" class="mobile-menu-list">
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/" title="Home 頁" onclick="">
+              Home
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/posts/" title="Posts 頁" onclick="">
+              Posts
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/categories/" title="分類 頁" onclick="">
+              分類
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/about/" title="關於 頁" onclick="">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+        <ul class="pl0 mr3 pc-menu-items">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="Home 頁">
+              Home
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts 頁">
+              Posts
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分類 頁">
+              分類
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="關於 頁">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</nav>
+
+    </div>
+    <div class="bg-black-60 headerbar-wrap">
+      <nav class="pv1 ph3 ph4-ns" role="navigation">
+  <script>
+    function showList(x) {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');      
+      x.classList.toggle("change");
+      if(eList.style.display == 'grid')
+      {
+        hideList();
+        return;
+      }
+      eList.style.display = 'grid'
+      var oParentRect = eParent.getBoundingClientRect();
+      var oTipRect = eList.getBoundingClientRect();
+      var fOriginalX = oParentRect.x;
+      var fOriginalY = oParentRect.y + oParentRect.height;
+  
+      eList.style.left = '0px';
+      eList.style.top = fOriginalY + 'px';
+      window.addEventListener("scroll", hideList);
+      window.addEventListener('resize', hideList);
+    }
+    function hideList() {
+      var eList = document.getElementById('mobile-mainmenu-list');
+      window.removeEventListener("scroll", hideList);
+      window.removeEventListener('resize', hideList);
+      eList.style.display = 'none'
+    }
+  </script>
+  <style>
+    .mobile-mainmenu-btn {
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 4px;
+      background-color: aliceblue;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+    </style>
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        NewPlayer
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </button>
+        <ul id="mobile-mainmenu-list" class="mobile-menu-list">
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/" title="Home 頁" onclick="">
+              Home
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/posts/" title="Posts 頁" onclick="">
+              Posts
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/categories/" title="分類 頁" onclick="">
+              分類
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/about/" title="關於 頁" onclick="">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+        <ul class="pl0 mr3 pc-menu-items">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="Home 頁">
+              Home
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts 頁">
+              Posts
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分類 頁">
+              分類
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="關於 頁">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main role="main">
+      
+  <div style="min-height: calc(100vh - 8rem);">
+    
+    <article class="flex-l flex-wrap justify-between mw8 center ph3 single-page">
+      <header class="mt4 w-100">
+        <aside class="instapaper_ignoref b helvetica tracked">
+            
+        </aside>
+        
+
+
+
+
+
+
+
+
+
+
+
+        <h1 class="f1 athelas mt3 mb1">10. Regular Expression Matching</h1>
+        <div class="categories">
+          📁 
+          
+            
+              <a style="text-decoration: none;" href="/categories/LeetCode_%E8%A7%A3%E9%A1%8C">LeetCode_解題</a>
+            
+          
+        </div>
+        
+        
+        
+        <time class="f6 mv4 dib tracked" datetime="2023-08-15T01:48:33+08:00">八月 15, 2023</time>
+        
+
+        
+        
+      </header>
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><h3 id="問題">問題</h3>
+<p>Given an input string <strong>s</strong> and a pattern <strong>p</strong>, implement regular expression matching with support for <strong>&rsquo;.&rsquo;</strong> and <strong>&rsquo;*&rsquo;</strong> where:</p>
+<p><strong>&rsquo;.&rsquo;</strong> Matches any single character.​​​​
+<strong>&rsquo;*&rsquo;</strong> Matches zero or more of the preceding element.
+The matching should cover the <strong>entire</strong> input string (not partial).</p>
+<h3 id="翻譯">翻譯</h3>
+<p>給定輸入字符串 <strong>s</strong> 和模式字符串 <strong>p</strong>，請實現支持 <strong>&rsquo;.&rsquo;</strong> 和 <strong>&rsquo;*&rsquo;</strong> 的正則表達式匹配，其中：</p>
+<p><strong>&rsquo;.&rsquo;</strong> 可以匹配任意單個字符。
+<strong>&rsquo;*&rsquo;</strong> 可以匹配零個或多個前面的元素。
+匹配應該覆蓋<strong>整個</strong>輸入字符串（不能是部分匹配）。</p>
+<h5 id="example-1">Example 1:</h5>
+<pre><code>Input: s = &quot;aa&quot;, p = &quot;a&quot;
+Output: false
+Explanation: &quot;a&quot; does not match the entire string &quot;aa&quot;.
+</code></pre>
+<h5 id="example-2">Example 2:</h5>
+<pre><code>Input: s = &quot;aa&quot;, p = &quot;a*&quot;
+Output: true
+Explanation: '*' means zero or more of the preceding element, 'a'. Therefore, by repeating 'a' once, it becomes &quot;aa&quot;.
+</code></pre>
+<h5 id="example-3">Example 3:</h5>
+<pre><code>Input: s = &quot;ab&quot;, p = &quot;.*&quot;
+Output: true
+Explanation: &quot;.*&quot; means &quot;zero or more (*) of any character (.)&quot;.
+</code></pre>
+<h5 id="constraints">Constraints:</h5>
+<ul>
+<li>1 &lt;= s.length &lt;= 20</li>
+<li>1 &lt;= p.length &lt;= 20</li>
+<li><strong>s</strong> contains only lowercase English letters.</li>
+<li><strong>p</strong> contains only lowercase English letters, <strong>&rsquo;.&rsquo;</strong>, and <strong>&rsquo;*&rsquo;</strong>.</li>
+<li>It is guaranteed for each appearance of the character <strong>&rsquo;*&rsquo;</strong>, there will be a previous valid character to match.</li>
+</ul>
+<h3 id="想法-1">想法 1</h3>
+<p>這問題一開始想到的，是直接用使用 <strong>&lsquo;遞迴&rsquo;</strong> 的方式下去解，因為題目有 <strong>&rsquo;.&rsquo;</strong> 代表任何數字，而 <strong>&rsquo;*&rsquo;</strong> 則是上一個數字， <strong>重複 N 次(N 可能是 0)</strong> 。<br>
+比如 s = &lsquo;a&rsquo;, 和 p = &lsquo;ab*&rsquo; 是相等的，因為 * 可以讓 b 不出現，所以變成 s = &lsquo;a&rsquo;，和 p = &lsquo;a&rsquo;，且 s = &lsquo;abb&rsquo;, 和 p = &lsquo;ab*&rsquo; ，也是相等的，因為 * 可以讓他出現兩次，變成 s = &lsquo;abb&rsquo;，和 p = &lsquo;abb&rsquo;。<br>
+而 &lsquo;.&rsquo; 更特殊了，他可以變成任何字元，有點類似撲克牌中的 Joker(鬼牌)，所以你有一串 s = &lsquo;abcdefg&rsquo;， p = &lsquo;.*&rsquo;，他們是相等的!?<br>
+那 <strong>&lsquo;遞迴&rsquo;</strong> 整理出來的邏輯如下</p>
+<ul>
+<li>先檢查到最後 s 和 p 是不是空字串(字串被消耗完畢的狀況)，那他一定是相等的!?回傳 True</li>
+<li>再來比對 s 的第二個字字源是不是 &lsquo;*&rsquo;，如果是可能出現兩種狀況
+<ul>
+<li>s 的第一個字元和 p 的第一個字元相等時，或是 p 的第一個字元是&rsquo;.&rsquo;(任意字元)，他可能消耗到 s 第一個字元，或是把 p 前面兩個字元(N 和 *)[N 是第一個字元]消耗掉，繼續&rsquo;遞迴&rsquo;</li>
+<li>如果不相等，那只能把 p 前面兩個拿掉(* = 0)，繼續&rsquo;遞迴&rsquo;</li>
+</ul>
+</li>
+<li>再來是判斷不是 &lsquo;*&lsquo;時，就只能比對 s 的第一個字元，和 p 的第一個字元是不是相等，或是 p 是不是 &lsquo;.&rsquo;，來把字元消耗掉</li>
+<li>最後都不是上面的狀況，代表他們不匹配，直接回傳 False</li>
+</ul>
+<h3 id="解法-1">解法 1</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run_isMatch</span>(self, s: str, p: str) <span style="color:#f92672">-&gt;</span> bool:
+</span></span><span style="display:flex;"><span>        s_leg <span style="color:#f92672">=</span> len(s)
+</span></span><span style="display:flex;"><span>        p_leg <span style="color:#f92672">=</span> len(p)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> s <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#f92672">and</span> p <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;&#39;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> p_leg <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> p[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;*&#39;</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> s_leg <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> (s[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> p [<span style="color:#ae81ff">0</span>] <span style="color:#f92672">or</span> p [<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span><span style="color:#e6db74">&#39;.&#39;</span>):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>run_isMatch(s[<span style="color:#ae81ff">1</span>::], p) <span style="color:#f92672">or</span> self<span style="color:#f92672">.</span>run_isMatch(s, p[<span style="color:#ae81ff">2</span>::])
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">#如果 p 第二個字是 *, 則可能是 s 第一個字, 或是完全沒匹配直接拿掉兩種可能</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">#如果地一個字完全不同, 那一定要拿掉 p</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>run_isMatch(s, p[<span style="color:#ae81ff">2</span>::])
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> s_leg <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> p_leg <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> (s[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> p [<span style="color:#ae81ff">0</span>] <span style="color:#f92672">or</span> p [<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span><span style="color:#e6db74">&#39;.&#39;</span>):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>run_isMatch(s[<span style="color:#ae81ff">1</span>::], p[<span style="color:#ae81ff">1</span>::])
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isMatch</span>(self, s: str, p: str) <span style="color:#f92672">-&gt;</span> bool:
+</span></span><span style="display:flex;"><span>        p_ary <span style="color:#f92672">=</span> []<span style="color:#75715e"># 用來把重複的正規清掉比如 a*a*a*a* -&gt; a*</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> pc <span style="color:#f92672">in</span> p:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> pc <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;*&#39;</span>:
+</span></span><span style="display:flex;"><span>                p_ary<span style="color:#f92672">.</span>append(pc)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                last <span style="color:#f92672">=</span> p_ary<span style="color:#f92672">.</span>pop()
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> len(p_ary) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> (p_ary[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">!=</span> last <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;*&#39;</span>):
+</span></span><span style="display:flex;"><span>                    p_ary<span style="color:#f92672">.</span>append(last <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;*&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> self<span style="color:#f92672">.</span>run_isMatch(s, <span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(p_ary))
+</span></span></code></pre></div><h3 id="想法-2">想法 2</h3>
+<p>再來這題也可以使用 DP (動態規劃)，下去解，只是要找到規律，要先定義一個二微陣列，X 列是 s 字串的長度，Y 列是 p 字串的長度，所以 dp[i][j] 是 s[0:j:] 和 p[0:i:]，又有下三種狀況:</p>
+<ul>
+<li>if p[i - 1] != &lsquo;*&rsquo; 時，dp[i][j] = dp[i - 1][j - 1] and (p[i - 1] == s[j - 1] || p[i - 1] == &lsquo;.&rsquo;);</li>
+<li>if p[i - 1] == &lsquo;*&rsquo; 時，第一種狀況是 dp[i][j] = dp[i - 2][j]， * 重複 0 次時</li>
+<li>if p[i - 1] == &lsquo;<em>&rsquo; 時，第二種狀況是 dp[i][j] = dp[i][j - 1] and (s[j - 1] == p[i - 2] or p[i - 2] == &lsquo;.&rsquo;)， * 重複 1 次以上時
+複上圖片比較能理解!?<br>
+圖片範例是 p = &ldquo;mississippi&rdquo;, s = &ldquo;mis</em>is<em>ip</em>.&rdquo;
+<img src="/images/LeetCode/10.Regular_Expression_Matching_Sample.png" alt="10. Regular Expression Matching Sample" title="10. Regular Expression Matching Sample"><br>
+圖片來源: <a href="https://leetcode.com/problems/regular-expression-matching/solutions/3401751/detailed-explaination-with-pictures-in-c-java-python-dp-bottom-up-tabulation/">🚀 ✅ Detailed explaination 🔥 with Pictures ✅ 🔥 🚀 in C++,Java , Python , DP bottom up tabulation.</a></li>
+</ul>
+<h3 id="解法-2">解法 2</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isMatch</span>(self, s: str, p: str) <span style="color:#f92672">-&gt;</span> bool:
+</span></span><span style="display:flex;"><span>        s_leg <span style="color:#f92672">=</span> len(s)
+</span></span><span style="display:flex;"><span>        p_leg <span style="color:#f92672">=</span> len(p)
+</span></span><span style="display:flex;"><span>        dp <span style="color:#f92672">=</span> [[<span style="color:#66d9ef">False</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(s_leg <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)] <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(p_leg <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)]
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 建 dp 用的陣列</span>
+</span></span><span style="display:flex;"><span>        dp[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(s_leg <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, p_leg <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>):<span style="color:#75715e"># p 沒有字時，不可能匹配，直接不考慮</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> p[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;*&#39;</span>:
+</span></span><span style="display:flex;"><span>                    dp[i][j] <span style="color:#f92672">=</span> dp[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>][j <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">and</span> (p[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> s[j <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">or</span> p[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;.&#39;</span>)
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e"># 沒有 * 時，只能下去比對字串是不是相等，或是等於 . 了</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">elif</span> i <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>                    dp[i][j] <span style="color:#f92672">=</span> dp[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>][j]
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e"># * 重複 0 次時</span>
+</span></span><span style="display:flex;"><span>                    dp[i][j] <span style="color:#f92672">=</span> dp[i][j] <span style="color:#f92672">or</span> (dp[i][j <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">and</span> (s[j <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> p[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>] <span style="color:#f92672">or</span> p[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;.&#39;</span>))
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e"># * 重複 1 次以上時</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> dp[p_leg][s_leg]
+</span></span></code></pre></div><h3 id="想法-3">想法 3</h3>
+<p>直接作弊用正規表達式的套件XDDDD</p>
+<h3 id="解法-3">解法 3</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">isMatch</span>(self, s: str, p: str) <span style="color:#f92672">-&gt;</span> bool:
+</span></span><span style="display:flex;"><span>        finded <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>findall(p, s)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> len(finded) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> finded[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> s
+</span></span></code></pre></div><p>參考:<br>
+<a href="https://leetcode.com/problems/regular-expression-matching/solutions/3401751/detailed-explaination-with-pictures-in-c-java-python-dp-bottom-up-tabulation/">🚀 ✅ Detailed explaination 🔥 with Pictures ✅ 🔥 🚀 in C++,Java , Python , DP bottom up tabulation.</a><br>
+<a href="https://leetcode.com/problems/regular-expression-matching/solutions/5684/c-on-space-dp/">C++ O(n)-space DP</a><br>
+<a href="https://www.cnblogs.com/grandyang/p/4461713.html">[LeetCode] 10. Regular Expression Matching 正则表达式匹配</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+        
+        </div>
+      </div>
+
+      <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+    </article>
+  </div>
+
+    </main>
+    <footer class="bg-blue bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://chechih.github.io/" >
+    &copy;  NewPlayer 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    <a href="https://github.com/Chechih" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      </a>
+  
+    <a href="https://www.linkedin.com/in/%E5%93%B2%E8%AA%8C-%E5%BC%B5-2a3377245/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      </a>
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

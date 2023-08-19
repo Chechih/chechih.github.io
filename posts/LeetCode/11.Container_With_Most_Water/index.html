@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>NewPlayer</title>
+    <title>11. Container With Most Water | NewPlayer</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="The last theme you&#39;ll ever need. Maybe.">
+    <meta name="description" content="問題 You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]). Find two lines that together with the x-axis form a container, such that the container contains the most water. Return the maximum amount of water a container can store. Notice that you may not slant the container.">
     <meta name="generator" content="Hugo 0.116.1">
     
     
@@ -39,19 +39,19 @@
 
     
     
-      <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="NewPlayer" />
-      <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="NewPlayer" />
-      
-    
-    
-    <meta property="og:title" content="Posts" />
-<meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://chechih.github.io/posts/" />
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
+    <meta property="og:title" content="11. Container With Most Water" />
+<meta property="og:description" content="問題 You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]). Find two lines that together with the x-axis form a container, such that the container contains the most water. Return the maximum amount of water a container can store. Notice that you may not slant the container." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chechih.github.io/posts/LeetCode/11.Container_With_Most_Water/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-08-20T00:33:01+08:00" />
+<meta property="article:modified_time" content="2023-08-20T00:33:01+08:00" />
+<meta itemprop="name" content="11. Container With Most Water">
+<meta itemprop="description" content="問題 You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]). Find two lines that together with the x-axis form a container, such that the container contains the most water. Return the maximum amount of water a container can store. Notice that you may not slant the container."><meta itemprop="datePublished" content="2023-08-20T00:33:01+08:00" />
+<meta itemprop="dateModified" content="2023-08-20T00:33:01+08:00" />
+<meta itemprop="wordCount" content="483">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="11. Container With Most Water"/>
+<meta name="twitter:description" content="問題 You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]). Find two lines that together with the x-axis form a container, such that the container contains the most water. Return the maximum amount of water a container can store. Notice that you may not slant the container."/>
 
 	
   </head>
@@ -69,6 +69,8 @@
     });
       </script>
     
+   
+  
 
   <header>
     <div class="bg-blue navbar-fixed-top">
@@ -329,97 +331,119 @@
 </nav>
 
     </div>
-    
   </header>
+
+
 
     <main role="main">
       
   <div style="min-height: calc(100vh - 8rem);">
-    <article class="mw8 center">
-      <section class="ph4 pa4">
+    
+    <article class="flex-l flex-wrap justify-between mw8 center ph3 single-page">
+      <header class="mt4 w-100">
+        <aside class="instapaper_ignoref b helvetica tracked">
+            
+        </aside>
         
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/8.String_to_Integeratoi/" class="link black dim">
-        8. String to Integer (atoi)
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++&rsquo;s atoi function). The algorithm for myAtoi(string s) is as follows: Read in and ignore any leading whitespace. Check if the next character (if not already at the end of the string) is &rsquo;-&rsquo; or &rsquo;+&rsquo;. Read this character in if it is either. This determines if the final result is negative
-    </div>
-    <a href="/posts/LeetCode/8.String_to_Integeratoi/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
-        
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/7.Reverse_Integer/" class="link black dim">
-        7. Reverse Integer
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231 , 231 - 1], then return 0. Assume the environment does not allow you to store 64-bit integers (signed or unsigned). 翻譯 給定一個帶符號的 32 位整數 x，請將其數
-    </div>
-    <a href="/posts/LeetCode/7.Reverse_Integer/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
-        
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/6.Zigzag_Conversion/" class="link black dim">
-        6. Zigzag Conversion
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 The string &ldquo;PAYPALISHIRING&rdquo; is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility) P A H N A P L S I I G Y I R And then read line by line: &ldquo;PAHNAPLSIIGYIR&rdquo; Write the code that will take a string and make this conversion given a number of
-    </div>
-    <a href="/posts/LeetCode/6.Zigzag_Conversion/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
+
+
+
+
+
+
+
+
+        <h1 class="f1 athelas mt3 mb1">11. Container With Most Water</h1>
+        <div class="categories">
+          📁 
+          
+            
+              <a style="text-decoration: none;" href="/categories/LeetCode_%E8%A7%A3%E9%A1%8C">LeetCode_解題</a>
+            
+          
+        </div>
         
-      </section>
-      <div class="pagination-container">
-    <ul class="pagination pagination-default">
-      <li class="page-item">
-        <a href="/posts/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/" aria-label="Page 1" class="page-link" role="button">1</a>
-      </li>
-      <li class="page-item active">
-        <a aria-current="page" aria-label="Page 2" class="page-link" role="button">2</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/4/" aria-label="Page 4" class="page-link" role="button">4</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/5/" aria-label="Page 5" class="page-link" role="button">5</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/3/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/6/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
-      </li>
-    </ul></div>
+        
+        
+        <time class="f6 mv4 dib tracked" datetime="2023-08-20T00:33:01+08:00">八月 20, 2023</time>
+        
+
+        
+        
+      </header>
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><h3 id="問題">問題</h3>
+<p>You are given an integer array <strong>height</strong> of length <strong>n</strong>. There are <strong>n</strong> vertical lines drawn such that the two endpoints of the <strong>i<sup>th</sup></strong> line are <strong>(i, 0)</strong> and <strong>(i, height[i])</strong>.</p>
+<p>Find two lines that together with the x-axis form a container, such that the container contains the most water.</p>
+<p>Return the maximum amount of water a container can store.</p>
+<p><strong>Notice</strong> that you may not slant the container.</p>
+<h3 id="翻譯">翻譯</h3>
+<p>您被給定一個長度為 <strong>n</strong> 的整數陣列 <strong>height</strong>。有 <strong>n</strong> 條垂直線，使得<strong>第 i 條線</strong>的兩個端點分別為 <strong>(i, 0)</strong> 和 <strong>(i, height[i])</strong>。</p>
+<p>找到兩條線，它們與 x 軸一起形成一個容器，使得該容器能夠包含最多的水。</p>
+<p>返回容器能夠儲存的最大水量。</p>
+<p><strong>請注意</strong>，您不能傾斜容器。</p>
+<h5 id="example-1">Example 1:</h5>
+<pre><code>Input: height = [1,8,6,2,5,4,8,3,7]
+Output: 49
+Explanation: The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.
+</code></pre>
+<p><img src="https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/17/question_11.jpg" alt="Question_11_Example1" title="question_11_example1"><br>
+圖片來源 LeetCode</p>
+<h5 id="example-2">Example 2:</h5>
+<pre><code>Input: height = [1,1]
+Output: 1
+</code></pre>
+<h5 id="constraints">Constraints:</h5>
+<ul>
+<li>n == height.length</li>
+<li>2 &lt;= n &lt;= 10<sup>5</sup></li>
+<li>0 &lt;= height[i] &lt;= 10<sup>4</sup></li>
+</ul>
+<h3 id="想法">想法</h3>
+<p>其實這題一開始，我是用暴力破解法的，但沒辦法過XDDD
+然後觀察下，其實這題就是要找最大面積，而他的面積，其實就是由兩個因素決定的:</p>
+<ol>
+<li>下排的寬度(位子相減)</li>
+<li>高度最小值(height 的值)<br>
+所以可以使用雙指標，從左右兩側跑，當指標互相靠近時，盡可能地去找出更大的 height ，去補償寬度邊小</li>
+</ol>
+<h3 id="解法">解法</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">maxArea</span>(self, height: List[int]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        height_leg <span style="color:#f92672">=</span> len(height)
+</span></span><span style="display:flex;"><span>        left <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        right <span style="color:#f92672">=</span> height_leg <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        max_area <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span><span style="color:#75715e"># 存最大面積</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;</span> right:
+</span></span><span style="display:flex;"><span>            area <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> height[left] <span style="color:#f92672">&lt;</span>  height[right]:<span style="color:#75715e"># 右邊己較高時</span>
+</span></span><span style="display:flex;"><span>                area <span style="color:#f92672">=</span> height[left] <span style="color:#f92672">*</span> (right <span style="color:#f92672">-</span> left)<span style="color:#75715e"># 左邊當高</span>
+</span></span><span style="display:flex;"><span>                left <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:<span style="color:#75715e"># 左邊己較高時</span>
+</span></span><span style="display:flex;"><span>                area <span style="color:#f92672">=</span> height[right] <span style="color:#f92672">*</span> (right <span style="color:#f92672">-</span> left)<span style="color:#75715e"># 右邊當高</span>
+</span></span><span style="display:flex;"><span>                right <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            max_area <span style="color:#f92672">=</span> max(max_area, area)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> max_area
+</span></span></code></pre></div><p>Github 同步網址:<br>
+<a href="https://github.com/Chechih/LeetCode_Py/tree/master/11.Container_With_Most_Water">https://github.com/Chechih/LeetCode_Py/tree/master/11.Container_With_Most_Water</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+        
+        </div>
+      </div>
+
+      <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
     </article>
   </div>
 

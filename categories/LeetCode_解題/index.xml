@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Tue, 15 Aug 2023 01:48:33 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/LeetCode_%E8%A7%A3%E9%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Aug 2023 00:33:01 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/LeetCode_%E8%A7%A3%E9%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>11. Container With Most Water</title>
+      <link>https://chechih.github.io/posts/LeetCode/11.Container_With_Most_Water/</link>
+      <pubDate>Sun, 20 Aug 2023 00:33:01 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/11.Container_With_Most_Water/</guid>
+      <description>問題 You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]). Find two lines that together with the x-axis form a container, such that the container contains the most water. Return the maximum amount of water a container can store. Notice that you may not slant the container.</description>
+    </item>
+    
     <item>
       <title>10. Regular Expression Matching</title>
       <link>https://chechih.github.io/posts/LeetCode/10.Regular_Expression_Matching/</link>

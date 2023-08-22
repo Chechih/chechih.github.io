@@ -43,11 +43,11 @@
 <meta property="og:description" content="問題 Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M. Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000 For example, 2 is written as II in Roman numeral, just two ones added together. 12 is written as XII, which is simply X &#43; II. The number 27 is written as XXVII, which is XX" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://chechih.github.io/posts/LeetCode/13.Roman_to_Integer/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-08-21T00:19:57+08:00" />
-<meta property="article:modified_time" content="2023-08-21T00:19:57+08:00" />
+<meta property="article:published_time" content="2023-08-22T23:50:26+08:00" />
+<meta property="article:modified_time" content="2023-08-22T23:50:26+08:00" />
 <meta itemprop="name" content="13. Roman to Integer">
-<meta itemprop="description" content="問題 Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M. Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000 For example, 2 is written as II in Roman numeral, just two ones added together. 12 is written as XII, which is simply X &#43; II. The number 27 is written as XXVII, which is XX"><meta itemprop="datePublished" content="2023-08-21T00:19:57+08:00" />
-<meta itemprop="dateModified" content="2023-08-21T00:19:57+08:00" />
+<meta itemprop="description" content="問題 Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M. Symbol Value I 1 V 5 X 10 L 50 C 100 D 500 M 1000 For example, 2 is written as II in Roman numeral, just two ones added together. 12 is written as XII, which is simply X &#43; II. The number 27 is written as XXVII, which is XX"><meta itemprop="datePublished" content="2023-08-22T23:50:26+08:00" />
+<meta itemprop="dateModified" content="2023-08-22T23:50:26+08:00" />
 <meta itemprop="wordCount" content="869">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="13. Roman to Integer"/>
@@ -368,7 +368,7 @@
         
         
         
-        <time class="f6 mv4 dib tracked" datetime="2023-08-21T00:19:57+08:00">八月 21, 2023</time>
+        <time class="f6 mv4 dib tracked" datetime="2023-08-22T23:50:26+08:00">八月 22, 2023</time>
         
 
         
@@ -433,13 +433,13 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 </ul>
 <h3 id="想法">想法</h3>
 <p>這題也可以建個羅馬字母對數字的表，如下:<br>
-&lsquo;I&rsquo;: 1,
-&lsquo;V&rsquo;: 5,
-&lsquo;X&rsquo;: 10,
-&lsquo;L&rsquo;: 50,
-&lsquo;C&rsquo;: 100,
-&lsquo;D&rsquo;: 500,
-&lsquo;M&rsquo;: 1000
+&lsquo;I&rsquo;: 1,<br>
+&lsquo;V&rsquo;: 5,<br>
+&lsquo;X&rsquo;: 10,<br>
+&lsquo;L&rsquo;: 50,<br>
+&lsquo;C&rsquo;: 100,<br>
+&lsquo;D&rsquo;: 500,<br>
+&lsquo;M&rsquo;: 1000<br>
 建完之後直接設定個變數用來加總用，然後開始掃字串，把掃到的數字直接轉成數字加總，只是掃的時候要注意，上一個是不是比現在小，如果是，可能就是 4(IV), 9:(IX), 40(XL)等等的羅馬數字，必須把上一個減掉，這段可以把它做成全部數字加起來，遇到時減兩次，因為之前有先加了。</p>
 <h3 id="解法">解法</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:

@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Tue, 22 Aug 2023 23:50:26 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Aug 2023 00:35:11 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>14. Longest Common Prefix</title>
+      <link>https://chechih.github.io/posts/LeetCode/14.Longest_Common_Prefix/</link>
+      <pubDate>Fri, 25 Aug 2023 00:35:11 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/14.Longest_Common_Prefix/</guid>
+      <description>問題 Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string &amp;quot;&amp;quot;. 翻譯 撰寫一個函式來在一個字符串陣列中找到最長的共同前綴字串。 如果沒有共同前綴，則返回</description>
+    </item>
+    
     <item>
       <title>13. Roman to Integer</title>
       <link>https://chechih.github.io/posts/LeetCode/13.Roman_to_Integer/</link>

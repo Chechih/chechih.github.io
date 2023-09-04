@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Sat, 02 Sep 2023 17:31:01 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/LeetCode_%E8%A7%A3%E9%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Sep 2023 00:31:44 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/LeetCode_%E8%A7%A3%E9%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>16. 3Sum Closest</title>
+      <link>https://chechih.github.io/posts/LeetCode/16.3Sum_Closest/</link>
+      <pubDate>Tue, 05 Sep 2023 00:31:44 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/16.3Sum_Closest/</guid>
+      <description>問題 Given an integer array nums of length n and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assume that each input would have exactly one solution. 翻譯 給定一個長度為 n 的整數陣列 nums 和一個整數目標 ta</description>
+    </item>
+    
     <item>
       <title>15. 3Sum</title>
       <link>https://chechih.github.io/posts/LeetCode/15.3Sum/</link>

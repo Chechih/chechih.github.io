@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Wed, 20 Sep 2023 00:24:16 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/LeetCode_%E8%A7%A3%E9%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Oct 2023 17:56:07 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/LeetCode_%E8%A7%A3%E9%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>22. Generate Parentheses</title>
+      <link>https://chechih.github.io/posts/LeetCode/22.Generate_Parentheses/</link>
+      <pubDate>Sun, 01 Oct 2023 17:56:07 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/22.Generate_Parentheses/</guid>
+      <description>問題 Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses. 翻譯 給定 n 對括號，編寫一個函數來生成所有合法括號的組合。 Example 1: Input: n = 3 Output: [&amp;quot;((()))&amp;quot;,&amp;quot;(()())&amp;quot;,&amp;quot;(())()&amp;quot;,&amp;quot;()(())&amp;quot;,&amp;quot;()()()&amp;quot;] Example 2: Input: n = 1 Output: [&amp;quot;()&amp;quot;] Constraints: 1 &amp;lt;= n &amp;lt;= 8 想法 這</description>
+    </item>
+    
     <item>
       <title>21. Merge Two Sorted Lists</title>
       <link>https://chechih.github.io/posts/LeetCode/21.Merge_Two_Sorted_Lists/</link>

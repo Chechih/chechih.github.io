@@ -268,3 +268,7 @@ sup {
 .serif {
   font-family: "Segoe UI","微軟正黑體"!important;
 }
+
+.custom-gradient1{
+  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+}

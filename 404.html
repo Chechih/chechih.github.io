@@ -69,15 +69,15 @@
     <div class="custom-gradient1 navbar-fixed-top">
       <nav class="pv1 ph3 ph4-ns" role="navigation">
   <script>
-    function showList(x) {
+    function showList() {
       var eParent = document.getElementById('mobile-mainmenu-btn');
-      var eList = document.getElementById('mobile-mainmenu-list');      
-      x.classList.toggle("change");
+      var eList = document.getElementById('mobile-mainmenu-list');    
       if(eList.style.display == 'grid')
       {
         hideList();
         return;
       }
+      eParent.classList.toggle("change");  
       eList.style.display = 'grid'
       var oParentRect = eParent.getBoundingClientRect();
       var oTipRect = eList.getBoundingClientRect();
@@ -90,10 +90,12 @@
       window.addEventListener('resize', hideList);
     }
     function hideList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
       var eList = document.getElementById('mobile-mainmenu-list');
+      eParent.classList.toggle("change");  
       window.removeEventListener("scroll", hideList);
       window.removeEventListener('resize', hideList);
-      eList.style.display = 'none'
+      eList.style.display = 'none';
     }
   </script>
   <style>
@@ -130,7 +132,7 @@
       
 
       
-        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList(this)">
+        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList()">
           <div class="bar1"></div>
           <div class="bar2"></div>
           <div class="bar3"></div>
@@ -198,15 +200,15 @@
     <div class="bg-black-60 headerbar-wrap">
       <nav class="pv1 ph3 ph4-ns" role="navigation">
   <script>
-    function showList(x) {
+    function showList() {
       var eParent = document.getElementById('mobile-mainmenu-btn');
-      var eList = document.getElementById('mobile-mainmenu-list');      
-      x.classList.toggle("change");
+      var eList = document.getElementById('mobile-mainmenu-list');    
       if(eList.style.display == 'grid')
       {
         hideList();
         return;
       }
+      eParent.classList.toggle("change");  
       eList.style.display = 'grid'
       var oParentRect = eParent.getBoundingClientRect();
       var oTipRect = eList.getBoundingClientRect();
@@ -219,10 +221,12 @@
       window.addEventListener('resize', hideList);
     }
     function hideList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
       var eList = document.getElementById('mobile-mainmenu-list');
+      eParent.classList.toggle("change");  
       window.removeEventListener("scroll", hideList);
       window.removeEventListener('resize', hideList);
-      eList.style.display = 'none'
+      eList.style.display = 'none';
     }
   </script>
   <style>
@@ -259,7 +263,7 @@
       
 
       
-        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList(this)">
+        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList()">
           <div class="bar1"></div>
           <div class="bar2"></div>
           <div class="bar3"></div>

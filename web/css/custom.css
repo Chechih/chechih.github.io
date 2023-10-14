@@ -93,7 +93,6 @@
 }
 
 .mobile-menu-list{
-  display: grid;
   position: fixed;
   top: 1rem;
   left: 0;

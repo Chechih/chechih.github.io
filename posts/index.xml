@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Thu, 12 Oct 2023 00:13:43 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Oct 2023 00:46:02 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>24. Swap Nodes in Pairs</title>
+      <link>https://chechih.github.io/posts/LeetCode/24.Swap_Nodes_in_Pairs/</link>
+      <pubDate>Mon, 16 Oct 2023 00:46:02 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/24.Swap_Nodes_in_Pairs/</guid>
+      <description>問題 Given a linked list, swap every two adjacent nodes and return its head. You must solve the problem without modifying the values in the list&amp;rsquo;s nodes (i.e., only nodes themselves may be changed.) 翻譯 給定一個鏈結串列，交換每兩個相鄰的節點，然後返回新的鏈結串列的頭部</description>
+    </item>
+    
     <item>
       <title>23. Merge k Sorted Lists</title>
       <link>https://chechih.github.io/posts/LeetCode/23.Merge_k_Sorted_Lists/</link>

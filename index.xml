@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Mon, 16 Oct 2023 00:46:02 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 Oct 2023 00:55:06 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>25. Reverse Nodes in k-Group</title>
+      <link>https://chechih.github.io/posts/LeetCode/25.Reverse_Nodes_in_k-Group/</link>
+      <pubDate>Tue, 17 Oct 2023 00:55:06 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/25.Reverse_Nodes_in_k-Group/</guid>
+      <description>問題 Given the head of a linked list, reverse the nodes of the list k at a time, and return the modified list. k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes, in the end, should remain as it is. You may not alter the values</description>
+    </item>
+    
     <item>
       <title>24. Swap Nodes in Pairs</title>
       <link>https://chechih.github.io/posts/LeetCode/24.Swap_Nodes_in_Pairs/</link>

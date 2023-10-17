@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Tue, 17 Oct 2023 00:55:06 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Oct 2023 00:49:41 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>26. Remove Duplicates from Sorted Array</title>
+      <link>https://chechih.github.io/posts/LeetCode/26.Remove_Duplicates_from_Sorted_Array/</link>
+      <pubDate>Wed, 18 Oct 2023 00:49:41 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/26.Remove_Duplicates_from_Sorted_Array/</guid>
+      <description>問題 Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums. Consider the number of unique elements of nums to be k, to get accepted, you need to do the following things: Change the array nums such that</description>
+    </item>
+    
     <item>
       <title>25. Reverse Nodes in k-Group</title>
       <link>https://chechih.github.io/posts/LeetCode/25.Reverse_Nodes_in_k-Group/</link>

@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>NewPlayer</title>
+    <title>27. Remove Element | NewPlayer</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="The last theme you&#39;ll ever need. Maybe.">
+    <meta name="description" content="問題 Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val. Consider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things: Change the array nums">
     <meta name="generator" content="Hugo 0.116.1">
     
     
@@ -39,19 +39,19 @@
 
     
     
-      <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="NewPlayer" />
-      <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="NewPlayer" />
-      
-    
-    
-    <meta property="og:title" content="Posts" />
-<meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://chechih.github.io/posts/" />
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
+    <meta property="og:title" content="27. Remove Element" />
+<meta property="og:description" content="問題 Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val. Consider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things: Change the array nums" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chechih.github.io/posts/LeetCode/27.Remove_Element/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-10-19T23:35:37+08:00" />
+<meta property="article:modified_time" content="2023-10-19T23:35:37+08:00" />
+<meta itemprop="name" content="27. Remove Element">
+<meta itemprop="description" content="問題 Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val. Consider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things: Change the array nums"><meta itemprop="datePublished" content="2023-10-19T23:35:37+08:00" />
+<meta itemprop="dateModified" content="2023-10-19T23:35:37+08:00" />
+<meta itemprop="wordCount" content="767">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="27. Remove Element"/>
+<meta name="twitter:description" content="問題 Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val. Consider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things: Change the array nums"/>
 
 	
   </head>
@@ -69,6 +69,8 @@
     });
       </script>
     
+   
+  
 
   <header>
     <div class="custom-gradient1 navbar-fixed-top">
@@ -333,97 +335,139 @@
 </nav>
 
     </div>
-    
   </header>
+
+
 
     <main role="main">
       
   <div style="min-height: calc(100vh - 8rem);">
-    <article class="mw8 center">
-      <section class="ph4 pa4">
+    
+    <article class="flex-l flex-wrap justify-between mw8 center ph3 single-page">
+      <header class="mt4 w-100">
+        <aside class="instapaper_ignoref b helvetica tracked">
+            
+        </aside>
         
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/WebBuild/HugoWebBuildToGitHub/" class="link black dim">
-        Hugo 建置到 GitHub Page
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      這裡會介紹建置好的 Hugo 網站，Push 到 GitHub Page 上 產生靜態檔案 先移到 Hugo 的資料夾(hugo new site myweb 產生的資料夾)， cd myweb 執行 hugo 就會看到 Hugo 資料夾裡面的 public 資料
-    </div>
-    <a href="/posts/WebBuild/HugoWebBuildToGitHub/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
-        
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/WebBuild/Hugo/" class="link black dim">
-        Hugo 建置
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      雖然架 GitHub 網站時，我有發現有 Jekyll ,Hexo, Hugo，不過 Jekyll 裝完發現太舊，Hexo, Hugo 選了好久，發現用 Hugo 的人比較多，而且 Hugo 如果文章多，建置似乎比較快，就選
-    </div>
-    <a href="/posts/WebBuild/Hugo/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
-        
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/Git_Extensions/Push/" class="link black dim">
-        Git Extensions Push GitHub
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      還沒安裝 Git Extensions 的可以參考這個 註冊 要在 GitHub 上 Push 當然也需要帳號拉~ 先到 GitHub 網站註冊， 還沒註冊的可以參考這個 GitHub 新增專案 再來就是點頭像，到專案去，按綠色的
-    </div>
-    <a href="/posts/Git_Extensions/Push/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
+
+
+
+
+
+
+
+
+        <h1 class="f1 athelas mt3 mb1">27. Remove Element</h1>
+        <div class="categories">
+          📁 
+          
+            
+              <a style="text-decoration: none;" href="/categories/LeetCode_%E8%A7%A3%E9%A1%8C">LeetCode_解題</a>
+            
+          
+        </div>
         
-      </section>
-      <div class="pagination-container">
-    <ul class="pagination pagination-default">
-      <li class="page-item">
-        <a href="/posts/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/9/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/7/" aria-label="Page 7" class="page-link" role="button">7</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/8/" aria-label="Page 8" class="page-link" role="button">8</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/9/" aria-label="Page 9" class="page-link" role="button">9</a>
-      </li>
-      <li class="page-item active">
-        <a aria-current="page" aria-label="Page 10" class="page-link" role="button">10</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/11/" aria-label="Page 11" class="page-link" role="button">11</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/11/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/11/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
-      </li>
-    </ul></div>
+        
+        
+        <time class="f6 mv4 dib tracked" datetime="2023-10-19T23:35:37+08:00">十月 19, 2023</time>
+        
+
+        
+        
+      </header>
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><h3 id="問題">問題</h3>
+<p>Given an integer array <strong>nums</strong> and an integer <strong>val</strong>, remove all occurrences of <strong>val</strong> in <strong>nums in-place</strong>. The order of the elements may be changed. Then return the number of elements in <strong>nums</strong> which are not equal to <strong>val</strong>.</p>
+<p>Consider the number of elements in <strong>nums</strong> which are not equal to <strong>val</strong> be <strong>k</strong>, to get accepted, you need to do the following things:</p>
+<ul>
+<li>Change the array <strong>nums</strong> such that the first <strong>k</strong> elements of <strong>nums</strong> contain the elements which are not equal to <strong>val</strong>. The remaining elements of <strong>nums</strong> are not important as well as the size of <strong>nums</strong>.</li>
+<li>Return <strong>k</strong>.
+<strong>Custom Judge:</strong></li>
+</ul>
+<p>The judge will test your solution with the following code:</p>
+<pre><code>int[] nums = [...]; // Input array
+int val = ...; // Value to remove
+int[] expectedNums = [...]; // The expected answer with correct length.
+                            // It is sorted with no values equaling val.
+
+int k = removeElement(nums, val); // Calls your implementation
+
+assert k == expectedNums.length;
+sort(nums, 0, k); // Sort the first k elements of nums
+for (int i = 0; i &lt; actualLength; i++) {
+    assert nums[i] == expectedNums[i];
+}
+</code></pre>
+<p>If all assertions pass, then your solution will be <strong>accepted</strong>.</p>
+<h3 id="翻譯">翻譯</h3>
+<p>給定一個整數陣列 <strong>nums</strong> 和一個整數 <strong>val</strong>，請原地移除陣列 <strong>nums</strong> 中所有等於 <strong>val</strong> 的元素。元素的順序可能會改變。然後返回陣列 <strong>nums</strong> 中不等於 <strong>val</strong> 的元素的數量。</p>
+<p>考慮到陣列 <strong>nums</strong> 中不等於 <strong>val</strong> 的元素數量為 <strong>k</strong>，為了使您的解答被接受，您需要執行以下操作：</p>
+<ul>
+<li>修改陣列 <strong>nums</strong>，使得 <strong>nums</strong> 的前 <strong>k</strong> 個元素包含不等於 <strong>val</strong> 的元素。<strong>nums</strong> 的其餘元素和陣列大小都不重要。</li>
+<li>返回 <strong>k</strong>。
+<strong>自定義判定:</strong></li>
+</ul>
+<p>判定程式將使用以下程式碼來測試您的解答：
+int[] nums = [&hellip;]; // 輸入陣列
+int val = &hellip;; // 要移除的數值
+int[] expectedNums = [&hellip;]; // 正確長度的預期答案。
+// 它是排序過的，沒有值等於 val。</p>
+<pre><code>int k = removeElement(nums, val); // 呼叫您的實作
+
+assert k == expectedNums.length;
+sort(nums, 0, k); // 對 nums 的前 k 個元素進行排序
+for (int i = 0; i &lt; k; i++) {
+    assert nums[i] == expectedNums[i];
+}
+</code></pre>
+<p>如果所有斷言都通過，則您的解答將被<strong>接受</strong>。</p>
+<h5 id="example-1">Example 1:</h5>
+<pre><code>Input: nums = [3,2,2,3], val = 3
+Output: 2, nums = [2,2,_,_]
+Explanation: Your function should return k = 2, with the first two elements of nums being 2.
+It does not matter what you leave beyond the returned k (hence they are underscores).
+</code></pre>
+<h5 id="example-2">Example 2:</h5>
+<pre><code>Input: nums = [0,1,2,2,3,0,4,2], val = 2
+Output: 5, nums = [0,1,4,0,3,_,_,_]
+Explanation: Your function should return k = 5, with the first five elements of nums containing 0, 0, 1, 3, and 4.
+Note that the five elements can be returned in any order.
+It does not matter what you leave beyond the returned k (hence they are underscores).
+</code></pre>
+<h5 id="constraints">Constraints:</h5>
+<ul>
+<li>0 &lt;= nums.length &lt;= 100</li>
+<li>0 &lt;= nums[i] &lt;= 50</li>
+<li>0 &lt;= val &lt;= 100</li>
+</ul>
+<h3 id="想法">想法</h3>
+<p>這題可以使用一個從尾部掃到頭的迴圈，去檢查陣列(nums)所有的值，是不是等於 val，如果是，就將他 pop 出去，因為他是從尾部開始掃的，就算他被 pop 出去，也不會有溢位的問題存在。</p>
+<h3 id="解法">解法</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">removeElement</span>(self, nums: List[int], val: int) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(nums) <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):<span style="color:#75715e">#因為正循環移除會破壞迴圈的數目</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(nums[i] <span style="color:#f92672">==</span> val):
+</span></span><span style="display:flex;"><span>                nums<span style="color:#f92672">.</span>pop(i)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> len(nums)
+</span></span></code></pre></div><p>Github 同步網址:<br>
+<a href="https://github.com/Chechih/LeetCode_Py/tree/master/27.Remove_Element">https://github.com/Chechih/LeetCode_Py/tree/master/27.Remove_Element</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+        
+        </div>
+      </div>
+
+      <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
     </article>
   </div>
 

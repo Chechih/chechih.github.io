@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Thu, 19 Oct 2023 23:35:37 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Oct 2023 00:41:39 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>28. Find the Index of the First Occurrence in a String</title>
+      <link>https://chechih.github.io/posts/LeetCode/28.Find_the_Index_of_the_First_Occurrence_in_a_String/</link>
+      <pubDate>Fri, 20 Oct 2023 00:41:39 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/28.Find_the_Index_of_the_First_Occurrence_in_a_String/</guid>
+      <description>問題 Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack. 翻譯 給定兩個字串 needle 和 haystack，返回 needle 在 haystack 中第一次出現的索引，如果 needle 不是 haystack 的一</description>
+    </item>
+    
     <item>
       <title>27. Remove Element</title>
       <link>https://chechih.github.io/posts/LeetCode/27.Remove_Element/</link>

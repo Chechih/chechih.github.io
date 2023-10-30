@@ -48,7 +48,7 @@
 <meta itemprop="name" content="30. Substring with Concatenation of All Words">
 <meta itemprop="description" content="問題 You are given a string s and an array of strings words. All the strings of words are of the same length. A concatenated substring in s is a substring that contains all the strings of any permutation of words concatenated. For example, if words = [&ldquo;ab&rdquo;,&ldquo;cd&rdquo;,&ldquo;ef&rdquo;], then &ldquo;abcdef&rdquo;, &ldquo;abefcd&rdquo;, &ldquo;cdabef&rdquo;, &ldquo;cdefab&rdquo;, &ldquo;efabcd&rdquo;, and &ldquo;efcdab&rdquo; are all concatenated strings. &ldquo;acdbef&rdquo; is not a concatenated substring because it is"><meta itemprop="datePublished" content="2023-10-31T00:25:06+08:00" />
 <meta itemprop="dateModified" content="2023-10-31T00:25:06+08:00" />
-<meta itemprop="wordCount" content="1892">
+<meta itemprop="wordCount" content="1899">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="30. Substring with Concatenation of All Words"/>
 <meta name="twitter:description" content="問題 You are given a string s and an array of strings words. All the strings of words are of the same length. A concatenated substring in s is a substring that contains all the strings of any permutation of words concatenated. For example, if words = [&ldquo;ab&rdquo;,&ldquo;cd&rdquo;,&ldquo;ef&rdquo;], then &ldquo;abcdef&rdquo;, &ldquo;abefcd&rdquo;, &ldquo;cdabef&rdquo;, &ldquo;cdefab&rdquo;, &ldquo;efabcd&rdquo;, and &ldquo;efcdab&rdquo; are all concatenated strings. &ldquo;acdbef&rdquo; is not a concatenated substring because it is"/>
@@ -388,8 +388,10 @@ Return the starting indices of all the concatenated substrings in <strong>s</str
 <h3 id="翻譯">翻譯</h3>
 <p>你被給定一個字符串 <strong>s</strong> 和一個字符串陣列 <strong>words</strong>。<strong>words</strong> 中的所有字符串都具有 <strong>相同的長度</strong>。</p>
 <p>在 <strong>s</strong> 中，一個 <strong>連接的子字符串</strong> 是指包含了任意排列的 <strong>words</strong> 中所有字符串的子字符串。</p>
-<p>例如，如果 <strong>words = [&ldquo;ab&rdquo;,&ldquo;cd&rdquo;,&ldquo;ef&rdquo;]</strong>，那麼 <strong>&ldquo;abcdef&rdquo;</strong>、<strong>&ldquo;abefcd&rdquo;</strong>、<strong>&ldquo;cdabef&rdquo;</strong>、<strong>&ldquo;cdefab&rdquo;</strong>、<strong>&ldquo;efabcd&rdquo;</strong> 和 <strong>&ldquo;efcdab&rdquo;</strong> 都是連接的字符串。<strong>&ldquo;acdbef&rdquo;</strong> 不是一個連接的子字符串，因為它不是任何 <strong>words</strong> 排列的串接。
-返回 <strong>s</strong> 中所有連接子字符串的起始索引。答案可以以 <strong>任何順序</strong> 返回。</p>
+<ul>
+<li>例如，如果 <strong>words = [&ldquo;ab&rdquo;,&ldquo;cd&rdquo;,&ldquo;ef&rdquo;]</strong>，那麼 <strong>&ldquo;abcdef&rdquo;</strong>、<strong>&ldquo;abefcd&rdquo;</strong>、<strong>&ldquo;cdabef&rdquo;</strong>、<strong>&ldquo;cdefab&rdquo;</strong>、<strong>&ldquo;efabcd&rdquo;</strong> 和 <strong>&ldquo;efcdab&rdquo;</strong> 都是連接的字符串。<strong>&ldquo;acdbef&rdquo;</strong> 不是一個連接的子字符串，因為它不是任何 <strong>words</strong> 排列的串接。
+返回 <strong>s</strong> 中所有連接子字符串的起始索引。答案可以以 <strong>任何順序</strong> 返回。</li>
+</ul>
 <h5 id="example-1">Example 1:</h5>
 <pre><code>Input: s = &quot;barfoothefoobarman&quot;, words = [&quot;foo&quot;,&quot;bar&quot;]
 Output: [0,9]
@@ -563,6 +565,8 @@ The substring starting at 12 is &quot;thefoobar&quot;. It is the concatenation o
 </span></span></code></pre></div><p>參考:<br>
 <a href="https://leetcode.com/problems/substring-with-concatenation-of-all-words/solutions/2417727/python-90-with-detailed-explanation-sliding-windows-using-counter/">✔️Python 90% with Detailed Explanation | sliding windows using Counter ^_^</a><br>
 <a href="https://leetcode.com/problems/substring-with-concatenation-of-all-words/solutions/2418859/python-elegant-short-sliding-window-98-89-faster/">Python Elegant &amp; Short | Sliding window | 98.89% faster</a></p>
+<p>Github 同步網址:<br>
+<a href="https://github.com/Chechih/LeetCode_Py/tree/master/30.Substring_with_Concatenation_of_All_Words">https://github.com/Chechih/LeetCode_Py/tree/master/30.Substring_with_Concatenation_of_All_Words</a></p>
 <ul class="pa0">
   
 </ul>

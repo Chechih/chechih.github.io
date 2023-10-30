@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Sat, 21 Oct 2023 15:48:26 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Oct 2023 00:25:06 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>30. Substring with Concatenation of All Words</title>
+      <link>https://chechih.github.io/posts/LeetCode/30.Substring_with_Concatenation_of_All_Words/</link>
+      <pubDate>Tue, 31 Oct 2023 00:25:06 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/30.Substring_with_Concatenation_of_All_Words/</guid>
+      <description>問題 You are given a string s and an array of strings words. All the strings of words are of the same length. A concatenated substring in s is a substring that contains all the strings of any permutation of words concatenated. For example, if words = [&amp;ldquo;ab&amp;rdquo;,&amp;ldquo;cd&amp;rdquo;,&amp;ldquo;ef&amp;rdquo;], then &amp;ldquo;abcdef&amp;rdquo;, &amp;ldquo;abefcd&amp;rdquo;, &amp;ldquo;cdabef&amp;rdquo;, &amp;ldquo;cdefab&amp;rdquo;, &amp;ldquo;efabcd&amp;rdquo;, and &amp;ldquo;efcdab&amp;rdquo; are all concatenated strings. &amp;ldquo;acdbef&amp;rdquo; is not a concatenated substring because it is</description>
+    </item>
+    
     <item>
       <title>29. Divide Two Integers</title>
       <link>https://chechih.github.io/posts/LeetCode/29.Divide_Two_Integers/</link>

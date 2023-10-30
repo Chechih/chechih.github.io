@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>30. Substring with Concatenation of All Words | NewPlayer</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="問題 You are given a string s and an array of strings words. All the strings of words are of the same length. A concatenated substring in s is a substring that contains all the strings of any permutation of words concatenated. For example, if words = [&ldquo;ab&rdquo;,&ldquo;cd&rdquo;,&ldquo;ef&rdquo;], then &ldquo;abcdef&rdquo;, &ldquo;abefcd&rdquo;, &ldquo;cdabef&rdquo;, &ldquo;cdefab&rdquo;, &ldquo;efabcd&rdquo;, and &ldquo;efcdab&rdquo; are all concatenated strings. &ldquo;acdbef&rdquo; is not a concatenated substring because it is">
+    <meta name="generator" content="Hugo 0.116.1">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+
+  <link rel="stylesheet" href="/web/css/custom.css?bust=202310120125">
+
+
+
+<script src="/web/js/jparticles@3.4.0/browser/jparticles.base.js"></script>
+
+<script src="/web/js/jparticles@3.4.0/browser/particle.js"></script>
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="30. Substring with Concatenation of All Words" />
+<meta property="og:description" content="問題 You are given a string s and an array of strings words. All the strings of words are of the same length. A concatenated substring in s is a substring that contains all the strings of any permutation of words concatenated. For example, if words = [&ldquo;ab&rdquo;,&ldquo;cd&rdquo;,&ldquo;ef&rdquo;], then &ldquo;abcdef&rdquo;, &ldquo;abefcd&rdquo;, &ldquo;cdabef&rdquo;, &ldquo;cdefab&rdquo;, &ldquo;efabcd&rdquo;, and &ldquo;efcdab&rdquo; are all concatenated strings. &ldquo;acdbef&rdquo; is not a concatenated substring because it is" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chechih.github.io/posts/LeetCode/30.Substring_with_Concatenation_of_All_Words/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-10-31T00:25:06+08:00" />
+<meta property="article:modified_time" content="2023-10-31T00:25:06+08:00" />
+<meta itemprop="name" content="30. Substring with Concatenation of All Words">
+<meta itemprop="description" content="問題 You are given a string s and an array of strings words. All the strings of words are of the same length. A concatenated substring in s is a substring that contains all the strings of any permutation of words concatenated. For example, if words = [&ldquo;ab&rdquo;,&ldquo;cd&rdquo;,&ldquo;ef&rdquo;], then &ldquo;abcdef&rdquo;, &ldquo;abefcd&rdquo;, &ldquo;cdabef&rdquo;, &ldquo;cdefab&rdquo;, &ldquo;efabcd&rdquo;, and &ldquo;efcdab&rdquo; are all concatenated strings. &ldquo;acdbef&rdquo; is not a concatenated substring because it is"><meta itemprop="datePublished" content="2023-10-31T00:25:06+08:00" />
+<meta itemprop="dateModified" content="2023-10-31T00:25:06+08:00" />
+<meta itemprop="wordCount" content="1892">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="30. Substring with Concatenation of All Words"/>
+<meta name="twitter:description" content="問題 You are given a string s and an array of strings words. All the strings of words are of the same length. A concatenated substring in s is a substring that contains all the strings of any permutation of words concatenated. For example, if words = [&ldquo;ab&rdquo;,&ldquo;cd&rdquo;,&ldquo;ef&rdquo;], then &ldquo;abcdef&rdquo;, &ldquo;abefcd&rdquo;, &ldquo;cdabef&rdquo;, &ldquo;cdefab&rdquo;, &ldquo;efabcd&rdquo;, and &ldquo;efcdab&rdquo; are all concatenated strings. &ldquo;acdbef&rdquo; is not a concatenated substring because it is"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white" style="background-color: #E7E9EB;">
+    <div class="particle-background" style="width: 100%; height: 100%; position: fixed;"></div>
+    <script>
+      
+      new JParticles.Particle(".particle-background", {
+        color: "#25bfff",
+        
+        proximity: 90,
+        
+        range: 100,
+    });
+      </script>
+    
+   
+  
+
+  <header>
+    <div class="custom-gradient1 navbar-fixed-top">
+      <nav class="pv1 ph3 ph4-ns" role="navigation">
+  <script>
+    function showList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');    
+      if(eList.style.display == 'grid')
+      {
+        hideList();
+        return;
+      }
+      eParent.classList.toggle("change");  
+      eList.style.display = 'grid'
+      var oParentRect = eParent.getBoundingClientRect();
+      var oTipRect = eList.getBoundingClientRect();
+      var fOriginalX = oParentRect.x;
+      var fOriginalY = oParentRect.y + oParentRect.height;
+  
+      eList.style.left = '0px';
+      eList.style.top = fOriginalY + 'px';
+      window.addEventListener("scroll", hideList);
+      window.addEventListener('resize', hideList);
+    }
+    function hideList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');
+      eParent.classList.toggle("change");  
+      window.removeEventListener("scroll", hideList);
+      window.removeEventListener('resize', hideList);
+      eList.style.display = 'none';
+    }
+  </script>
+  <style>
+    .mobile-mainmenu-btn {
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 4px;
+      background-color: aliceblue;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+    </style>
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        NewPlayer
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </button>
+        <ul id="mobile-mainmenu-list" class="mobile-menu-list">
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/" title="Home 頁" onclick="">
+              Home
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/posts/" title="Posts 頁" onclick="">
+              Posts
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/categories/" title="分類 頁" onclick="">
+              分類
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/about/" title="關於 頁" onclick="">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+        <ul class="pl0 mr3 pc-menu-items">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="Home 頁">
+              Home
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts 頁">
+              Posts
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分類 頁">
+              分類
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="關於 頁">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</nav>
+
+    </div>
+    <div class="bg-black-60 headerbar-wrap">
+      <nav class="pv1 ph3 ph4-ns" role="navigation">
+  <script>
+    function showList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');    
+      if(eList.style.display == 'grid')
+      {
+        hideList();
+        return;
+      }
+      eParent.classList.toggle("change");  
+      eList.style.display = 'grid'
+      var oParentRect = eParent.getBoundingClientRect();
+      var oTipRect = eList.getBoundingClientRect();
+      var fOriginalX = oParentRect.x;
+      var fOriginalY = oParentRect.y + oParentRect.height;
+  
+      eList.style.left = '0px';
+      eList.style.top = fOriginalY + 'px';
+      window.addEventListener("scroll", hideList);
+      window.addEventListener('resize', hideList);
+    }
+    function hideList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');
+      eParent.classList.toggle("change");  
+      window.removeEventListener("scroll", hideList);
+      window.removeEventListener('resize', hideList);
+      eList.style.display = 'none';
+    }
+  </script>
+  <style>
+    .mobile-mainmenu-btn {
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 4px;
+      background-color: aliceblue;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+    </style>
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        NewPlayer
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </button>
+        <ul id="mobile-mainmenu-list" class="mobile-menu-list">
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/" title="Home 頁" onclick="">
+              Home
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/posts/" title="Posts 頁" onclick="">
+              Posts
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/categories/" title="分類 頁" onclick="">
+              分類
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/about/" title="關於 頁" onclick="">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+        <ul class="pl0 mr3 pc-menu-items">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="Home 頁">
+              Home
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts 頁">
+              Posts
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分類 頁">
+              分類
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="關於 頁">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main role="main">
+      
+  <div style="min-height: calc(100vh - 8rem);">
+    
+    <article class="flex-l flex-wrap justify-between mw8 center ph3 single-page">
+      <header class="mt4 w-100">
+        <aside class="instapaper_ignoref b helvetica tracked">
+            
+        </aside>
+        
+
+
+
+
+
+
+
+
+
+
+
+        <h1 class="f1 athelas mt3 mb1">30. Substring with Concatenation of All Words</h1>
+        <div class="categories">
+          📁 
+          
+            
+              <a style="text-decoration: none;" href="/categories/LeetCode_%E8%A7%A3%E9%A1%8C">LeetCode_解題</a>
+            
+          
+        </div>
+        
+        
+        
+        <time class="f6 mv4 dib tracked" datetime="2023-10-31T00:25:06+08:00">十月 31, 2023</time>
+        
+
+        
+        
+      </header>
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><h3 id="問題">問題</h3>
+<p>You are given a string <strong>s</strong> and an array of strings <strong>words</strong>. All the strings of <strong>words</strong> are of <strong>the same length</strong>.</p>
+<p>A <strong>concatenated substring</strong> in <strong>s</strong> is a substring that contains all the strings of any permutation of <strong>words</strong> concatenated.</p>
+<ul>
+<li>For example, if <strong>words = [&ldquo;ab&rdquo;,&ldquo;cd&rdquo;,&ldquo;ef&rdquo;]</strong>, then <strong>&ldquo;abcdef&rdquo;</strong>, <strong>&ldquo;abefcd&rdquo;</strong>, <strong>&ldquo;cdabef&rdquo;</strong>, <strong>&ldquo;cdefab&rdquo;</strong>, <strong>&ldquo;efabcd&rdquo;</strong>, and <strong>&ldquo;efcdab&rdquo;</strong> are all concatenated strings. <strong>&ldquo;acdbef&rdquo;</strong> is not a concatenated substring because it is not the concatenation of any permutation of <strong>words</strong>.
+Return the starting indices of all the concatenated substrings in <strong>s</strong>. You can return the answer in <strong>any order</strong>.</li>
+</ul>
+<h3 id="翻譯">翻譯</h3>
+<p>你被給定一個字符串 <strong>s</strong> 和一個字符串陣列 <strong>words</strong>。<strong>words</strong> 中的所有字符串都具有 <strong>相同的長度</strong>。</p>
+<p>在 <strong>s</strong> 中，一個 <strong>連接的子字符串</strong> 是指包含了任意排列的 <strong>words</strong> 中所有字符串的子字符串。</p>
+<p>例如，如果 <strong>words = [&ldquo;ab&rdquo;,&ldquo;cd&rdquo;,&ldquo;ef&rdquo;]</strong>，那麼 <strong>&ldquo;abcdef&rdquo;</strong>、<strong>&ldquo;abefcd&rdquo;</strong>、<strong>&ldquo;cdabef&rdquo;</strong>、<strong>&ldquo;cdefab&rdquo;</strong>、<strong>&ldquo;efabcd&rdquo;</strong> 和 <strong>&ldquo;efcdab&rdquo;</strong> 都是連接的字符串。<strong>&ldquo;acdbef&rdquo;</strong> 不是一個連接的子字符串，因為它不是任何 <strong>words</strong> 排列的串接。
+返回 <strong>s</strong> 中所有連接子字符串的起始索引。答案可以以 <strong>任何順序</strong> 返回。</p>
+<h5 id="example-1">Example 1:</h5>
+<pre><code>Input: s = &quot;barfoothefoobarman&quot;, words = [&quot;foo&quot;,&quot;bar&quot;]
+Output: [0,9]
+Explanation: Since words.length == 2 and words[i].length == 3, the concatenated substring has to be of length 6.
+The substring starting at 0 is &quot;barfoo&quot;. It is the concatenation of [&quot;bar&quot;,&quot;foo&quot;] which is a permutation of words.
+The substring starting at 9 is &quot;foobar&quot;. It is the concatenation of [&quot;foo&quot;,&quot;bar&quot;] which is a permutation of words.
+The output order does not matter. Returning [9,0] is fine too.
+</code></pre>
+<h5 id="example-2">Example 2:</h5>
+<pre><code>Input: s = &quot;wordgoodgoodgoodbestword&quot;, words = [&quot;word&quot;,&quot;good&quot;,&quot;best&quot;,&quot;word&quot;]
+Output: []
+Explanation: Since words.length == 4 and words[i].length == 4, the concatenated substring has to be of length 16.
+There is no substring of length 16 in s that is equal to the concatenation of any permutation of words.
+We return an empty array.\
+</code></pre>
+<h5 id="example-3">Example 3:</h5>
+<pre><code>Input: s = &quot;barfoofoobarthefoobarman&quot;, words = [&quot;bar&quot;,&quot;foo&quot;,&quot;the&quot;]
+Output: [6,9,12]
+Explanation: Since words.length == 3 and words[i].length == 3, the concatenated substring has to be of length 9.
+The substring starting at 6 is &quot;foobarthe&quot;. It is the concatenation of [&quot;foo&quot;,&quot;bar&quot;,&quot;the&quot;] which is a permutation of words.
+The substring starting at 9 is &quot;barthefoo&quot;. It is the concatenation of [&quot;bar&quot;,&quot;the&quot;,&quot;foo&quot;] which is a permutation of words.
+The substring starting at 12 is &quot;thefoobar&quot;. It is the concatenation of [&quot;the&quot;,&quot;foo&quot;,&quot;bar&quot;] which is a permutation of words.
+</code></pre>
+<h5 id="constraints">Constraints:</h5>
+<ul>
+<li>1 &lt;= s.length &lt;= 10<sup>4</sup></li>
+<li>1 &lt;= words.length &lt;= 5000</li>
+<li>1 &lt;= words[i].length &lt;= 30</li>
+<li>s and words[i] consist of lowercase English letters.</li>
+</ul>
+<h3 id="想法-1">想法 1</h3>
+<p>因為題目有說 <strong>words</strong> 裡面的字串長度都是相同的(假設長度 <em>word_leg</em>)，所以先設定一個 for 迴圈在外層跑遍 <strong>s</strong>，然後把 <strong>s</strong> 根據 <em>word_leg</em> 的長度切割，切到和 <strong>words</strong> 的總長度(<em>all_words_leg</em>)相等，下去比對陣列是否相等來找 Index，需要注意的部分是都需要排列才能比對陣列是否相同。</p>
+<h3 id="解法-1">解法 1</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">split_list</span>(self, text, leg) <span style="color:#f92672">-&gt;</span> List[str]:
+</span></span><span style="display:flex;"><span>        rlt <span style="color:#f92672">=</span> [text[idx : idx <span style="color:#f92672">+</span> leg] <span style="color:#66d9ef">for</span> idx <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(text), leg)]
+</span></span><span style="display:flex;"><span>        rlt<span style="color:#f92672">.</span>sort()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> rlt
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findSubstring</span>(self, s: str, words: List[str]) <span style="color:#f92672">-&gt;</span> List[int]:
+</span></span><span style="display:flex;"><span>        all_words_leg <span style="color:#f92672">=</span> len(<span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(words))
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> all_words_leg <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> []
+</span></span><span style="display:flex;"><span>        word_leg <span style="color:#f92672">=</span> len(words[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">#因為題目有說 words 內的 word 長度相等</span>
+</span></span><span style="display:flex;"><span>        s_leg <span style="color:#f92672">=</span> len(s)
+</span></span><span style="display:flex;"><span>        words<span style="color:#f92672">.</span>sort()
+</span></span><span style="display:flex;"><span>        rlt <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(s_leg <span style="color:#f92672">-</span> all_words_leg <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>            split_str_list <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>split_list(s[i: i <span style="color:#f92672">+</span> all_words_leg ], word_leg)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> split_str_list <span style="color:#f92672">==</span> words:
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">#因為排序過了, 如果相等代表是所求的東西</span>
+</span></span><span style="display:flex;"><span>                rlt<span style="color:#f92672">.</span>append(i)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> rlt
+</span></span></code></pre></div><h3 id="想法-2">想法 2</h3>
+<p>這是在 <strong>想法1</strong> 的基礎上，再使用 <em>set</em> 去儲存已經判斷過的<em>以切割 s</em>，這樣可以增加些速度，不過這應該是這想法的極限了XDDD</p>
+<h3 id="解法-2">解法 2</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findSubstring</span>(self, s: str, words: List[str]) <span style="color:#f92672">-&gt;</span> List[int]:
+</span></span><span style="display:flex;"><span>        is_check_ok <span style="color:#f92672">=</span> set()
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 將檢查過可以的字串存起來</span>
+</span></span><span style="display:flex;"><span>        is_check_no <span style="color:#f92672">=</span> set()
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 將檢查過不可以的字串存起來</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">split_list</span>(text, leg) <span style="color:#f92672">-&gt;</span> List[str]:
+</span></span><span style="display:flex;"><span>            rlt <span style="color:#f92672">=</span> [text[idx : idx <span style="color:#f92672">+</span> leg] <span style="color:#66d9ef">for</span> idx <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(text), leg)]
+</span></span><span style="display:flex;"><span>            rlt<span style="color:#f92672">.</span>sort()
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> rlt
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run</span>():
+</span></span><span style="display:flex;"><span>            all_words_leg <span style="color:#f92672">=</span> len(<span style="color:#e6db74">&#39;&#39;</span><span style="color:#f92672">.</span>join(words))
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> all_words_leg <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> []
+</span></span><span style="display:flex;"><span>            word_leg <span style="color:#f92672">=</span> len(words[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">#因為題目有說 words 內的 word 長度相等</span>
+</span></span><span style="display:flex;"><span>            s_leg <span style="color:#f92672">=</span> len(s)
+</span></span><span style="display:flex;"><span>            words<span style="color:#f92672">.</span>sort()
+</span></span><span style="display:flex;"><span>            rlt <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(s_leg <span style="color:#f92672">-</span> all_words_leg <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>                spilt_str <span style="color:#f92672">=</span> s[i: i <span style="color:#f92672">+</span> all_words_leg]
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> spilt_str <span style="color:#f92672">in</span> is_check_ok:
+</span></span><span style="display:flex;"><span>                    rlt<span style="color:#f92672">.</span>append(i)
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">elif</span> spilt_str <span style="color:#f92672">in</span> is_check_no:
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>                split_str_list <span style="color:#f92672">=</span> split_list(spilt_str, word_leg)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> split_str_list <span style="color:#f92672">==</span> words:
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e">#因為排序過了, 如果相等代表是所求的東西</span>
+</span></span><span style="display:flex;"><span>                    rlt<span style="color:#f92672">.</span>append(i)
+</span></span><span style="display:flex;"><span>                    is_check_ok<span style="color:#f92672">.</span>add(spilt_str)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                    is_check_no<span style="color:#f92672">.</span>add(spilt_str)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> rlt
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> run()
+</span></span></code></pre></div><h3 id="想法-3">想法 3</h3>
+<p>再來這個方法是參考網路上的做法，可以使用 <strong>滑動視窗</strong> 的方式有效率地在字串中尋找匹配的子字串，避免了不必要的重複計算，具體步驟可以歸類以下</p>
+<ol>
+<li>在一個外層 for 中，從 0 到 word_leg - 1 的不同起始位置開始檢查，因為 <strong>words</strong>裡面每個子字串都相等</li>
+<li>在內層 for 中，以每次增加 word_leg 遍歷字串 s，並透過滑動視窗的方式，嘗試匹配包含 words 中所有單字的子字串</li>
+<li>對於每個單字 word，將其從 word_count(words 每個字串出現的次數) 字典中減去一個計數</li>
+<li>如果 word_count[word] 的值小於 0，表示目前視窗內某個單字已超過了在 <strong>words</strong> 中的數量，則需要往前找。 在這種情況下，for 會一直移動視窗的左側，同時將左側單字的計數加回，直到視窗內的單字數量符合 words 清單中的數量。</li>
+</ol>
+<h3 id="參考解法-3">參考解法 3</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findSubstring</span>(self, s: str, words: List[str]) <span style="color:#f92672">-&gt;</span> List[int]:
+</span></span><span style="display:flex;"><span>        word_leg <span style="color:#f92672">=</span> len(words[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 因為題目有說 words 內的 word 長度相等</span>
+</span></span><span style="display:flex;"><span>        all_words_leg <span style="color:#f92672">=</span> word_leg <span style="color:#f92672">*</span> len(words)
+</span></span><span style="display:flex;"><span>        rlt <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        org_word_count <span style="color:#f92672">=</span> Counter(words)
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 產生所有字串的數量</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(word_leg):
+</span></span><span style="display:flex;"><span>            start <span style="color:#f92672">=</span> i
+</span></span><span style="display:flex;"><span>            word_count <span style="color:#f92672">=</span> Counter(org_word_count)
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 複製一份出來</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(i, len(s) <span style="color:#f92672">-</span> word_leg <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, word_leg):
+</span></span><span style="display:flex;"><span>                word <span style="color:#f92672">=</span> s[j: j <span style="color:#f92672">+</span> word_leg]
+</span></span><span style="display:flex;"><span>                word_count[word] <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">while</span> word_count[word] <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e"># 如果字串出現超過指定的數目</span>
+</span></span><span style="display:flex;"><span>                    word_count[s[start: start <span style="color:#f92672">+</span> word_leg]] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e"># 將前面的字串拿掉一直到符合</span>
+</span></span><span style="display:flex;"><span>                    start <span style="color:#f92672">+=</span> word_leg
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e"># 開始位子也往前</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> start <span style="color:#f92672">+</span> all_words_leg <span style="color:#f92672">==</span> j <span style="color:#f92672">+</span> word_leg:
+</span></span><span style="display:flex;"><span>                    rlt<span style="color:#f92672">.</span> append(start)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> rlt
+</span></span></code></pre></div><h3 id="參考想法-4">參考想法 4</h3>
+<p>再來這個想法也和 <strong>參考想法3</strong>類似，只是他的計數器是加的，加到和 word_count(words 每個字串出現的次數) 相同，才是尋找的字串，且多 <strong>words_used</strong> 變數用來判斷是不是和尋找的 <strong>words</strong>字串相等(即所求字串)，來避免多餘的處理</p>
+<h3 id="解法-4">解法 4</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">findSubstring</span>(self, s: str, words: List[str]) <span style="color:#f92672">-&gt;</span> List[int]:
+</span></span><span style="display:flex;"><span>		word_leg <span style="color:#f92672">=</span> len(words[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>		word_count <span style="color:#f92672">=</span> Counter(words)
+</span></span><span style="display:flex;"><span>		rlt <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(word_leg):
+</span></span><span style="display:flex;"><span>			start <span style="color:#f92672">=</span> i
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e"># 起始窗口位子</span>
+</span></span><span style="display:flex;"><span>			window <span style="color:#f92672">=</span> defaultdict(int)
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e"># 用來存出現過的字串</span>
+</span></span><span style="display:flex;"><span>			words_used <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e"># 用來記錄找到的字串數目</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(i, len(s) <span style="color:#f92672">-</span> word_leg <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, word_leg):
+</span></span><span style="display:flex;"><span>				word <span style="color:#f92672">=</span> s[j:j <span style="color:#f92672">+</span> word_leg]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">if</span> word <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> word_count:
+</span></span><span style="display:flex;"><span>					<span style="color:#75715e"># 如果現在這斷字串不在要找的目標中</span>
+</span></span><span style="display:flex;"><span>					start <span style="color:#f92672">=</span> j <span style="color:#f92672">+</span> word_leg
+</span></span><span style="display:flex;"><span>					<span style="color:#75715e"># 往下一段字串找並初始其他變數</span>
+</span></span><span style="display:flex;"><span>					window <span style="color:#f92672">=</span> defaultdict(int)
+</span></span><span style="display:flex;"><span>					words_used <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>					<span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>				words_used <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>				window[word] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">while</span> window[word] <span style="color:#f92672">&gt;</span> word_count[word]:
+</span></span><span style="display:flex;"><span>					<span style="color:#75715e"># 如果字串出現超過指定的數目</span>
+</span></span><span style="display:flex;"><span>					window[s[start:start <span style="color:#f92672">+</span> word_leg]] <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>					<span style="color:#75715e"># 將前面的字串拿掉一直到符合</span>
+</span></span><span style="display:flex;"><span>					start <span style="color:#f92672">+=</span> word_leg
+</span></span><span style="display:flex;"><span>					words_used <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">if</span> words_used <span style="color:#f92672">==</span> len(words):
+</span></span><span style="display:flex;"><span>					rlt<span style="color:#f92672">.</span>append(start)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> rlt
+</span></span></code></pre></div><p>參考:<br>
+<a href="https://leetcode.com/problems/substring-with-concatenation-of-all-words/solutions/2417727/python-90-with-detailed-explanation-sliding-windows-using-counter/">✔️Python 90% with Detailed Explanation | sliding windows using Counter ^_^</a><br>
+<a href="https://leetcode.com/problems/substring-with-concatenation-of-all-words/solutions/2418859/python-elegant-short-sliding-window-98-89-faster/">Python Elegant &amp; Short | Sliding window | 98.89% faster</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+        
+        </div>
+      </div>
+
+      <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+    </article>
+  </div>
+
+    </main>
+    <footer class="custom-gradient1 bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://chechih.github.io/" >
+    &copy;  NewPlayer 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    <a href="https://github.com/Chechih" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      </a>
+  
+    <a href="https://www.linkedin.com/in/%E5%93%B2%E8%AA%8C-%E5%BC%B5-2a3377245/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      </a>
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

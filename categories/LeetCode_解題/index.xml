@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Mon, 06 Nov 2023 00:00:56 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/LeetCode_%E8%A7%A3%E9%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Nov 2023 01:04:13 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/LeetCode_%E8%A7%A3%E9%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>32. Longest Valid Parentheses</title>
+      <link>https://chechih.github.io/posts/LeetCode/32.Longest_Valid_Parentheses/</link>
+      <pubDate>Wed, 08 Nov 2023 01:04:13 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/32.Longest_Valid_Parentheses/</guid>
+      <description>問題 Given a string containing just the characters &amp;rsquo;(&amp;rsquo; and &amp;rsquo;)&amp;rsquo;, return the length of the longest valid (well-formed) parentheses substring. 翻譯 給定一個只包含字符 &amp;rsquo;(&amp;rsquo; 和 &amp;rsquo;)&amp;rsquo; 的字串，返回最長有效（合法形式）括號 子字串 的長度。 Example 1: Input: s = &amp;quot;(()&amp;quot; Output: 2 Explanation:</description>
+    </item>
+    
     <item>
       <title>31. Next Permutation</title>
       <link>https://chechih.github.io/posts/LeetCode/31.Next_Permutation/</link>

@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Wed, 08 Nov 2023 01:04:13 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Nov 2023 15:55:27 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>33. Search in Rotated Sorted Array</title>
+      <link>https://chechih.github.io/posts/LeetCode/33.Search_in_Rotated_Sorted_Array/</link>
+      <pubDate>Sun, 12 Nov 2023 15:55:27 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/33.Search_in_Rotated_Sorted_Array/</guid>
+      <description>問題 There is an integer array nums sorted in ascending order (with distinct values). Prior to being passed to your function, nums is possibly rotated at an unknown pivot index k (1 &amp;lt;= k &amp;lt; nums.length) such that the resulting array is [nums[k], nums[k+1], &amp;hellip;, nums[n-1], nums[0], nums[1], &amp;hellip;, nums[k-1]] (0-indexed). For example, [0,1,2,4,5,6,7] might be rotated at pivot index 3 and become [4,5,6,7,0,1,2]. Given the array nums after</description>
+    </item>
+    
     <item>
       <title>32. Longest Valid Parentheses</title>
       <link>https://chechih.github.io/posts/LeetCode/32.Longest_Valid_Parentheses/</link>

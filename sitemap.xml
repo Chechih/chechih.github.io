@@ -2,27 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://chechih.github.io/posts/LeetCode/34.Find_First_and_Last_Position_of_Element_in_Sorted_Array/</loc>
-    <lastmod>2023-11-15T01:33:11+08:00</lastmod>
+    <loc>https://chechih.github.io/posts/LeetCode/35.Search_Insert_Position/</loc>
+    <lastmod>2023-11-20T00:01:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://chechih.github.io/categories/</loc>
-    <lastmod>2023-11-15T01:33:11+08:00</lastmod>
+    <lastmod>2023-11-20T00:01:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://chechih.github.io/categories/LeetCode_%E8%A7%A3%E9%A1%8C/</loc>
-    <lastmod>2023-11-15T01:33:11+08:00</lastmod>
+    <lastmod>2023-11-20T00:01:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://chechih.github.io/</loc>
-    <lastmod>2023-11-15T01:33:11+08:00</lastmod>
+    <lastmod>2023-11-20T00:01:16+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://chechih.github.io/posts/</loc>
+    <lastmod>2023-11-20T00:01:16+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/posts/LeetCode/34.Find_First_and_Last_Position_of_Element_in_Sorted_Array/</loc>
     <lastmod>2023-11-15T01:33:11+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

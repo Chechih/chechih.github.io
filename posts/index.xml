@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Mon, 20 Nov 2023 00:01:16 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Nov 2023 00:46:02 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>36. Valid Sudoku</title>
+      <link>https://chechih.github.io/posts/LeetCode/36.Valid_Sudoku/</link>
+      <pubDate>Wed, 29 Nov 2023 00:46:02 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/36.Valid_Sudoku/</guid>
+      <description>問題 Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules: Each row must contain the digits 1-9 without repetition. Each column must contain the digits 1-9 without repetition. Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without repetition. Note: A Sudoku board (partially filled) could be valid</description>
+    </item>
+    
     <item>
       <title>35. Search Insert Position</title>
       <link>https://chechih.github.io/posts/LeetCode/35.Search_Insert_Position/</link>

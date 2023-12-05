@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Wed, 29 Nov 2023 00:46:02 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Dec 2023 01:28:07 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>37. Sudoku Solver</title>
+      <link>https://chechih.github.io/posts/LeetCode/37.Sudoku_Solver/</link>
+      <pubDate>Wed, 06 Dec 2023 01:28:07 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/37.Sudoku_Solver/</guid>
+      <description>問題 Write a program to solve a Sudoku puzzle by filling the empty cells. A sudoku solution must satisfy all of the following rules: Each of the digits 1-9 must occur exactly once in each row. Each of the digits 1-9 must occur exactly once in each column. Each of the digits 1-9 must occur exactly once in each of the 9 3x3 sub-boxes of the grid. The &amp;rsquo;.&amp;rsquo;</description>
+    </item>
+    
     <item>
       <title>36. Valid Sudoku</title>
       <link>https://chechih.github.io/posts/LeetCode/36.Valid_Sudoku/</link>

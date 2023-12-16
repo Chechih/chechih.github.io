@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Sun, 10 Dec 2023 16:11:32 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Dec 2023 19:03:14 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>39. Combination Sum</title>
+      <link>https://chechih.github.io/posts/LeetCode/39.Combination_Sum/</link>
+      <pubDate>Sat, 16 Dec 2023 19:03:14 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/39.Combination_Sum/</guid>
+      <description>問題 Given an array of distinct integers candidates and a target integer target, return a list of all unique combinations of candidates where the chosen numbers sum to target. You may return the combinations in any order. The same number may be chosen from candidates an unlimited number of times. Two combinations are unique if the frequency of at least one of the chosen numbers is different. The test</description>
+    </item>
+    
     <item>
       <title>38. Count and Say</title>
       <link>https://chechih.github.io/posts/LeetCode/38.Count_and_Say/</link>

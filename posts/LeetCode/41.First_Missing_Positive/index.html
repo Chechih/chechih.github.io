@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>41. First Missing Positive | NewPlayer</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="問題 Given an unsorted integer array nums, return the smallest missing positive integer. You must implement an algorithm that runs in O(n) time and uses O(1) auxiliary space. 翻譯 給定一個未排序的整數陣列 nums，返回最小的缺失正整數。 你必須實現一個在 O(n) 時間">
+    <meta name="generator" content="Hugo 0.116.1">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+
+  <link rel="stylesheet" href="/web/css/custom.css?bust=202310120125">
+
+
+
+<script src="/web/js/jparticles@3.4.0/browser/jparticles.base.js"></script>
+
+<script src="/web/js/jparticles@3.4.0/browser/particle.js"></script>
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="41. First Missing Positive" />
+<meta property="og:description" content="問題 Given an unsorted integer array nums, return the smallest missing positive integer. You must implement an algorithm that runs in O(n) time and uses O(1) auxiliary space. 翻譯 給定一個未排序的整數陣列 nums，返回最小的缺失正整數。 你必須實現一個在 O(n) 時間" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chechih.github.io/posts/LeetCode/41.First_Missing_Positive/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-20T02:14:18+08:00" />
+<meta property="article:modified_time" content="2023-12-20T02:14:18+08:00" />
+<meta itemprop="name" content="41. First Missing Positive">
+<meta itemprop="description" content="問題 Given an unsorted integer array nums, return the smallest missing positive integer. You must implement an algorithm that runs in O(n) time and uses O(1) auxiliary space. 翻譯 給定一個未排序的整數陣列 nums，返回最小的缺失正整數。 你必須實現一個在 O(n) 時間"><meta itemprop="datePublished" content="2023-12-20T02:14:18+08:00" />
+<meta itemprop="dateModified" content="2023-12-20T02:14:18+08:00" />
+<meta itemprop="wordCount" content="754">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="41. First Missing Positive"/>
+<meta name="twitter:description" content="問題 Given an unsorted integer array nums, return the smallest missing positive integer. You must implement an algorithm that runs in O(n) time and uses O(1) auxiliary space. 翻譯 給定一個未排序的整數陣列 nums，返回最小的缺失正整數。 你必須實現一個在 O(n) 時間"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white" style="background-color: #E7E9EB;">
+    <div class="particle-background" style="width: 100%; height: 100%; position: fixed;"></div>
+    <script>
+      
+      new JParticles.Particle(".particle-background", {
+        color: "#25bfff",
+        
+        proximity: 90,
+        
+        range: 100,
+    });
+      </script>
+    
+   
+  
+
+  <header>
+    <div class="custom-gradient1 navbar-fixed-top">
+      <nav class="pv1 ph3 ph4-ns" role="navigation">
+  <script>
+    function showList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');    
+      if(eList.style.display == 'grid')
+      {
+        hideList();
+        return;
+      }
+      eParent.classList.toggle("change");  
+      eList.style.display = 'grid'
+      var oParentRect = eParent.getBoundingClientRect();
+      var oTipRect = eList.getBoundingClientRect();
+      var fOriginalX = oParentRect.x;
+      var fOriginalY = oParentRect.y + oParentRect.height;
+  
+      eList.style.left = '0px';
+      eList.style.top = fOriginalY + 'px';
+      window.addEventListener("scroll", hideList);
+      window.addEventListener('resize', hideList);
+    }
+    function hideList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');
+      eParent.classList.toggle("change");  
+      window.removeEventListener("scroll", hideList);
+      window.removeEventListener('resize', hideList);
+      eList.style.display = 'none';
+    }
+  </script>
+  <style>
+    .mobile-mainmenu-btn {
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 4px;
+      background-color: aliceblue;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+    </style>
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        NewPlayer
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </button>
+        <ul id="mobile-mainmenu-list" class="mobile-menu-list">
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/" title="Home 頁" onclick="">
+              Home
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/posts/" title="Posts 頁" onclick="">
+              Posts
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/categories/" title="分類 頁" onclick="">
+              分類
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/about/" title="關於 頁" onclick="">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+        <ul class="pl0 mr3 pc-menu-items">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="Home 頁">
+              Home
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts 頁">
+              Posts
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分類 頁">
+              分類
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="關於 頁">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</nav>
+
+    </div>
+    <div class="bg-black-60 headerbar-wrap">
+      <nav class="pv1 ph3 ph4-ns" role="navigation">
+  <script>
+    function showList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');    
+      if(eList.style.display == 'grid')
+      {
+        hideList();
+        return;
+      }
+      eParent.classList.toggle("change");  
+      eList.style.display = 'grid'
+      var oParentRect = eParent.getBoundingClientRect();
+      var oTipRect = eList.getBoundingClientRect();
+      var fOriginalX = oParentRect.x;
+      var fOriginalY = oParentRect.y + oParentRect.height;
+  
+      eList.style.left = '0px';
+      eList.style.top = fOriginalY + 'px';
+      window.addEventListener("scroll", hideList);
+      window.addEventListener('resize', hideList);
+    }
+    function hideList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');
+      eParent.classList.toggle("change");  
+      window.removeEventListener("scroll", hideList);
+      window.removeEventListener('resize', hideList);
+      eList.style.display = 'none';
+    }
+  </script>
+  <style>
+    .mobile-mainmenu-btn {
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 4px;
+      background-color: aliceblue;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+    </style>
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        NewPlayer
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </button>
+        <ul id="mobile-mainmenu-list" class="mobile-menu-list">
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/" title="Home 頁" onclick="">
+              Home
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/posts/" title="Posts 頁" onclick="">
+              Posts
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/categories/" title="分類 頁" onclick="">
+              分類
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/about/" title="關於 頁" onclick="">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+        <ul class="pl0 mr3 pc-menu-items">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="Home 頁">
+              Home
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts 頁">
+              Posts
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分類 頁">
+              分類
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="關於 頁">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main role="main">
+      
+  <div style="min-height: calc(100vh - 8rem);">
+    
+    <article class="flex-l flex-wrap justify-between mw8 center ph3 single-page">
+      <header class="mt4 w-100">
+        <aside class="instapaper_ignoref b helvetica tracked">
+            
+        </aside>
+        
+
+
+
+
+
+
+
+
+
+
+
+        <h1 class="f1 athelas mt3 mb1">41. First Missing Positive</h1>
+        <div class="categories">
+          📁 
+          
+            
+              <a style="text-decoration: none;" href="/categories/LeetCode_%E8%A7%A3%E9%A1%8C">LeetCode_解題</a>
+            
+          
+        </div>
+        
+        
+        
+        <time class="f6 mv4 dib tracked" datetime="2023-12-20T02:14:18+08:00">十二月 20, 2023</time>
+        
+
+        
+        
+      </header>
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><h3 id="問題">問題</h3>
+<p>Given an unsorted integer array <strong>nums</strong>, return the smallest missing positive integer.</p>
+<p>You must implement an algorithm that runs in <strong>O(n)</strong> time and uses <strong>O(1)</strong> auxiliary space.</p>
+<h3 id="翻譯">翻譯</h3>
+<p>給定一個未排序的整數陣列 <strong>nums</strong>，返回最小的缺失正整數。</p>
+<p>你必須實現一個在 <strong>O(n)</strong> 時間內運行且使用 <strong>O(1)</strong> 輔助空間的演算法。</p>
+<h5 id="example-1">Example 1:</h5>
+<pre><code>Input: nums = [1,2,0]
+Output: 3
+Explanation: The numbers in the range [1,2] are all in the array.
+</code></pre>
+<h5 id="example-2">Example 2:</h5>
+<pre><code>Input: nums = [3,4,-1,1]
+Output: 2
+Explanation: 1 is in the array but 2 is missing.
+</code></pre>
+<h5 id="example-3">Example 3:</h5>
+<pre><code>Input: nums = [7,8,9,11,12]
+Output: 1
+Explanation: The smallest positive integer 1 is missing.
+</code></pre>
+<h5 id="constraints">Constraints:</h5>
+<ul>
+<li>1 &lt;= nums.length &lt;= 10<sup>5</sup></li>
+<li>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</li>
+</ul>
+<h3 id="想法-1">想法 1</h3>
+<p>這題如果不管題目的時間和空間複雜度的話，可以把 nums 也轉成 set，然後建一個 set，內容 1 到 nums_leg + 2 ，再和剛剛的 nums set 相減，然後找出最小的正整數就好。</p>
+<h3 id="解法-1">解法 1</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">firstMissingPositive</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        nums_leg <span style="color:#f92672">=</span> len(nums)
+</span></span><span style="display:flex;"><span>        rule <span style="color:#f92672">=</span> set(range(<span style="color:#ae81ff">1</span>, nums_leg <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>))
+</span></span><span style="display:flex;"><span>        diff <span style="color:#f92672">=</span> rule <span style="color:#f92672">-</span> set(nums)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(len(diff) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> min(diff)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><h3 id="想法-2">想法 2</h3>
+<p>不過這題想了很久還是參考了網路上的解法XDDD<br>
+步驟可以歸類為</p>
+<ol>
+<li>指定變數 nums_leg = len(nums)</li>
+<li>將 nums 小於 0 和大於 nums_leg 的設定標記，也就是用一個數字取代掉，這邊用 nums_leg + 1</li>
+<li>透過將該數字的索引轉換為負數來標記數組中出現的每個單元格，利用 nums 陣列來標記出現過的，出現過的都轉成負數，這樣就能從位子找出最小正整數了</li>
+<li>找出第一個非負數的儲存格（沒有出現在陣列中），找陣列值大於 0 的位子，因為剛剛都有標記出現過的都設定成負數了</li>
+<li>沒有找到正數，這表示數組包含所有數字 1..n，所以回傳 nums_leg + 1</li>
+</ol>
+<h3 id="解法-2">解法 2</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">firstMissingPositive</span>(self, nums: List[int]) <span style="color:#f92672">-&gt;</span> int:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 1. 指定 nums_leg</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        nums_leg <span style="color:#f92672">=</span> len(nums)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 2. 以特殊標記編號 (n+1) 標記編號 (num &lt; 0) 和 (num &gt; n)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># （我們可以忽略這些，因為如果所有數字都 &gt; n 那麼我們將簡單地傳回 1）</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(nums_leg):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> nums[i] <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">or</span> nums[i] <span style="color:#f92672">&gt;</span> nums_leg:
+</span></span><span style="display:flex;"><span>                nums[i] <span style="color:#f92672">=</span> nums_leg <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 數組中的所有數字現在都是正數，且範圍為 1..n+1</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 3. 透過將該數字的索引轉換為負數來標記數組中出現的每個單元格</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(nums_leg):
+</span></span><span style="display:flex;"><span>            num <span style="color:#f92672">=</span> abs(nums[i])
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> num <span style="color:#f92672">&gt;</span> nums_leg:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>            num <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># -1 表示基於零索引的陣列（因此數字 1 將位於位子 0）</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> nums[num] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># 防止雙重否定運算</span>
+</span></span><span style="display:flex;"><span>                nums[num] <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">*</span> nums[num]
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 4. 找出第一個非負數的儲存格（沒有出現在陣列中）</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(nums_leg):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> nums[i] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 5. 沒有找到正數，這表示數組包含所有數字 1..n</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> nums_leg <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><p>參考:<br>
+<a href="https://leetcode.com/problems/first-missing-positive/solutions/17214/java-simple-solution-with-documentation/">Java - simple solution - with documentation</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+        
+        </div>
+      </div>
+
+      <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+    </article>
+  </div>
+
+    </main>
+    <footer class="custom-gradient1 bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://chechih.github.io/" >
+    &copy;  NewPlayer 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    <a href="https://github.com/Chechih" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      </a>
+  
+    <a href="https://www.linkedin.com/in/%E5%93%B2%E8%AA%8C-%E5%BC%B5-2a3377245/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      </a>
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

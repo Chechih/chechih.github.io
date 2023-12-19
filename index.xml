@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Sun, 17 Dec 2023 21:23:17 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Dec 2023 02:14:18 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>41. First Missing Positive</title>
+      <link>https://chechih.github.io/posts/LeetCode/41.First_Missing_Positive/</link>
+      <pubDate>Wed, 20 Dec 2023 02:14:18 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/41.First_Missing_Positive/</guid>
+      <description>問題 Given an unsorted integer array nums, return the smallest missing positive integer. You must implement an algorithm that runs in O(n) time and uses O(1) auxiliary space. 翻譯 給定一個未排序的整數陣列 nums，返回最小的缺失正整數。 你必須實現一個在 O(n) 時間</description>
+    </item>
+    
     <item>
       <title>40. Combination Sum II</title>
       <link>https://chechih.github.io/posts/LeetCode/40.Combination_Sum_II/</link>

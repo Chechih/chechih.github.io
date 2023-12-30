@@ -18,6 +18,15 @@
     </item>
     
     <item>
+      <title>42. Trapping Rain Water</title>
+      <link>https://chechih.github.io/posts/LeetCode/42.Trapping_Rain_Water/</link>
+      <pubDate>Wed, 20 Dec 2023 02:14:18 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/42.Trapping_Rain_Water/</guid>
+      <description>問題 Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining. 翻譯 給定 n 個非負整數，這些整數代表一個高程圖，其中每個柱子的寬度為 1，計算下雨後它能夠</description>
+    </item>
+    
+    <item>
       <title>40. Combination Sum II</title>
       <link>https://chechih.github.io/posts/LeetCode/40.Combination_Sum_II/</link>
       <pubDate>Sun, 17 Dec 2023 21:23:17 +0800</pubDate>

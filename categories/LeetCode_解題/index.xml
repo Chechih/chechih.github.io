@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Wed, 20 Dec 2023 02:14:18 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/LeetCode_%E8%A7%A3%E9%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Jan 2024 00:03:56 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/LeetCode_%E8%A7%A3%E9%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>43. Multiply Strings</title>
+      <link>https://chechih.github.io/posts/LeetCode/43.Multiply_Strings/</link>
+      <pubDate>Tue, 02 Jan 2024 00:03:56 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/43.Multiply_Strings/</guid>
+      <description>問題 Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string. Note: You must not use any built-in BigInteger library or convert the inputs to integer directly. 翻譯 給定兩個非負整數 num1 和 num2，以字串表示，返回它們的乘積</description>
+    </item>
+    
     <item>
       <title>41. First Missing Positive</title>
       <link>https://chechih.github.io/posts/LeetCode/41.First_Missing_Positive/</link>

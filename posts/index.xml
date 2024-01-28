@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Tue, 02 Jan 2024 00:03:56 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Jan 2024 23:18:01 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>44. Wildcard Matching</title>
+      <link>https://chechih.github.io/posts/LeetCode/44.Wildcard_Matching/</link>
+      <pubDate>Sun, 28 Jan 2024 23:18:01 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/44.Wildcard_Matching/</guid>
+      <description>問題 Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for &amp;rsquo;?&amp;rsquo; and &amp;rsquo;*&amp;rsquo; where: &amp;rsquo;?&amp;rsquo; Matches any single character. &amp;rsquo;*&amp;rsquo; Matches any sequence of characters (including the empty sequence). The matching should cover the entire input string (not partial). 翻譯 給定一個輸入字串（s）和一個模式（p），實</description>
+    </item>
+    
     <item>
       <title>43. Multiply Strings</title>
       <link>https://chechih.github.io/posts/LeetCode/43.Multiply_Strings/</link>

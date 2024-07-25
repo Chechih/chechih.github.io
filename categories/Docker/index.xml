@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on NewPlayer</title>
+    <link>https://chechih.github.io/categories/Docker/</link>
+    <description>Recent content in Docker on NewPlayer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>NewPlayer</copyright>
+    <lastBuildDate>Wed, 20 Jul 2022 17:23:23 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/Docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker 安裝</title>
+      <link>https://chechih.github.io/posts/Docker/Install/</link>
+      <pubDate>Wed, 20 Jul 2022 17:23:23 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/Docker/Install/</guid>
+      <description>為什麼要用 Git Extensions 呢，很簡單，因為 Git 指令我常常忘記XDDDD 而且他的 UI 很棒(?)外貌協會(X) 下載 要使用 Git Extensions 前，要先裝 Git，看使用的 OS 裝對應的</description>
+    </item>
+    
+  </channel>
+</rss>

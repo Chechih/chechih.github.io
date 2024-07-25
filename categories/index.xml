@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Tue, 30 Jan 2024 01:26:03 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Jul 2024 17:23:23 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu</title>
+      <link>https://chechih.github.io/categories/Ubuntu/</link>
+      <pubDate>Sat, 20 Jul 2024 17:23:23 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/Ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VirtualBox</title>
+      <link>https://chechih.github.io/categories/VirtualBox/</link>
+      <pubDate>Sat, 20 Jul 2024 17:23:23 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/VirtualBox/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>LeetCode_解題</title>
       <link>https://chechih.github.io/categories/LeetCode_%E8%A7%A3%E9%A1%8C/</link>
@@ -32,6 +50,15 @@
       <pubDate>Wed, 20 Jul 2022 21:45:41 +0800</pubDate>
       
       <guid>https://chechih.github.io/categories/Git_Extensions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://chechih.github.io/categories/Docker/</link>
+      <pubDate>Wed, 20 Jul 2022 17:23:23 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/Docker/</guid>
       <description></description>
     </item>
     

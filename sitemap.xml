@@ -2,27 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://chechih.github.io/categories/</loc>
+    <lastmod>2024-07-20T17:23:23+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/</loc>
+    <lastmod>2024-07-20T17:23:23+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/posts/</loc>
+    <lastmod>2024-07-20T17:23:23+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/categories/Ubuntu/</loc>
+    <lastmod>2024-07-20T17:23:23+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/categories/VirtualBox/</loc>
+    <lastmod>2024-07-20T17:23:23+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/posts/Ubuntu/Install/</loc>
+    <lastmod>2024-07-20T17:23:23+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://chechih.github.io/posts/LeetCode/45.Jump_Game_II/</loc>
     <lastmod>2024-01-30T01:26:03+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://chechih.github.io/categories/</loc>
-    <lastmod>2024-01-30T01:26:03+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://chechih.github.io/categories/LeetCode_%E8%A7%A3%E9%A1%8C/</loc>
-    <lastmod>2024-01-30T01:26:03+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://chechih.github.io/</loc>
-    <lastmod>2024-01-30T01:26:03+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://chechih.github.io/posts/</loc>
     <lastmod>2024-01-30T01:26:03+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -269,6 +284,16 @@
   </url><url>
     <loc>https://chechih.github.io/categories/Git_Extensions/</loc>
     <lastmod>2022-07-20T21:45:41+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/categories/Docker/</loc>
+    <lastmod>2022-07-20T17:23:23+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/posts/Docker/Install/</loc>
+    <lastmod>2022-07-20T17:23:23+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>

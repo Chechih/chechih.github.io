@@ -7,14 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Wed, 20 Jul 2022 17:23:23 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/Docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Aug 2024 01:02:01 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/Docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Docker 安裝</title>
+      <title>Docker 安裝 By Ubuntu</title>
       <link>https://chechih.github.io/posts/Docker/Install/</link>
-      <pubDate>Wed, 20 Jul 2022 17:23:23 +0800</pubDate>
+      <pubDate>Mon, 12 Aug 2024 01:02:01 +0800</pubDate>
       
       <guid>https://chechih.github.io/posts/Docker/Install/</guid>
-      <description>為什麼要用 Git Extensions 呢，很簡單，因為 Git 指令我常常忘記XDDDD 而且他的 UI 很棒(?)外貌協會(X) 下載 要使用 Git Extensions 前，要先裝 Git，看使用的 OS 裝對應的</description>
+      <description>安裝 在 Ubuntu 中安裝 Docker 使用 docker.io 會比較快速，能省去許多麻煩。 打開終端機，輸入 sudo apt-get install docker.io -y 2. 檢查 Docker 是否正常啟動 service docker status 3. 將自己加入 docker 群組，這樣之後下指令就不</description>
     </item>
     
   </channel>

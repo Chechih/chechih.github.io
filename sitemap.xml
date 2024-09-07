@@ -3,7 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://chechih.github.io/categories/</loc>
-    <lastmod>2024-08-18T04:28:59+08:00</lastmod>
+    <lastmod>2024-09-04T23:48:22+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/categories/IIS/</loc>
+    <lastmod>2024-09-04T23:48:22+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/</loc>
+    <lastmod>2024-09-04T23:48:22+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/posts/</loc>
+    <lastmod>2024-09-04T23:48:22+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/categories/Windows/</loc>
+    <lastmod>2024-09-04T23:48:22+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/posts/IIS/Install/</loc>
+    <lastmod>2024-09-04T23:48:22+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/categories/%E7%B6%B2%E7%AB%99%E5%BB%BA%E7%BD%AE/</loc>
+    <lastmod>2024-09-04T23:48:22+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -13,16 +43,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://chechih.github.io/posts/Docker/Introduction/</loc>
-    <lastmod>2024-08-18T04:28:59+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://chechih.github.io/</loc>
-    <lastmod>2024-08-18T04:28:59+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://chechih.github.io/posts/</loc>
     <lastmod>2024-08-18T04:28:59+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -278,11 +298,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://chechih.github.io/posts/WebBuild/HugoWebBuildToGitHub/</loc>
-    <lastmod>2022-08-01T20:05:01+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://chechih.github.io/categories/%E7%B6%B2%E7%AB%99%E5%BB%BA%E7%BD%AE/</loc>
     <lastmod>2022-08-01T20:05:01+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

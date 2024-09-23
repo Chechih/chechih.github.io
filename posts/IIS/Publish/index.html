@@ -43,12 +43,12 @@
 <meta property="og:description" content="前言 本範例使用 Windows Server 2022，要安裝的 ASP.NET Core 版本使用 8，專案的話選擇 Visual Studio 2022 的 ASP.NET Web 應用程式(Model-View-Controller)，專案名T" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://chechih.github.io/posts/IIS/Publish/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-09-12T21:50:03+08:00" />
-<meta property="article:modified_time" content="2024-09-12T21:50:03+08:00" />
+<meta property="article:published_time" content="2024-09-24T00:50:03+08:00" />
+<meta property="article:modified_time" content="2024-09-24T00:50:03+08:00" />
 <meta itemprop="name" content="IIS 上部屬 ASP.NET Core">
-<meta itemprop="description" content="前言 本範例使用 Windows Server 2022，要安裝的 ASP.NET Core 版本使用 8，專案的話選擇 Visual Studio 2022 的 ASP.NET Web 應用程式(Model-View-Controller)，專案名T"><meta itemprop="datePublished" content="2024-09-12T21:50:03+08:00" />
-<meta itemprop="dateModified" content="2024-09-12T21:50:03+08:00" />
-<meta itemprop="wordCount" content="835">
+<meta itemprop="description" content="前言 本範例使用 Windows Server 2022，要安裝的 ASP.NET Core 版本使用 8，專案的話選擇 Visual Studio 2022 的 ASP.NET Web 應用程式(Model-View-Controller)，專案名T"><meta itemprop="datePublished" content="2024-09-24T00:50:03+08:00" />
+<meta itemprop="dateModified" content="2024-09-24T00:50:03+08:00" />
+<meta itemprop="wordCount" content="836">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="IIS 上部屬 ASP.NET Core"/>
 <meta name="twitter:description" content="前言 本範例使用 Windows Server 2022，要安裝的 ASP.NET Core 版本使用 8，專案的話選擇 Visual Studio 2022 的 ASP.NET Web 應用程式(Model-View-Controller)，專案名T"/>
@@ -385,7 +385,7 @@
         
         
         
-        <time class="f6 mv4 dib tracked" datetime="2024-09-12T21:50:03+08:00">九月 12, 2024</time>
+        <time class="f6 mv4 dib tracked" datetime="2024-09-24T00:50:03+08:00">九月 24, 2024</time>
         
 
         
@@ -394,7 +394,7 @@
       <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><h3 id="前言">前言</h3>
 <p>本範例使用 Windows Server 2022，要安裝的 ASP.NET Core 版本使用 8，專案的話選擇 Visual Studio 2022 的 <strong>ASP.NET Web 應用程式(Model-View-Controller)</strong>，專案名<strong>TestWeb</strong>，ASP.NET 的發佈流程都可以參考這篇</p>
 <h3 id="安裝">安裝</h3>
-<p>請至<a href="https://dotnet.microsoft.com/zh-tw/download/dotnet/">微軟官網</a> 下載安裝 dotnet-runtime、aspnetcore-runtime、Windows Server Hosting，版本請選擇和要不上去一樣的版本，比如此範例使用版本 8，就全都安裝版本 8 的，其中 Windows Server Hosting 測試可以向下相容，不保證未來也可以XDDD<br>
+<p>請至<a href="https://dotnet.microsoft.com/zh-tw/download/dotnet/">微軟官網</a> 下載安裝 dotnet-runtime、aspnetcore-runtime、Windows Server Hosting，版本請選擇和要發佈上去一樣的版本，比如此範例專案使用版本 8，就全都安裝版本 8 的，其中 Windows Server Hosting 測試可以向下相容，不保證未來也可以XDDD<br>
 <img src="/images/IIS/dotnet_runtime_download.jpg" alt="微軟官網" title="dotnet_runtime_download"><br>
 下載完成再來是安裝，依序安裝 Windows Server Hosting -&gt; dotnet-runtime -&gt; aspnetcore-runtime，建議用這個安裝順序，如果沒有按照此順序，可能還要再設定其他東西</p>
 <h4 id="windows_server_hosting-安裝">Windows_Server_Hosting 安裝</h4>
@@ -417,7 +417,7 @@
 其他資訊方面最重要的就是<strong>架構</strong>，一定要選跟剛剛安裝的那些 .NET 套件相同，確認好可直接按<em>建立</em>，建立完成後，可以執行看看，看能不能跑<br>
 <img src="/images/IIS/ASP.NET_MVC_RUN.jpg" alt="ASP.NET_MVC_RUN" title="ASP.NET_MVC_RUN"></p>
 <h2 id="發佈">發佈</h2>
-<p>測試完畢後，再來開始來發佈了，先到專案那邊，右鍵按下發佈<br>
+<p>測試完畢後，再來開始發佈，先到專案那邊，右鍵按下<strong>發佈</strong><br>
 <img src="/images/IIS/ASP.NET_MVC_Publish1.jpg" alt="ASP.NET_MVC_Publish" title="ASP.NET_MVC_Publish"><br>
 選擇<strong>資料夾</strong>那個選項<br>
 <img src="/images/IIS/ASP.NET_MVC_Publish2.jpg" alt="ASP.NET_MVC_Publish" title="ASP.NET_MVC_Publish"><br>

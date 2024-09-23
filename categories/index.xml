@@ -9,20 +9,20 @@
     <copyright>NewPlayer</copyright>
     <lastBuildDate>Tue, 24 Sep 2024 00:50:03 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>.NET</title>
-      <link>https://chechih.github.io/categories/.NET/</link>
-      <pubDate>Tue, 24 Sep 2024 00:50:03 +0800</pubDate>
-      
-      <guid>https://chechih.github.io/categories/.NET/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>IIS</title>
       <link>https://chechih.github.io/categories/IIS/</link>
       <pubDate>Tue, 24 Sep 2024 00:50:03 +0800</pubDate>
       
       <guid>https://chechih.github.io/categories/IIS/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NET</title>
+      <link>https://chechih.github.io/categories/NET/</link>
+      <pubDate>Tue, 24 Sep 2024 00:50:03 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/NET/</guid>
       <description></description>
     </item>
     

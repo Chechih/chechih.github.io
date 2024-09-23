@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>IIS 上部屬 ASP.NET Core | NewPlayer</title>
+    <title>NET | NewPlayer</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="前言 本範例使用 Windows Server 2022，要安裝的 ASP.NET Core 版本使用 8，專案的話選擇 Visual Studio 2022 的 ASP.NET Web 應用程式(Model-View-Controller)，專案名T">
+    <meta name="description" content="The last theme you&#39;ll ever need. Maybe.">
     <meta name="generator" content="Hugo 0.116.1">
     
     
@@ -39,19 +39,19 @@
 
     
     
-    <meta property="og:title" content="IIS 上部屬 ASP.NET Core" />
-<meta property="og:description" content="前言 本範例使用 Windows Server 2022，要安裝的 ASP.NET Core 版本使用 8，專案的話選擇 Visual Studio 2022 的 ASP.NET Web 應用程式(Model-View-Controller)，專案名T" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://chechih.github.io/posts/IIS/Publish/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-09-24T00:50:03+08:00" />
-<meta property="article:modified_time" content="2024-09-24T00:50:03+08:00" />
-<meta itemprop="name" content="IIS 上部屬 ASP.NET Core">
-<meta itemprop="description" content="前言 本範例使用 Windows Server 2022，要安裝的 ASP.NET Core 版本使用 8，專案的話選擇 Visual Studio 2022 的 ASP.NET Web 應用程式(Model-View-Controller)，專案名T"><meta itemprop="datePublished" content="2024-09-24T00:50:03+08:00" />
-<meta itemprop="dateModified" content="2024-09-24T00:50:03+08:00" />
-<meta itemprop="wordCount" content="836">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="IIS 上部屬 ASP.NET Core"/>
-<meta name="twitter:description" content="前言 本範例使用 Windows Server 2022，要安裝的 ASP.NET Core 版本使用 8，專案的話選擇 Visual Studio 2022 的 ASP.NET Web 應用程式(Model-View-Controller)，專案名T"/>
+      <link href="/categories/NET/index.xml" rel="alternate" type="application/rss+xml" title="NewPlayer" />
+      <link href="/categories/NET/index.xml" rel="feed" type="application/rss+xml" title="NewPlayer" />
+      
+    
+    
+    <meta property="og:title" content="NET" />
+<meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://chechih.github.io/categories/NET/" />
+<meta itemprop="name" content="NET">
+<meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe."><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="NET"/>
+<meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
 
 	
     
@@ -78,8 +78,6 @@
     });
       </script>
     
-   
-  
 
   <header>
     <div class="custom-gradient1 navbar-fixed-top">
@@ -344,121 +342,43 @@
 </nav>
 
     </div>
+    
   </header>
-
-
 
     <main role="main">
       
-  <div style="min-height: calc(100vh - 8rem);">
-    
-    <article class="flex-l flex-wrap justify-between mw8 center ph3 single-page">
-      <header class="mt4 w-100">
-        <aside class="instapaper_ignoref b helvetica tracked">
-            
-        </aside>
-        
-
-
-
-
-
-
-
-
-
-
-
-        <h1 class="f1 athelas mt3 mb1">IIS 上部屬 ASP.NET Core</h1>
-        <div class="categories">
-          📁 
-          
-            
-              <a style="text-decoration: none;" href="/categories/Windows">Windows</a>
-            
-              <a style="text-decoration: none;" href="/categories/IIS">IIS</a>
-            
-              <a style="text-decoration: none;" href="/categories/NET">NET</a>
-            
-          
-        </div>
-        
-        
-        
-        <time class="f6 mv4 dib tracked" datetime="2024-09-24T00:50:03+08:00">九月 24, 2024</time>
-        
-
-        
-        
-      </header>
-      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><h3 id="前言">前言</h3>
-<p>本範例使用 Windows Server 2022，要安裝的 ASP.NET Core 版本使用 8，專案的話選擇 Visual Studio 2022 的 <strong>ASP.NET Web 應用程式(Model-View-Controller)</strong>，專案名<strong>TestWeb</strong>，ASP.NET 的發佈流程都可以參考這篇</p>
-<h3 id="安裝">安裝</h3>
-<p>請至<a href="https://dotnet.microsoft.com/zh-tw/download/dotnet/">微軟官網</a> 下載安裝 dotnet-runtime、aspnetcore-runtime、Windows Server Hosting，版本請選擇和要發佈上去一樣的版本，比如此範例專案使用版本 8，就全都安裝版本 8 的，其中 Windows Server Hosting 測試可以向下相容，不保證未來也可以XDDD<br>
-<img src="/images/IIS/dotnet_runtime_download.jpg" alt="微軟官網" title="dotnet_runtime_download"><br>
-下載完成再來是安裝，依序安裝 Windows Server Hosting -&gt; dotnet-runtime -&gt; aspnetcore-runtime，建議用這個安裝順序，如果沒有按照此順序，可能還要再設定其他東西</p>
-<h4 id="windows_server_hosting-安裝">Windows_Server_Hosting 安裝</h4>
-<p><img src="/images/IIS/Windows_Server_Hosting1.jpg" alt="Windows_Server_Hosting" title="Windows_Server_Hosting1"><br>
-<img src="/images/IIS/Windows_Server_Hosting2.jpg" alt="Windows_Server_Hosting" title="Windows_Server_Hosting2"><br>
-<img src="/images/IIS/Windows_Server_Hosting3.jpg" alt="Windows_Server_Hosting" title="Windows_Server_Hosting3"></p>
-<h4 id="dotnet-runtime-安裝">dotnet-runtime 安裝</h4>
-<p><img src="/images/IIS/dotnet_runtime1.jpg" alt="dotnet_runtime" title="dotnet_runtime1"><br>
-<img src="/images/IIS/dotnet_runtime2.jpg" alt="dotnet_runtime" title="dotnet_runtime2"><br>
-<img src="/images/IIS/dotnet_runtime3.jpg" alt="dotnet_runtime" title="dotnet_runtime3"></p>
-<h4 id="aspnetcore-runtime-安裝">aspnetcore-runtime 安裝</h4>
-<p><img src="/images/IIS/aspnetcore_runtime1.jpg" alt="aspnetcore_runtime" title="aspnetcore_runtime1"><br>
-<img src="/images/IIS/aspnetcore_runtime2.jpg" alt="aspnetcore_runtime" title="aspnetcore_runtime2"><br>
-<img src="/images/IIS/aspnetcore_runtime3.jpg" alt="aspnetcore_runtime" title="aspnetcore_runtime3"><br>
-安裝完成後，再來選擇專案</p>
-<h2 id="建立專案">建立專案</h2>
-<p>選擇 Visual Studio 2022 的 ASP.NET Web 應用程式(Model-View-Controller)
-<img src="/images/IIS/ASP.NET_MVC.jpg" alt="ASP.NET_MVC" title="ASP.NET_MVC"><br>
-名稱路徑大約填一下，反正測試用(?<br>
-其他資訊方面最重要的就是<strong>架構</strong>，一定要選跟剛剛安裝的那些 .NET 套件相同，確認好可直接按<em>建立</em>，建立完成後，可以執行看看，看能不能跑<br>
-<img src="/images/IIS/ASP.NET_MVC_RUN.jpg" alt="ASP.NET_MVC_RUN" title="ASP.NET_MVC_RUN"></p>
-<h2 id="發佈">發佈</h2>
-<p>測試完畢後，再來開始發佈，先到專案那邊，右鍵按下<strong>發佈</strong><br>
-<img src="/images/IIS/ASP.NET_MVC_Publish1.jpg" alt="ASP.NET_MVC_Publish" title="ASP.NET_MVC_Publish"><br>
-選擇<strong>資料夾</strong>那個選項<br>
-<img src="/images/IIS/ASP.NET_MVC_Publish2.jpg" alt="ASP.NET_MVC_Publish" title="ASP.NET_MVC_Publish"><br>
-發佈路徑可以先用預設沒關係，只是路徑要先記好，如果 IIS 和 Visual Studio 是在同一電腦，可以直接指到 IIS 路徑，如果不清楚，可以先用預設<br>
-<img src="/images/IIS/ASP.NET_MVC_Publish3.jpg" alt="ASP.NET_MVC_Publish" title="ASP.NET_MVC_Publish"><br>
-<img src="/images/IIS/ASP.NET_MVC_Publish4.jpg" alt="ASP.NET_MVC_Publish" title="ASP.NET_MVC_Publish"><br>
-再來直接點擊發佈紐即可，檔案就會開始產生了~~<br>
-<img src="/images/IIS/ASP.NET_MVC_Publish5.jpg" alt="ASP.NET_MVC_Publish" title="ASP.NET_MVC_Publish"></p>
-<h2 id="iis-部屬">IIS 部屬</h2>
-<p>再來把剛剛產生的檔案[預設路徑&ndash;&gt;[專案]\bin\release\net8.0\publish]，整包丟到要部屬的 IIS 電腦上，此範例放置[C:\TestWeb]
-再來開啟 IIS<br>
-<img src="/images/IIS/IIS_View.jpg" alt="IIS_View" title="IIS_View"><br>
-點選<strong>應用程式集區</strong>，右鍵<strong>新增應用程式集區</strong><br>
-<img src="/images/IIS/Application_Cluster_Add.jpg" alt="Application_Cluster_Add" title="Application_Cluster_Add"><br>
-名稱輸入能識別即可，.NET CLR 版本選擇<strong>沒有受控碼</strong>，然後確定<br>
-<img src="/images/IIS/Application_Cluster_Add2.jpg" alt="Application_Cluster_Add" title="Application_Cluster_Add"><br>
-再來選擇<strong>站台</strong>，右鍵<strong>新增網站</strong><br>
-<img src="/images/IIS/Add_Web.jpg" alt="Add_Web" title="Add_Web"><br>
-站台名稱一樣輸入可識別得就好，<strong>應用程式集區</strong>選擇剛剛建立的，<strong>實體路徑</strong>選擇發佈檔案的位置[此範例是 C:\TestWeb]，連接埠輸入網站要開放的 Port，然後確定<br>
-<img src="/images/IIS/Add_Web2.jpg" alt="Add_Web" title="Add_Web"><br>
-測試看看，選擇 IIS 的預覽網站，選擇剛剛的 Port 就可以看到剛剛發佈的網站了!!!<br>
-<img src="/images/IIS/Preview_Web.jpg" alt="Preview_Web" title="Preview_Web"></p>
-<h3 id="參考">參考</h3>
-<p><a href="https://ithelp.ithome.com.tw/articles/10190336">[.NET Core] 如何在 IIS 上部屬 .NET Core</a></p>
-<ul class="pa0">
   
-</ul>
-<div class="mt6 instapaper_ignoref">
-        
+    <article class="cf pa4-m" style=
+    "background: inear-gradient(to top, #37ecba 0%, #72afd3 100%);; text-align: center;">
+      <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links mid-gray">
+        <h2>NET</h2>
+      </div>
+    </article>
+  
+      <div style="min-height: calc(100vh - 14rem);">
+        <div class="mw8 center">
+          <section class="ph4 pa4">
+            
+              <div class="relative w-100  mb4">
+                <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
+  <div class="bg-white pa4 gray overflow-hidden">
+    <h1 class="f3 near-black">
+      <a href="/posts/IIS/Publish/" class="link black dim">
+        IIS 上部屬 ASP.NET Core
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
+      前言 本範例使用 Windows Server 2022，要安裝的 ASP.NET Core 版本使用 8，專案的話選擇 Visual Studio 2022 的 ASP.NET Web 應用程式(Model-View-Controller)，專案名T
+    </div>
+    <a href="/posts/IIS/Publish/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
+  </div>
+</div>
+
+              </div>
+            
+          </section>
         </div>
       </div>
-
-      <aside class="w-30-l mt6-l">
-
-
-
-
-</aside>
-
-    </article>
-  </div>
 
     </main>
     <footer class="custom-gradient1 bottom-0 w-100 pa3" role="contentinfo">

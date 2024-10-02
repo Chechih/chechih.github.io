@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>NewPlayer</title>
+    <title>使用 Web Deploy 發佈程式到 IIS 上 | NewPlayer</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="The last theme you&#39;ll ever need. Maybe.">
+    <meta name="description" content="前言 如果在開發時，部屬的 IIS (下面簡稱 A 電腦)和開發程式 (下面簡稱 B 電腦)是在不同機器上面時，這時就可以使用 Web Deploy 將程式碼從 B 電腦發佈到 A 電腦上">
     <meta name="generator" content="Hugo 0.116.1">
     
     
@@ -39,19 +39,19 @@
 
     
     
-      <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="NewPlayer" />
-      <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="NewPlayer" />
-      
-    
-    
-    <meta property="og:title" content="Posts" />
-<meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://chechih.github.io/posts/" />
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
+    <meta property="og:title" content="使用 Web Deploy 發佈程式到 IIS 上" />
+<meta property="og:description" content="前言 如果在開發時，部屬的 IIS (下面簡稱 A 電腦)和開發程式 (下面簡稱 B 電腦)是在不同機器上面時，這時就可以使用 Web Deploy 將程式碼從 B 電腦發佈到 A 電腦上" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chechih.github.io/posts/20241002/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-10-02T17:43:49+08:00" />
+<meta property="article:modified_time" content="2024-10-02T17:43:49+08:00" />
+<meta itemprop="name" content="使用 Web Deploy 發佈程式到 IIS 上">
+<meta itemprop="description" content="前言 如果在開發時，部屬的 IIS (下面簡稱 A 電腦)和開發程式 (下面簡稱 B 電腦)是在不同機器上面時，這時就可以使用 Web Deploy 將程式碼從 B 電腦發佈到 A 電腦上"><meta itemprop="datePublished" content="2024-10-02T17:43:49+08:00" />
+<meta itemprop="dateModified" content="2024-10-02T17:43:49+08:00" />
+<meta itemprop="wordCount" content="529">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用 Web Deploy 發佈程式到 IIS 上"/>
+<meta name="twitter:description" content="前言 如果在開發時，部屬的 IIS (下面簡稱 A 電腦)和開發程式 (下面簡稱 B 電腦)是在不同機器上面時，這時就可以使用 Web Deploy 將程式碼從 B 電腦發佈到 A 電腦上"/>
 
 	
     
@@ -78,6 +78,8 @@
     });
       </script>
     
+   
+  
 
   <header>
     <div class="custom-gradient1 navbar-fixed-top">
@@ -342,97 +344,128 @@
 </nav>
 
     </div>
-    
   </header>
+
+
 
     <main role="main">
       
   <div style="min-height: calc(100vh - 8rem);">
-    <article class="mw8 center">
-      <section class="ph4 pa4">
+    
+    <article class="flex-l flex-wrap justify-between mw8 center ph3 single-page">
+      <header class="mt4 w-100">
+        <aside class="instapaper_ignoref b helvetica tracked">
+            
+        </aside>
         
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/3.Longest_Substring_Without_Repeating_Characters/" class="link black dim">
-        3. Longest Substring Without Repeating Characters
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Given a string s, find the length of the longest substring without repeating characters. 翻譯 給定一個字符串s，找到最長的不含重複字符的子串的長度。 Example 1: Input: s = &quot;abcabcbb&quot; Output: 3 Explanation: The answer is &quot;abc&quot;, with the length of 3. Example 2: Input: s = &quot;bbbbb&quot; Output:
-    </div>
-    <a href="/posts/LeetCode/3.Longest_Substring_Without_Repeating_Characters/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
-        
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/2.Add_Two_Numbers/" class="link black dim">
-        2. Add Two Numbers
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list. You may assume the two numbers do not contain any leading zero, except the number 0 itself. 翻譯 您被給予兩個非空的鏈
-    </div>
-    <a href="/posts/LeetCode/2.Add_Two_Numbers/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
-        
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/1.Two_Sum/" class="link black dim">
-        1. Two Sum
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order. 翻譯 給定一個整數數組，返回兩個數字
-    </div>
-    <a href="/posts/LeetCode/1.Two_Sum/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
+
+
+
+
+
+
+
+
+        <h1 class="f1 athelas mt3 mb1">使用 Web Deploy 發佈程式到 IIS 上</h1>
+        <div class="categories">
+          📁 
+          
+            
+              <a style="text-decoration: none;" href="/categories/Windows">Windows</a>
+            
+              <a style="text-decoration: none;" href="/categories/IIS">IIS</a>
+            
+              <a style="text-decoration: none;" href="/categories/NET">NET</a>
+            
+          
+        </div>
         
-      </section>
-      <div class="pagination-container">
-    <ul class="pagination pagination-default">
-      <li class="page-item">
-        <a href="/posts/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/16/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/15/" aria-label="Page 15" class="page-link" role="button">15</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/16/" aria-label="Page 16" class="page-link" role="button">16</a>
-      </li>
-      <li class="page-item active">
-        <a aria-current="page" aria-label="Page 17" class="page-link" role="button">17</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/18/" aria-label="Page 18" class="page-link" role="button">18</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/19/" aria-label="Page 19" class="page-link" role="button">19</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/18/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/19/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
-      </li>
-    </ul></div>
+        
+        
+        <time class="f6 mv4 dib tracked" datetime="2024-10-02T17:43:49+08:00">十月 2, 2024</time>
+        
+
+        
+        
+      </header>
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><h3 id="前言">前言</h3>
+<p>如果在開發時，部屬的 IIS (下面簡稱 A 電腦)和開發程式 (下面簡稱 B 電腦)是在不同機器上面時，這時就可以使用 Web Deploy 將程式碼從 B 電腦發佈到 A 電腦上面，這樣就能省掉很多的時間!!!<br>
+本範例使用 Windows Server 2022 和 Web Deploy 4.0, 專案市使用 Visual Studio 2022 的 ASP.NET Web 應用程式(Model-View-Controller)，專案名 TestWeb</p>
+<h3 id="安裝">安裝</h3>
+<p>先到 A 電腦上安裝 Web Deploy</p>
+<ol>
+<li>可以從微軟官網上<a href="https://www.microsoft.com/en-us/download/details.aspx?id=106070&amp;msockid=249a4e66a90668b80d395ad2a8ae69c7">下載</a>，按下載鍵時，直接選擇 <strong>webdeploy_amd64_zh-TW.msi</strong> 即可<br>
+<img src="/images/20241002/1.jpg" alt="20241002_01" title="20241002_01"></li>
+<li>安裝時請選擇完整安裝<br>
+<img src="/images/20241002/2.jpg" alt="20241002_02" title="20241002_02"><br>
+<img src="/images/20241002/3.jpg" alt="20241002_03" title="20241002_03"><br>
+<img src="/images/20241002/4.jpg" alt="20241002_04" title="20241002_04"><br>
+<img src="/images/20241002/5.jpg" alt="20241002_05" title="20241002_05"><br>
+<img src="/images/20241002/6.jpg" alt="20241002_06" title="20241002_06"><br>
+<img src="/images/20241002/7.jpg" alt="20241002_07" title="20241002_07"></li>
+<li>安裝完成後，請再點選 EXE 檔案(<strong>webdeploy_amd64_zh-TW.msi</strong>)按下<strong>變更</strong>，將其餘東西也都裝好
+<img src="/images/20241002/16.jpg" alt="20241002_16" title="20241002_16"></li>
+</ol>
+<h3 id="設定功能">設定功能</h3>
+<p>A 電腦上設定</p>
+<ol>
+<li>打開<strong>伺服器管理員</strong>
+<img src="/images/20241002/8.jpg" alt="20241002_08" title="20241002_08"></li>
+<li>點選<strong>新增角色及功能</strong></li>
+<li>到<strong>伺服器角色</strong>那頁，勾選<strong>網頁伺服器中的</strong>管理服務**，安裝他
+<img src="/images/20241002/9.jpg" alt="20241002_09" title="20241002_09"></li>
+</ol>
+<h3 id="iis-設定">IIS 設定</h3>
+<p>A 電腦上設定</p>
+<ol>
+<li>打開 IIS</li>
+<li>點選<strong>管理服務</strong>
+<img src="/images/20241002/10.jpg" alt="20241002_10" title="20241002_10"></li>
+<li>勾選<strong>遠端連線</strong>，並按下右方的啟動
+<img src="/images/20241002/11.jpg" alt="20241002_11" title="20241002_11"></li>
+</ol>
+<h3 id="測試">測試</h3>
+<p>打開 B 電腦的 Visual Studio 2022 和專案</p>
+<ol>
+<li>點選專案右鍵，並選擇發佈
+<img src="/images/20241002/12.jpg" alt="20241002_12" title="20241002_12"></li>
+<li>選擇<strong>網頁伺服器(IIS)</strong>
+<img src="/images/20241002/13.jpg" alt="20241002_13" title="20241002_13"></li>
+<li>選擇<strong>Web Deploy</strong>
+<img src="/images/20241002/14.jpg" alt="20241002_14" title="20241002_14"></li>
+<li>輸入 IIS 訊息<br>
+a. 伺服器 &ndash;&gt; A 電腦 IP
+b. 網站名稱 &ndash;&gt; A 電腦 IIS 名稱
+c. 目的地 URL &ndash;&gt; IIS URL
+d. 使用者名稱密碼 &ndash;&gt; A 電腦的使用者
+<img src="/images/20241002/15.jpg" alt="20241002_15" title="20241002_15"></li>
+<li>點選發佈<br>
+<img src="/images/20241002/17.jpg" alt="20241002_17" title="20241002_17"></li>
+<li>會看到網頁跳出，即成功了!!!
+<img src="/images/20241002/18.jpg" alt="20241002_18" title="20241002_18"></li>
+<li>如果中途有出現甚麼問題，可以檢查或關閉下 A 電腦的防火牆，或重新啟動</li>
+</ol>
+<h3 id="參考">參考</h3>
+<p><a href="https://www.cnblogs.com/Can-daydayup/p/17900076.html">Visual Studio使用Web Deploy发布.NET Web应用到指定服务器的IIS中</a><br>
+<a href="https://hackmd.io/@johnsonnote/webdesign/https%3A%2F%2Fhackmd.io%2F%40johnsonnote%2Ffw_deploy">MVCNF11-網站發行</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+        
+        </div>
+      </div>
+
+      <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
     </article>
   </div>
 

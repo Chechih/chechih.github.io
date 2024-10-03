@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Wed, 02 Oct 2024 17:43:49 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Oct 2024 17:00:03 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>46. Permutations</title>
+      <link>https://chechih.github.io/posts/LeetCode/46.Permutations/</link>
+      <pubDate>Thu, 03 Oct 2024 17:00:03 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/LeetCode/46.Permutations/</guid>
+      <description>問題 Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order. 翻譯 給定一個由不同整數組成的數組 nums，返回所有可能的排列。你可以以任意順序返回答案。 Example 1: Input: nums</description>
+    </item>
+    
     <item>
       <title>使用 Web Deploy 發佈程式到 IIS 上</title>
       <link>https://chechih.github.io/posts/20241002/</link>

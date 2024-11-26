@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>NewPlayer</title>
+    <title>建立私有 Docker Registory | NewPlayer</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="The last theme you&#39;ll ever need. Maybe.">
+    <meta name="description" content="前言 一般建立好的 Image 都會上傳到 Docker Hub 上，這樣 Pull 時，就取得到檔案，但有個問題，就是檔案可能洩漏出去，且有拉取 Image 的限制。好消息是，有個 Docker Registory 的倉庫，他">
     <meta name="generator" content="Hugo 0.116.1">
     
     
@@ -39,19 +39,19 @@
 
     
     
-      <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="NewPlayer" />
-      <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="NewPlayer" />
-      
-    
-    
-    <meta property="og:title" content="Posts" />
-<meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://chechih.github.io/posts/" />
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
+    <meta property="og:title" content="建立私有 Docker Registory" />
+<meta property="og:description" content="前言 一般建立好的 Image 都會上傳到 Docker Hub 上，這樣 Pull 時，就取得到檔案，但有個問題，就是檔案可能洩漏出去，且有拉取 Image 的限制。好消息是，有個 Docker Registory 的倉庫，他" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chechih.github.io/posts/20241127/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-11-27T00:50:11+08:00" />
+<meta property="article:modified_time" content="2024-11-27T00:50:11+08:00" />
+<meta itemprop="name" content="建立私有 Docker Registory">
+<meta itemprop="description" content="前言 一般建立好的 Image 都會上傳到 Docker Hub 上，這樣 Pull 時，就取得到檔案，但有個問題，就是檔案可能洩漏出去，且有拉取 Image 的限制。好消息是，有個 Docker Registory 的倉庫，他"><meta itemprop="datePublished" content="2024-11-27T00:50:11+08:00" />
+<meta itemprop="dateModified" content="2024-11-27T00:50:11+08:00" />
+<meta itemprop="wordCount" content="549">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="建立私有 Docker Registory"/>
+<meta name="twitter:description" content="前言 一般建立好的 Image 都會上傳到 Docker Hub 上，這樣 Pull 時，就取得到檔案，但有個問題，就是檔案可能洩漏出去，且有拉取 Image 的限制。好消息是，有個 Docker Registory 的倉庫，他"/>
 
 	
     
@@ -78,6 +78,8 @@
     });
       </script>
     
+   
+  
 
   <header>
     <div class="custom-gradient1 navbar-fixed-top">
@@ -342,97 +344,130 @@
 </nav>
 
     </div>
-    
   </header>
+
+
 
     <main role="main">
       
   <div style="min-height: calc(100vh - 8rem);">
-    <article class="mw8 center">
-      <section class="ph4 pa4">
+    
+    <article class="flex-l flex-wrap justify-between mw8 center ph3 single-page">
+      <header class="mt4 w-100">
+        <aside class="instapaper_ignoref b helvetica tracked">
+            
+        </aside>
         
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/41.First_Missing_Positive/" class="link black dim">
-        41. First Missing Positive
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Given an unsorted integer array nums, return the smallest missing positive integer. You must implement an algorithm that runs in O(n) time and uses O(1) auxiliary space. 翻譯 給定一個未排序的整數陣列 nums，返回最小的缺失正整數。 你必須實現一個在 O(n) 時間
-    </div>
-    <a href="/posts/LeetCode/41.First_Missing_Positive/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
-        
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/42.Trapping_Rain_Water/" class="link black dim">
-        42. Trapping Rain Water
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining. 翻譯 給定 n 個非負整數，這些整數代表一個高程圖，其中每個柱子的寬度為 1，計算下雨後它能夠
-    </div>
-    <a href="/posts/LeetCode/42.Trapping_Rain_Water/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
-        
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/40.Combination_Sum_II/" class="link black dim">
-        40. Combination Sum II
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sum to target. Each number in candidates may only be used once in the combination. Note: The solution set must not contain duplicate combinations. 翻譯 給定一個候選數字集合（candidate
-    </div>
-    <a href="/posts/LeetCode/40.Combination_Sum_II/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
+
+
+
+
+
+
+
+
+        <h1 class="f1 athelas mt3 mb1">建立私有 Docker Registory</h1>
+        <div class="categories">
+          📁 
+          
+            
+              <a style="text-decoration: none;" href="/categories/Docker">Docker</a>
+            
+          
+        </div>
         
-      </section>
-      <div class="pagination-container">
-    <ul class="pagination pagination-default">
-      <li class="page-item">
-        <a href="/posts/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/4/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/4/" aria-label="Page 4" class="page-link" role="button">4</a>
-      </li>
-      <li class="page-item active">
-        <a aria-current="page" aria-label="Page 5" class="page-link" role="button">5</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/6/" aria-label="Page 6" class="page-link" role="button">6</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/7/" aria-label="Page 7" class="page-link" role="button">7</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/6/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/20/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
-      </li>
-    </ul></div>
+        
+        
+        <time class="f6 mv4 dib tracked" datetime="2024-11-27T00:50:11+08:00">十一月 27, 2024</time>
+        
+
+        
+        
+      </header>
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><h3 id="前言">前言</h3>
+<p>一般建立好的 Image 都會上傳到 <a href="https://hub.docker.com/">Docker Hub</a> 上，這樣 Pull 時，就取得到檔案，但有個問題，就是檔案可能洩漏出去，且有拉取 Image 的限制。好消息是，有個 Docker Registory 的倉庫，他可以架在本地端，就是自家電腦或 Server 上，然後把 Image Push 上去，這樣就不用擔心公司或不想開放的檔案在網路上供人參觀了~</p>
+<h3 id="下載-registry-image">下載 registry Image</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker pull registry
+</span></span></code></pre></div><h3 id="執行-registry">執行 registry</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker run -d -p <span style="color:#f92672">[</span>對應到本機的 Port 號<span style="color:#f92672">]</span>:5000 registry
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ex:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># docker run -d -p 5000:5000 registry</span>
+</span></span></code></pre></div><p>可以透過 -v 參數，將私有倉儲的檔案存放在本地的資料夾內，而 &ndash;name 是把執行起來的容器，取個新名稱</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker run -d -p <span style="color:#f92672">[</span>對應到本機的 Port 號<span style="color:#f92672">]</span>:5000 -v /home/<span style="color:#f92672">[</span>user_name<span style="color:#f92672">]</span>/storage:/var/lib/registry --name <span style="color:#f92672">[</span>registry_name<span style="color:#f92672">]</span> registry
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ex:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># docker run -d -p 5000:5000 -v /home/newplayer/storage:/var/lib/registry --name private_registry registry</span>
+</span></span></code></pre></div><p><img src="/images/20241127/1.jpg" alt="建立私倉" title="建立私倉"></p>
+<h3 id="修改-docker-設定檔">修改 Docker 設定檔</h3>
+<p>修改 daemon.json</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>vim  /etc/docker/daemon.json
+</span></span></code></pre></div><p>備註: Docker Desktop 可以點選右上角齒輪(設定)，再點選 Docker Engine
+<img src="/images/20241127/2.1.jpg" alt="私倉白名單" title="私倉白名單"><br>
+將以下內容加進去，這有點像設定白名單的倉庫，後面那個 IP 就是倉庫的 IP 位置</p>
+<pre tabindex="0"><code>{ &#34;insecure-registries&#34;:[&#34;192.168.56.115:5000&#34;] }
+</code></pre><p><em>修改按 i ，修改後按 ESC ，輸入 :wq 存檔離開</em><br>
+再執行以下命令重開 Docker</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo systemctl stop docker
+</span></span><span style="display:flex;"><span>sudo systemctl start docker
+</span></span></code></pre></div><p><img src="/images/20241127/2.2.jpg" alt="私倉白名單" title="私倉白名單"></p>
+<h3 id="若容器停止可以執行以下指令開啟">若容器停止，可以執行以下指令開啟</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker start <span style="color:#f92672">[</span>registry_name<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ex:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># docker start private_registry</span>
+</span></span></code></pre></div><h3 id="將-image-推上去私有倉儲">將 Image 推上去私有倉儲</h3>
+<ol>
+<li>將要上傳的 Image 打上 Tag</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker tag <span style="color:#f92672">[</span>image_tag<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>registry_port<span style="color:#f92672">]</span>/<span style="color:#f92672">[</span>image_tag<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ex:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># docker tag mcr.microsoft.com/dotnet/aspnet:8.0 192.168.56.115:5000/mcr.microsoft.com/dotnet/aspnet</span>
+</span></span></code></pre></div><p><img src="/images/20241127/3.jpg" alt="Tag Image" title="Tag Image"><br>
+2. 將剛剛打好 tag 的 Image 推上去私有倉儲</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker push <span style="color:#f92672">[</span>registry_port<span style="color:#f92672">]</span>/<span style="color:#f92672">[</span>image_tag<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ex:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># docker push 192.168.56.115:5000/mcr.microsoft.com/dotnet/aspnet</span>
+</span></span></code></pre></div><p><img src="/images/20241127/4.jpg" alt="Push Image" title="Push Image"></p>
+<h3 id="將-image-拉到本地端">將 Image 拉到本地端</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker pull <span style="color:#f92672">[</span>registry_port<span style="color:#f92672">]</span>/<span style="color:#f92672">[</span>image_tag<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ex:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># docker pull 192.168.56.115:5000/mcr.microsoft.com/dotnet/aspnet:8.0</span>
+</span></span></code></pre></div><p><img src="/images/20241127/5.jpg" alt="Pull Image" title="Pull Image"></p>
+<h3 id="私倉-api">私倉 API</h3>
+<ul>
+<li>查尋私倉內的 Image</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>curl -X GET <span style="color:#f92672">[</span>registry_port<span style="color:#f92672">]</span>/v2/_catalog
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ex:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># curl -X GET 10.32.22.65:5000/v2/_catalog</span>
+</span></span></code></pre></div><p><img src="/images/20241127/6.jpg" alt="private_registry_1" title="private_registry_1"></p>
+<ul>
+<li>想要看更詳細的版本號</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>curl -X GET <span style="color:#f92672">[</span>registry_port<span style="color:#f92672">]</span>/v2/<span style="color:#f92672">[</span>image_tag<span style="color:#f92672">]</span>/tags/list
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ex:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># curl -X GET 192.168.56.115:5000/v2/mcr.microsoft.com/dotnet/aspnet/tags/list</span>
+</span></span></code></pre></div><p><img src="/images/20241127/7.jpg" alt="private_registry_2" title="private_registry_2"></p>
+<h3 id="參考">參考</h3>
+<p><a href="https://hub.docker.com/_/registry">Docker 官方說明文件</a><br>
+<a href="https://philipzheng.gitbook.io/docker_practice/repository/local_repo">《Docker —— 從入門到實踐­》正體中文版</a><br>
+<a href="https://blog.csdn.net/qingfengxd1/article/details/99671984">linux redhat、ubuntu系统 docker启动、停止命令</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+        
+        </div>
+      </div>
+
+      <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
     </article>
   </div>
 

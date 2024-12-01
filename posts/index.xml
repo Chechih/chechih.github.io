@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Wed, 27 Nov 2024 00:50:11 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Dec 2024 00:33:59 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 Docker 建立 Nginx 網站</title>
+      <link>https://chechih.github.io/posts/20241202/</link>
+      <pubDate>Mon, 02 Dec 2024 00:33:59 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20241202/</guid>
+      <description>前言 這裡將簡單講解在 Docker 上，怎麼使用 Nginx 架設靜態網站 下載 Nginx Image docker pull nginx 建立 Nginx Controller 建立一個空資料夾，資料夾名稱可以自訂，本範例建立**/home/new</description>
+    </item>
+    
     <item>
       <title>建立私有 Docker Registory</title>
       <link>https://chechih.github.io/posts/20241127/</link>

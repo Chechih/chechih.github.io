@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Mon, 02 Dec 2024 00:33:59 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Dec 2024 00:41:07 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker Desktop 安裝</title>
+      <link>https://chechih.github.io/posts/20241206/</link>
+      <pubDate>Fri, 06 Dec 2024 00:41:07 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20241206/</guid>
+      <description>安裝環境 Windows 2022 前置作業 到空置台開起 Hyper-V 下載 Docker Desktop 到 Docker 官網 下載安裝 下載完成 安裝 開啟執行檔 勾選設定，第一個選項是指要不要使用 Hyper-V 安裝，若沒有特別需求，使</description>
+    </item>
+    
     <item>
       <title>使用 Docker 建立 Nginx 網站</title>
       <link>https://chechih.github.io/posts/20241202/</link>

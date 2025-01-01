@@ -391,9 +391,9 @@
 <p>以前在測試某個 IP Port 能不能使用時，都是使用 telnet 測試</p>
 <pre tabindex="0"><code class="language-**shell**" data-lang="**shell**">telnet [server_ip] [port_no]
 </code></pre><p>成功時，會一片黑
-<img src="/images/20250102/1.jpg" alt="Telnet Successful" title="telnet_successful"><br>
+<img src="/images/20250102/1.gif" alt="Telnet Successful" title="telnet_successful"><br>
 失敗時，有訊息
-<img src="/images/20250102/2.jpg" alt="Telnet Failure" title="telnet_failure"><br>
+<img src="/images/20250102/2.gif" alt="Telnet Failure" title="telnet_failure"><br>
 而且假設你只想測試 Port 有沒有開，不想知道上面有沒有部屬東西，這指令可能有時成功有時失敗。</p>
 <h3 id="正篇">正篇</h3>
 <p>這時就可以試試 PowerShell 的 Test-NetConnection 指令，這指令直接在執行完，就可以直接知道 Port 有沒有開起了</p>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anaconda on NewPlayer</title>
+    <link>https://chechih.github.io/categories/Anaconda/</link>
+    <description>Recent content in Anaconda on NewPlayer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>NewPlayer</copyright>
+    <lastBuildDate>Mon, 03 Mar 2025 22:13:33 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/Anaconda/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anaconda3 常用指令</title>
+      <link>https://chechih.github.io/posts/20250303/</link>
+      <pubDate>Mon, 03 Mar 2025 22:13:33 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250303/</guid>
+      <description>前言 Anaconda 是一個 Python 發行版，本身包含 Python 解釋器、科學計算套件和開發工具。它內建 Conda 用來管理建立 Python 虛擬環境，可讓使用者建立不同 Python 版本的獨立環境。 指令 創建</description>
+    </item>
+    
+  </channel>
+</rss>

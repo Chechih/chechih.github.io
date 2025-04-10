@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Wed, 26 Mar 2025 00:32:11 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Apr 2025 23:33:17 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DeepSeek</title>
+      <link>https://chechih.github.io/categories/DeepSeek/</link>
+      <pubDate>Thu, 10 Apr 2025 23:33:17 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/DeepSeek/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ollama</title>
+      <link>https://chechih.github.io/categories/Ollama/</link>
+      <pubDate>Thu, 10 Apr 2025 23:33:17 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/Ollama/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>SQL Server</title>
       <link>https://chechih.github.io/categories/SQL-Server/</link>

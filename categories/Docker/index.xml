@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Fri, 06 Dec 2024 00:41:07 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/Docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Apr 2025 01:06:47 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/Docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>為 Ollama 建立一個聊天介面</title>
+      <link>https://chechih.github.io/posts/20250416/</link>
+      <pubDate>Wed, 16 Apr 2025 01:06:47 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250416/</guid>
+      <description>前言 當你安裝好了 Ollama，你可能會想說，可不可以跟 GPT 一樣，給他個介面?當然可以，這裡將會介紹怎麼安裝 Webui 安裝 要先安裝 Docker ，未安裝可到 Docker 安裝 By</description>
+    </item>
+    
     <item>
       <title>Docker Desktop 安裝</title>
       <link>https://chechih.github.io/posts/20241206/</link>

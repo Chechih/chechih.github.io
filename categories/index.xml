@@ -7,22 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Thu, 10 Apr 2025 23:33:17 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Apr 2025 01:06:47 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>DeepSeek</title>
-      <link>https://chechih.github.io/categories/DeepSeek/</link>
-      <pubDate>Thu, 10 Apr 2025 23:33:17 +0800</pubDate>
+      <title>Docker</title>
+      <link>https://chechih.github.io/categories/Docker/</link>
+      <pubDate>Wed, 16 Apr 2025 01:06:47 +0800</pubDate>
       
-      <guid>https://chechih.github.io/categories/DeepSeek/</guid>
+      <guid>https://chechih.github.io/categories/Docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ollama</title>
       <link>https://chechih.github.io/categories/Ollama/</link>
-      <pubDate>Thu, 10 Apr 2025 23:33:17 +0800</pubDate>
+      <pubDate>Wed, 16 Apr 2025 01:06:47 +0800</pubDate>
       
       <guid>https://chechih.github.io/categories/Ollama/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DeepSeek</title>
+      <link>https://chechih.github.io/categories/DeepSeek/</link>
+      <pubDate>Thu, 10 Apr 2025 23:33:17 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/DeepSeek/</guid>
       <description></description>
     </item>
     
@@ -68,15 +77,6 @@
       <pubDate>Sun, 08 Dec 2024 23:30:58 +0800</pubDate>
       
       <guid>https://chechih.github.io/categories/Kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>https://chechih.github.io/categories/Docker/</link>
-      <pubDate>Fri, 06 Dec 2024 00:41:07 +0800</pubDate>
-      
-      <guid>https://chechih.github.io/categories/Docker/</guid>
       <description></description>
     </item>
     

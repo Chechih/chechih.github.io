@@ -3,7 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://chechih.github.io/categories/</loc>
-    <lastmod>2025-04-16T01:06:47+08:00</lastmod>
+    <lastmod>2025-04-24T00:01:28+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/</loc>
+    <lastmod>2025-04-24T00:01:28+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/posts/</loc>
+    <lastmod>2025-04-24T00:01:28+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/categories/VirtualBox/</loc>
+    <lastmod>2025-04-24T00:01:28+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/posts/20250424/</loc>
+    <lastmod>2025-04-24T00:01:28+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -12,17 +32,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://chechih.github.io/</loc>
-    <lastmod>2025-04-16T01:06:47+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://chechih.github.io/categories/Ollama/</loc>
-    <lastmod>2025-04-16T01:06:47+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://chechih.github.io/posts/</loc>
     <lastmod>2025-04-16T01:06:47+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -164,11 +174,6 @@
   </url><url>
     <loc>https://chechih.github.io/categories/Ubuntu/</loc>
     <lastmod>2024-08-12T01:02:01+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://chechih.github.io/categories/VirtualBox/</loc>
-    <lastmod>2024-07-20T17:23:23+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>

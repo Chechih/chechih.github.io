@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Wed, 16 Apr 2025 01:06:47 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Apr 2025 00:01:28 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VirtualBox 打開虛擬化</title>
+      <link>https://chechih.github.io/posts/20250424/</link>
+      <pubDate>Thu, 24 Apr 2025 00:01:28 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250424/</guid>
+      <description>前言 前一陣子，想說在 VirtualBox，開啟 Hyper-V 測測 Docker Desktop，直接跳出不支援，查了下，好像是沒有開啟虛擬化，記錄下來，避免未來又忘了</description>
+    </item>
+    
     <item>
       <title>為 Ollama 建立一個聊天介面</title>
       <link>https://chechih.github.io/posts/20250416/</link>

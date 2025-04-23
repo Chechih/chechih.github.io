@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DeepSeek on NewPlayer</title>
+    <link>https://chechih.github.io/categories/DeepSeek/</link>
+    <description>Recent content in DeepSeek on NewPlayer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>NewPlayer</copyright>
+    <lastBuildDate>Thu, 10 Apr 2025 23:33:17 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/DeepSeek/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 Ollama 在本地部署 LLM 模型 By Ubuntu</title>
+      <link>https://chechih.github.io/posts/20250410/</link>
+      <pubDate>Thu, 10 Apr 2025 23:33:17 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250410/</guid>
+      <description>前言 本文將介紹使用 Ollama 在本地端搭建 deepseek-r1:1.5b，因為小弟電腦配備比較差一點，這個搭建起來比較不會 Lag， 但如果電腦比較高級</description>
+    </item>
+    
+  </channel>
+</rss>

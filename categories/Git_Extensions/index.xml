@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git_Extensions on NewPlayer</title>
+    <link>https://chechih.github.io/categories/Git_Extensions/</link>
+    <description>Recent content in Git_Extensions on NewPlayer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>NewPlayer</copyright>
+    <lastBuildDate>Wed, 20 Jul 2022 21:45:41 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/Git_Extensions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git Extensions Push GitHub</title>
+      <link>https://chechih.github.io/posts/Git_Extensions/Push/</link>
+      <pubDate>Wed, 20 Jul 2022 21:45:41 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/Git_Extensions/Push/</guid>
+      <description>還沒安裝 Git Extensions 的可以參考這個 註冊 要在 GitHub 上 Push 當然也需要帳號拉~ 先到 GitHub 網站註冊， 還沒註冊的可以參考這個 GitHub 新增專案 再來就是點頭像，到專案去，按綠色的</description>
+    </item>
+    
+    <item>
+      <title>Git Extensions 安裝和 Commit</title>
+      <link>https://chechih.github.io/posts/Git_Extensions/Install/</link>
+      <pubDate>Wed, 20 Jul 2022 17:23:23 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/Git_Extensions/Install/</guid>
+      <description>為什麼要用 Git Extensions 呢，很簡單，因為 Git 指令我常常忘記XDDDD 而且他的 UI 很棒(?)外貌協會(X) 下載 要使用 Git Extensions 前，要先裝 Git，看使用的 OS 裝對應的</description>
+    </item>
+    
+  </channel>
+</rss>

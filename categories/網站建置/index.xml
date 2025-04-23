@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>網站建置 on NewPlayer</title>
+    <link>https://chechih.github.io/categories/%E7%B6%B2%E7%AB%99%E5%BB%BA%E7%BD%AE/</link>
+    <description>Recent content in 網站建置 on NewPlayer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>NewPlayer</copyright>
+    <lastBuildDate>Wed, 04 Sep 2024 23:48:22 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/%E7%B6%B2%E7%AB%99%E5%BB%BA%E7%BD%AE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>開啟 IIS By Windows Server 2022</title>
+      <link>https://chechih.github.io/posts/IIS/Install/</link>
+      <pubDate>Wed, 04 Sep 2024 23:48:22 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/IIS/Install/</guid>
+      <description>安裝 開啟伺服器管理員 選擇新增角色及功能 會跳出新增角色及功能精靈，直接點選下一步 安裝類型選擇角色型或功能型安裝 目的地伺服器選擇從伺服器集區選取</description>
+    </item>
+    
+    <item>
+      <title>Hugo 建置到 GitHub Page</title>
+      <link>https://chechih.github.io/posts/WebBuild/HugoWebBuildToGitHub/</link>
+      <pubDate>Mon, 01 Aug 2022 20:05:01 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/WebBuild/HugoWebBuildToGitHub/</guid>
+      <description>這裡會介紹建置好的 Hugo 網站，Push 到 GitHub Page 上 產生靜態檔案 先移到 Hugo 的資料夾(hugo new site myweb 產生的資料夾)， cd myweb 執行 hugo 就會看到 Hugo 資料夾裡面的 public 資料</description>
+    </item>
+    
+    <item>
+      <title>Hugo 建置</title>
+      <link>https://chechih.github.io/posts/WebBuild/Hugo/</link>
+      <pubDate>Sat, 30 Jul 2022 21:20:33 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/WebBuild/Hugo/</guid>
+      <description>雖然架 GitHub 網站時，我有發現有 Jekyll ,Hexo, Hugo，不過 Jekyll 裝完發現太舊，Hexo, Hugo 選了好久，發現用 Hugo 的人比較多，而且 Hugo 如果文章多，建置似乎比較快，就選</description>
+    </item>
+    
+    <item>
+      <title>使用 GitHub 製作個人網站</title>
+      <link>https://chechih.github.io/posts/WebBuild/GitHub-Page-Build/</link>
+      <pubDate>Tue, 19 Jul 2022 21:43:22 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/WebBuild/GitHub-Page-Build/</guid>
+      <description>GitHub 上只能架設靜態網站，如果想要架設動態的可能要去找其他的地方，但如果只是要架靜態網站是個不錯的選擇。 建立帳號 要在 GitHub 上架網站當然需要一個帳號拉</description>
+    </item>
+    
+    <item>
+      <title>GitHub 帳號註冊</title>
+      <link>https://chechih.github.io/posts/WebBuild/Register/</link>
+      <pubDate>Tue, 19 Jul 2022 13:11:51 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/WebBuild/Register/</guid>
+      <description>建立帳號 要在 GitHub 帳號~ 當然先到 GitHub 網站， 右上方辦理，如下圖: 按進去後就會看到，很炫的註冊網站， 值得注意的是中間的 username 那邊會是之後 git 上去資料夾的根目</description>
+    </item>
+    
+  </channel>
+</rss>

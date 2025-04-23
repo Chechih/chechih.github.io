@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on NewPlayer</title>
+    <link>https://chechih.github.io/categories/</link>
+    <description>Recent content in Categories on NewPlayer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>NewPlayer</copyright>
+    <lastBuildDate>Wed, 16 Apr 2025 01:06:47 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker</title>
+      <link>https://chechih.github.io/categories/Docker/</link>
+      <pubDate>Wed, 16 Apr 2025 01:06:47 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/Docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ollama</title>
+      <link>https://chechih.github.io/categories/Ollama/</link>
+      <pubDate>Wed, 16 Apr 2025 01:06:47 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/Ollama/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DeepSeek</title>
+      <link>https://chechih.github.io/categories/DeepSeek/</link>
+      <pubDate>Thu, 10 Apr 2025 23:33:17 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/DeepSeek/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SQL Server</title>
+      <link>https://chechih.github.io/categories/SQL-Server/</link>
+      <pubDate>Wed, 26 Mar 2025 00:32:11 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/SQL-Server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Anaconda</title>
+      <link>https://chechih.github.io/categories/Anaconda/</link>
+      <pubDate>Mon, 03 Mar 2025 22:13:33 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/Anaconda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://chechih.github.io/categories/Python/</link>
+      <pubDate>Mon, 03 Mar 2025 22:13:33 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/Python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PowerShell</title>
+      <link>https://chechih.github.io/categories/PowerShell/</link>
+      <pubDate>Thu, 02 Jan 2025 00:36:17 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/PowerShell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://chechih.github.io/categories/Kubernetes/</link>
+      <pubDate>Sun, 08 Dec 2024 23:30:58 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/Kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LeetCode_解題</title>
+      <link>https://chechih.github.io/categories/LeetCode_%E8%A7%A3%E9%A1%8C/</link>
+      <pubDate>Thu, 03 Oct 2024 17:00:03 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/LeetCode_%E8%A7%A3%E9%A1%8C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IIS</title>
+      <link>https://chechih.github.io/categories/IIS/</link>
+      <pubDate>Wed, 02 Oct 2024 17:43:49 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/IIS/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NET</title>
+      <link>https://chechih.github.io/categories/NET/</link>
+      <pubDate>Wed, 02 Oct 2024 17:43:49 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/NET/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://chechih.github.io/categories/Windows/</link>
+      <pubDate>Wed, 02 Oct 2024 17:43:49 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/Windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>網站建置</title>
+      <link>https://chechih.github.io/categories/%E7%B6%B2%E7%AB%99%E5%BB%BA%E7%BD%AE/</link>
+      <pubDate>Wed, 04 Sep 2024 23:48:22 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/%E7%B6%B2%E7%AB%99%E5%BB%BA%E7%BD%AE/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://chechih.github.io/categories/Ubuntu/</link>
+      <pubDate>Mon, 12 Aug 2024 01:02:01 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/Ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VirtualBox</title>
+      <link>https://chechih.github.io/categories/VirtualBox/</link>
+      <pubDate>Sat, 20 Jul 2024 17:23:23 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/VirtualBox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git_Extensions</title>
+      <link>https://chechih.github.io/categories/Git_Extensions/</link>
+      <pubDate>Wed, 20 Jul 2022 21:45:41 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/Git_Extensions/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

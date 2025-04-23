@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>37. Sudoku Solver | NewPlayer</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="問題 Write a program to solve a Sudoku puzzle by filling the empty cells. A sudoku solution must satisfy all of the following rules: Each of the digits 1-9 must occur exactly once in each row. Each of the digits 1-9 must occur exactly once in each column. Each of the digits 1-9 must occur exactly once in each of the 9 3x3 sub-boxes of the grid. The &rsquo;.&rsquo;">
+    <meta name="generator" content="Hugo 0.116.1">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+
+  <link rel="stylesheet" href="/web/css/custom.css?bust=202310120125">
+
+
+
+<script src="/web/js/jparticles@3.4.0/browser/jparticles.base.js"></script>
+
+<script src="/web/js/jparticles@3.4.0/browser/particle.js"></script>
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="37. Sudoku Solver" />
+<meta property="og:description" content="問題 Write a program to solve a Sudoku puzzle by filling the empty cells. A sudoku solution must satisfy all of the following rules: Each of the digits 1-9 must occur exactly once in each row. Each of the digits 1-9 must occur exactly once in each column. Each of the digits 1-9 must occur exactly once in each of the 9 3x3 sub-boxes of the grid. The &rsquo;.&rsquo;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chechih.github.io/posts/LeetCode/37.Sudoku_Solver/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-06T01:28:07+08:00" />
+<meta property="article:modified_time" content="2023-12-06T01:28:07+08:00" />
+<meta itemprop="name" content="37. Sudoku Solver">
+<meta itemprop="description" content="問題 Write a program to solve a Sudoku puzzle by filling the empty cells. A sudoku solution must satisfy all of the following rules: Each of the digits 1-9 must occur exactly once in each row. Each of the digits 1-9 must occur exactly once in each column. Each of the digits 1-9 must occur exactly once in each of the 9 3x3 sub-boxes of the grid. The &rsquo;.&rsquo;"><meta itemprop="datePublished" content="2023-12-06T01:28:07+08:00" />
+<meta itemprop="dateModified" content="2023-12-06T01:28:07+08:00" />
+<meta itemprop="wordCount" content="921">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="37. Sudoku Solver"/>
+<meta name="twitter:description" content="問題 Write a program to solve a Sudoku puzzle by filling the empty cells. A sudoku solution must satisfy all of the following rules: Each of the digits 1-9 must occur exactly once in each row. Each of the digits 1-9 must occur exactly once in each column. Each of the digits 1-9 must occur exactly once in each of the 9 3x3 sub-boxes of the grid. The &rsquo;.&rsquo;"/>
+
+	
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDSDRE73T9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VDSDRE73T9');
+    </script>
+  </head>
+
+  <body class="ma0 avenir bg-near-white" style="background-color: #E7E9EB;">
+    <div class="particle-background" style="width: 100%; height: 100%; position: fixed;"></div>
+    <script>
+      
+      new JParticles.Particle(".particle-background", {
+        color: "#25bfff",
+        
+        proximity: 90,
+        
+        range: 100,
+    });
+      </script>
+    
+   
+  
+
+  <header>
+    <div class="custom-gradient1 navbar-fixed-top">
+      <nav class="pv1 ph3 ph4-ns" role="navigation">
+  <script>
+    function showList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');    
+      if(eList.style.display == 'grid')
+      {
+        hideList();
+        return;
+      }
+      eParent.classList.toggle("change");  
+      eList.style.display = 'grid'
+      var oParentRect = eParent.getBoundingClientRect();
+      var oTipRect = eList.getBoundingClientRect();
+      var fOriginalX = oParentRect.x;
+      var fOriginalY = oParentRect.y + oParentRect.height;
+  
+      eList.style.left = '0px';
+      eList.style.top = fOriginalY + 'px';
+      window.addEventListener("scroll", hideList);
+      window.addEventListener('resize', hideList);
+    }
+    function hideList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');
+      eParent.classList.toggle("change");  
+      window.removeEventListener("scroll", hideList);
+      window.removeEventListener('resize', hideList);
+      eList.style.display = 'none';
+    }
+  </script>
+  <style>
+    .mobile-mainmenu-btn {
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 4px;
+      background-color: aliceblue;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+    </style>
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        NewPlayer
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </button>
+        <ul id="mobile-mainmenu-list" class="mobile-menu-list">
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/" title="Home 頁" onclick="">
+              Home
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/posts/" title="Posts 頁" onclick="">
+              Posts
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/categories/" title="分類 頁" onclick="">
+              分類
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/about/" title="關於 頁" onclick="">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+        <ul class="pl0 mr3 pc-menu-items">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="Home 頁">
+              Home
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts 頁">
+              Posts
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分類 頁">
+              分類
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="關於 頁">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</nav>
+
+    </div>
+    <div class="bg-black-60 headerbar-wrap">
+      <nav class="pv1 ph3 ph4-ns" role="navigation">
+  <script>
+    function showList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');    
+      if(eList.style.display == 'grid')
+      {
+        hideList();
+        return;
+      }
+      eParent.classList.toggle("change");  
+      eList.style.display = 'grid'
+      var oParentRect = eParent.getBoundingClientRect();
+      var oTipRect = eList.getBoundingClientRect();
+      var fOriginalX = oParentRect.x;
+      var fOriginalY = oParentRect.y + oParentRect.height;
+  
+      eList.style.left = '0px';
+      eList.style.top = fOriginalY + 'px';
+      window.addEventListener("scroll", hideList);
+      window.addEventListener('resize', hideList);
+    }
+    function hideList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');
+      eParent.classList.toggle("change");  
+      window.removeEventListener("scroll", hideList);
+      window.removeEventListener('resize', hideList);
+      eList.style.display = 'none';
+    }
+  </script>
+  <style>
+    .mobile-mainmenu-btn {
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 4px;
+      background-color: aliceblue;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+    </style>
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        NewPlayer
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </button>
+        <ul id="mobile-mainmenu-list" class="mobile-menu-list">
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/" title="Home 頁" onclick="">
+              Home
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/posts/" title="Posts 頁" onclick="">
+              Posts
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/categories/" title="分類 頁" onclick="">
+              分類
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/about/" title="關於 頁" onclick="">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+        <ul class="pl0 mr3 pc-menu-items">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="Home 頁">
+              Home
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts 頁">
+              Posts
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分類 頁">
+              分類
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="關於 頁">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main role="main">
+      
+  <div style="min-height: calc(100vh - 8rem);">
+    
+    <article class="flex-l flex-wrap justify-between mw8 center ph3 single-page">
+      <header class="mt4 w-100">
+        <aside class="instapaper_ignoref b helvetica tracked">
+            
+        </aside>
+        
+
+
+
+
+
+
+
+
+
+
+
+        <h1 class="f1 athelas mt3 mb1">37. Sudoku Solver</h1>
+        <div class="categories">
+          📁 
+          
+            
+              <a style="text-decoration: none;" href="/categories/LeetCode_%E8%A7%A3%E9%A1%8C">LeetCode_解題</a>
+            
+          
+        </div>
+        
+        
+        
+        <time class="f6 mv4 dib tracked" datetime="2023-12-06T01:28:07+08:00">十二月 6, 2023</time>
+        
+
+        
+        
+      </header>
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><h3 id="問題">問題</h3>
+<p>Write a program to solve a Sudoku puzzle by filling the empty cells.</p>
+<p>A sudoku solution must satisfy <strong>all of the following rules</strong>:</p>
+<ol>
+<li>Each of the digits <strong>1-9</strong> must occur exactly once in each row.</li>
+<li>Each of the digits <strong>1-9</strong> must occur exactly once in each column.</li>
+<li>Each of the digits <strong>1-9</strong> must occur exactly once in each of the 9 <strong>3x3</strong> sub-boxes of the grid.
+The <strong>&rsquo;.&rsquo;</strong> character indicates empty cells.</li>
+</ol>
+<h3 id="翻譯">翻譯</h3>
+<p>撰寫一個程式來通過填充空白格子來解決數獨。</p>
+<p>一個數獨解必須滿足 <strong>以下所有規則</strong>：</p>
+<ol>
+<li>每個數字 <strong>1-9</strong> 在每一行中必須恰好出現一次。</li>
+<li>每個數字 <strong>1-9</strong> 在每一列中必須恰好出現一次。</li>
+<li>每個數字 <strong>1-9</strong> 在棋盤的每個 9 個 <strong>3x3</strong> 子區塊中必須恰好出現一次。
+字符 <strong>&rsquo;.&rsquo;</strong> 表示空白格子。</li>
+</ol>
+<h5 id="example-1">Example 1:</h5>
+<pre><code>Input: board = [[&quot;5&quot;,&quot;3&quot;,&quot;.&quot;,&quot;.&quot;,&quot;7&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;],[&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;1&quot;,&quot;9&quot;,&quot;5&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;],[&quot;.&quot;,&quot;9&quot;,&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;,&quot;.&quot;],[&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;3&quot;],[&quot;4&quot;,&quot;.&quot;,&quot;.&quot;,&quot;8&quot;,&quot;.&quot;,&quot;3&quot;,&quot;.&quot;,&quot;.&quot;,&quot;1&quot;],[&quot;7&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;2&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;],[&quot;.&quot;,&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;2&quot;,&quot;8&quot;,&quot;.&quot;],[&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;4&quot;,&quot;1&quot;,&quot;9&quot;,&quot;.&quot;,&quot;.&quot;,&quot;5&quot;],[&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;7&quot;,&quot;9&quot;]]
+Output: [[&quot;5&quot;,&quot;3&quot;,&quot;4&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;1&quot;,&quot;2&quot;],[&quot;6&quot;,&quot;7&quot;,&quot;2&quot;,&quot;1&quot;,&quot;9&quot;,&quot;5&quot;,&quot;3&quot;,&quot;4&quot;,&quot;8&quot;],[&quot;1&quot;,&quot;9&quot;,&quot;8&quot;,&quot;3&quot;,&quot;4&quot;,&quot;2&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;],[&quot;8&quot;,&quot;5&quot;,&quot;9&quot;,&quot;7&quot;,&quot;6&quot;,&quot;1&quot;,&quot;4&quot;,&quot;2&quot;,&quot;3&quot;],[&quot;4&quot;,&quot;2&quot;,&quot;6&quot;,&quot;8&quot;,&quot;5&quot;,&quot;3&quot;,&quot;7&quot;,&quot;9&quot;,&quot;1&quot;],[&quot;7&quot;,&quot;1&quot;,&quot;3&quot;,&quot;9&quot;,&quot;2&quot;,&quot;4&quot;,&quot;8&quot;,&quot;5&quot;,&quot;6&quot;],[&quot;9&quot;,&quot;6&quot;,&quot;1&quot;,&quot;5&quot;,&quot;3&quot;,&quot;7&quot;,&quot;2&quot;,&quot;8&quot;,&quot;4&quot;],[&quot;2&quot;,&quot;8&quot;,&quot;7&quot;,&quot;4&quot;,&quot;1&quot;,&quot;9&quot;,&quot;6&quot;,&quot;3&quot;,&quot;5&quot;],[&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;2&quot;,&quot;8&quot;,&quot;6&quot;,&quot;1&quot;,&quot;7&quot;,&quot;9&quot;]]
+Explanation: The input board is shown above and the only valid solution is shown below:
+</code></pre>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Sudoku-by-L2G-20050714.svg/250px-Sudoku-by-L2G-20050714.svg.png" alt="Example 1 board" title="Example 1 board"><br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Sudoku-by-L2G-20050714_solution.svg/250px-Sudoku-by-L2G-20050714_solution.svg.png" alt="Example 1 board answer" title="Example 1 board answer"><br>
+圖片來源: <a href="https://leetcode.com/problems/sudoku-solver/">LeetCode</a></p>
+<h5 id="constraints">Constraints:</h5>
+<ul>
+<li>board.length == 9</li>
+<li>board[i].length == 9</li>
+<li>board[i][j] is a digit or &lsquo;.&rsquo;.</li>
+<li>It is guaranteed that the input board has only one solution.</li>
+</ul>
+<h3 id="想法">想法</h3>
+<p>這題是要求數獨的解，可以一開始把每個需要填的位置，把可能的數字都先找出來，再遞迴去把這些可能的數字都帶帶看，直到找出答案。帶入時只要檢查直軸和橫軸，和九方格內有沒有重複的就好，如果有重複就換下一個數字試試，如果所有可能都試過了代表前面找錯了，就必須回朔檢查前面的數字，這樣把所有數字找過找即可。</p>
+<h3 id="解法">解法</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    sudoku_square_keys <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>        [(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>)], 
+</span></span><span style="display:flex;"><span>        [(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>), (<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">4</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>), (<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">5</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">5</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>)], 
+</span></span><span style="display:flex;"><span>        [(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">6</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">6</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">6</span>), (<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">7</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">7</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">7</span>), (<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">8</span>), (<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">8</span>), (<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">8</span>)], 
+</span></span><span style="display:flex;"><span>        [(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>), (<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">2</span>), (<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2</span>)], 
+</span></span><span style="display:flex;"><span>        [(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>), (<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">3</span>), (<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">3</span>), (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>), (<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">4</span>), (<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">4</span>), (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>), (<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>), (<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">5</span>)], 
+</span></span><span style="display:flex;"><span>        [(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">6</span>), (<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">6</span>), (<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>), (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">7</span>), (<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">7</span>), (<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">7</span>), (<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">8</span>), (<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">8</span>), (<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">8</span>)], 
+</span></span><span style="display:flex;"><span>        [(<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">0</span>), (<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">1</span>), (<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">2</span>), (<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">2</span>), (<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">2</span>)], 
+</span></span><span style="display:flex;"><span>        [(<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">3</span>), (<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">3</span>), (<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">3</span>), (<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">4</span>), (<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">4</span>), (<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">4</span>), (<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">5</span>), (<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">5</span>), (<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">5</span>)], 
+</span></span><span style="display:flex;"><span>        [(<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">6</span>), (<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">6</span>), (<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">6</span>), (<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>), (<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">7</span>), (<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">7</span>), (<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">8</span>), (<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>), (<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">8</span>)]]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sudoku_horizontal_answer</span>(self, board: List[List[str]]) <span style="color:#f92672">-&gt;</span> Set[str]:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        檢查水平可能的數字
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>        rlt <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">9</span>):
+</span></span><span style="display:flex;"><span>            b <span style="color:#f92672">=</span> board[i]
+</span></span><span style="display:flex;"><span>            no_point <span style="color:#f92672">=</span> {k <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> b <span style="color:#66d9ef">if</span> k <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;.&#39;</span>}
+</span></span><span style="display:flex;"><span>            possibility_val <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>xor(no_point)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">9</span>):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(b[j] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;.&#39;</span>):
+</span></span><span style="display:flex;"><span>                    rlt[(i, j)] <span style="color:#f92672">=</span> possibility_val
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> rlt
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">xor</span>(self, remove_items: Set[str]) <span style="color:#f92672">-&gt;</span> Set[str]:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {<span style="color:#e6db74">&#39;1&#39;</span>, <span style="color:#e6db74">&#39;2&#39;</span>, <span style="color:#e6db74">&#39;3&#39;</span>, <span style="color:#e6db74">&#39;4&#39;</span>, <span style="color:#e6db74">&#39;5&#39;</span>, <span style="color:#e6db74">&#39;6&#39;</span>, <span style="color:#e6db74">&#39;7&#39;</span>, <span style="color:#e6db74">&#39;8&#39;</span>, <span style="color:#e6db74">&#39;9&#39;</span>} <span style="color:#f92672">^</span> remove_items
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sudoku_vertical_answer</span>(self, board: List[List[str]]) <span style="color:#f92672">-&gt;</span> Set[str]:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        檢查垂直可能的數字
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>        rlt <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">9</span>):
+</span></span><span style="display:flex;"><span>            no_point <span style="color:#f92672">=</span> {k[i] <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> board <span style="color:#66d9ef">if</span> k[i] <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;.&#39;</span>}
+</span></span><span style="display:flex;"><span>            possibility_val <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>xor(no_point)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">9</span>):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(board[j][i] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;.&#39;</span>):
+</span></span><span style="display:flex;"><span>                    rlt[(j, i)] <span style="color:#f92672">=</span> possibility_val
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> rlt
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sudoku_square_answer</span>(self, board: List[List[str]]) <span style="color:#f92672">-&gt;</span> Set[str]:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        檢查九方格可能的數字
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>        rlt <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>        keys <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>sudoku_square_keys
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">9</span>):
+</span></span><span style="display:flex;"><span>            no_point <span style="color:#f92672">=</span> {board[k[<span style="color:#ae81ff">0</span>]][k[<span style="color:#ae81ff">1</span>]] <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> keys[i] <span style="color:#66d9ef">if</span> board[k[<span style="color:#ae81ff">0</span>]][k[<span style="color:#ae81ff">1</span>]] <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;.&#39;</span>}
+</span></span><span style="display:flex;"><span>            possibility_val <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>xor(no_point)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">9</span>):
+</span></span><span style="display:flex;"><span>                k <span style="color:#f92672">=</span> keys[i][j]
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(board[k[<span style="color:#ae81ff">0</span>]][k[<span style="color:#ae81ff">1</span>]] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;.&#39;</span>):
+</span></span><span style="display:flex;"><span>                    rlt[k] <span style="color:#f92672">=</span> possibility_val
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> rlt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">possibility_answer</span>(self, board: List[List[str]])<span style="color:#f92672">-&gt;</span> Dict[Tuple[int, int], Set[str]]:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        確認每一格可能的數字
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#39;&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>        ha <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>sudoku_horizontal_answer(board)
+</span></span><span style="display:flex;"><span>        va <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>sudoku_vertical_answer(board)
+</span></span><span style="display:flex;"><span>        sa <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>sudoku_square_answer(board)  
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> { i: vals <span style="color:#f92672">&amp;</span> va[i] <span style="color:#f92672">&amp;</span> sa[i] <span style="color:#66d9ef">for</span> i, vals <span style="color:#f92672">in</span> ha<span style="color:#f92672">.</span>items() }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_valid</span>(self, board: List[List[str]], i: int, j: int, val: str)<span style="color:#f92672">-&gt;</span> bool:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">9</span>):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> board[k][j] <span style="color:#f92672">==</span> val:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> board[i][k] <span style="color:#f92672">==</span> val:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>            row <span style="color:#f92672">=</span> i <span style="color:#f92672">//</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">+</span> k <span style="color:#f92672">//</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>            col <span style="color:#f92672">=</span> j <span style="color:#f92672">//</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">+</span> k <span style="color:#f92672">%</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> board[row][col] <span style="color:#f92672">==</span> val:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">check_answer</span>(self, possibility_answer: Dict[Tuple[int, int], Set[str]], board: List[List[str]]) <span style="color:#f92672">-&gt;</span> bool:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> possibility_answer:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>        last_key <span style="color:#f92672">=</span> list(possibility_answer)[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>        pv <span style="color:#f92672">=</span> possibility_answer[last_key]
+</span></span><span style="display:flex;"><span>        x, y <span style="color:#f92672">=</span> last_key
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">del</span> possibility_answer[last_key]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> v <span style="color:#f92672">in</span> pv:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> self<span style="color:#f92672">.</span>is_valid(board, x, y, v):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>            board[x][y] <span style="color:#f92672">=</span> v
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (self<span style="color:#f92672">.</span>check_answer(possibility_answer, board)):
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>            board[x][y] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;.&#39;</span>
+</span></span><span style="display:flex;"><span>        possibility_answer[last_key] <span style="color:#f92672">=</span> pv
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">solveSudoku</span>(self, board: List[List[str]]) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Do not return anything, modify board in-place instead.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        pa <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>possibility_answer(board)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>check_answer(pa, board)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>
+</span></span></code></pre></div><p>Github 同步網址:<br>
+<a href="https://github.com/Chechih/LeetCode_Py/tree/master/37.Sudoku_Solver">https://github.com/Chechih/LeetCode_Py/tree/master/37.Sudoku_Solver</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+        
+        </div>
+      </div>
+
+      <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+    </article>
+  </div>
+
+    </main>
+    <footer class="custom-gradient1 bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://chechih.github.io/" >
+    &copy;  NewPlayer 2025 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    <a href="https://github.com/Chechih" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      </a>
+  
+    <a href="https://www.linkedin.com/in/%E5%93%B2%E8%AA%8C-%E5%BC%B5-2a3377245/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      </a>
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

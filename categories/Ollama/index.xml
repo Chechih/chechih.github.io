@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ollama on NewPlayer</title>
+    <link>https://chechih.github.io/categories/Ollama/</link>
+    <description>Recent content in Ollama on NewPlayer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>NewPlayer</copyright>
+    <lastBuildDate>Wed, 16 Apr 2025 01:06:47 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/Ollama/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>為 Ollama 建立一個聊天介面</title>
+      <link>https://chechih.github.io/posts/20250416/</link>
+      <pubDate>Wed, 16 Apr 2025 01:06:47 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250416/</guid>
+      <description>前言 當你安裝好了 Ollama，你可能會想說，可不可以跟 GPT 一樣，給他個介面?當然可以，這裡將會介紹怎麼安裝 Webui 安裝 要先安裝 Docker ，未安裝可到 Docker 安裝 By</description>
+    </item>
+    
+    <item>
+      <title>使用 Ollama 在本地部署 LLM 模型 By Ubuntu</title>
+      <link>https://chechih.github.io/posts/20250410/</link>
+      <pubDate>Thu, 10 Apr 2025 23:33:17 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250410/</guid>
+      <description>前言 本文將介紹使用 Ollama 在本地端搭建 deepseek-r1:1.5b，因為小弟電腦配備比較差一點，這個搭建起來比較不會 Lag， 但如果電腦比較高級</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>在 VirtualBox 中安裝 Ubuntu | NewPlayer</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="前置準備 前往 VirtualBox 官網 下載 EXE 安裝，下載完成安裝起來 前往 Ubuntu 官網 下載印象檔 此範例使用 24.04 LTS 版本 開始安裝 Step1: 開啟安裝好的 VirtualBox Step2: 點選右上角的新增按鈕 Step3: 輸入參數">
+    <meta name="generator" content="Hugo 0.116.1">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+
+  <link rel="stylesheet" href="/web/css/custom.css?bust=202310120125">
+
+
+
+<script src="/web/js/jparticles@3.4.0/browser/jparticles.base.js"></script>
+
+<script src="/web/js/jparticles@3.4.0/browser/particle.js"></script>
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="在 VirtualBox 中安裝 Ubuntu" />
+<meta property="og:description" content="前置準備 前往 VirtualBox 官網 下載 EXE 安裝，下載完成安裝起來 前往 Ubuntu 官網 下載印象檔 此範例使用 24.04 LTS 版本 開始安裝 Step1: 開啟安裝好的 VirtualBox Step2: 點選右上角的新增按鈕 Step3: 輸入參數" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chechih.github.io/posts/Ubuntu/Install/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-07-20T17:23:23+08:00" />
+<meta property="article:modified_time" content="2024-07-20T17:23:23+08:00" />
+<meta itemprop="name" content="在 VirtualBox 中安裝 Ubuntu">
+<meta itemprop="description" content="前置準備 前往 VirtualBox 官網 下載 EXE 安裝，下載完成安裝起來 前往 Ubuntu 官網 下載印象檔 此範例使用 24.04 LTS 版本 開始安裝 Step1: 開啟安裝好的 VirtualBox Step2: 點選右上角的新增按鈕 Step3: 輸入參數"><meta itemprop="datePublished" content="2024-07-20T17:23:23+08:00" />
+<meta itemprop="dateModified" content="2024-07-20T17:23:23+08:00" />
+<meta itemprop="wordCount" content="957">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="在 VirtualBox 中安裝 Ubuntu"/>
+<meta name="twitter:description" content="前置準備 前往 VirtualBox 官網 下載 EXE 安裝，下載完成安裝起來 前往 Ubuntu 官網 下載印象檔 此範例使用 24.04 LTS 版本 開始安裝 Step1: 開啟安裝好的 VirtualBox Step2: 點選右上角的新增按鈕 Step3: 輸入參數"/>
+
+	
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDSDRE73T9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VDSDRE73T9');
+    </script>
+  </head>
+
+  <body class="ma0 avenir bg-near-white" style="background-color: #E7E9EB;">
+    <div class="particle-background" style="width: 100%; height: 100%; position: fixed;"></div>
+    <script>
+      
+      new JParticles.Particle(".particle-background", {
+        color: "#25bfff",
+        
+        proximity: 90,
+        
+        range: 100,
+    });
+      </script>
+    
+   
+  
+
+  <header>
+    <div class="custom-gradient1 navbar-fixed-top">
+      <nav class="pv1 ph3 ph4-ns" role="navigation">
+  <script>
+    function showList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');    
+      if(eList.style.display == 'grid')
+      {
+        hideList();
+        return;
+      }
+      eParent.classList.toggle("change");  
+      eList.style.display = 'grid'
+      var oParentRect = eParent.getBoundingClientRect();
+      var oTipRect = eList.getBoundingClientRect();
+      var fOriginalX = oParentRect.x;
+      var fOriginalY = oParentRect.y + oParentRect.height;
+  
+      eList.style.left = '0px';
+      eList.style.top = fOriginalY + 'px';
+      window.addEventListener("scroll", hideList);
+      window.addEventListener('resize', hideList);
+    }
+    function hideList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');
+      eParent.classList.toggle("change");  
+      window.removeEventListener("scroll", hideList);
+      window.removeEventListener('resize', hideList);
+      eList.style.display = 'none';
+    }
+  </script>
+  <style>
+    .mobile-mainmenu-btn {
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 4px;
+      background-color: aliceblue;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+    </style>
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        NewPlayer
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </button>
+        <ul id="mobile-mainmenu-list" class="mobile-menu-list">
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/" title="Home 頁" onclick="">
+              Home
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/posts/" title="Posts 頁" onclick="">
+              Posts
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/categories/" title="分類 頁" onclick="">
+              分類
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/about/" title="關於 頁" onclick="">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+        <ul class="pl0 mr3 pc-menu-items">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="Home 頁">
+              Home
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts 頁">
+              Posts
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分類 頁">
+              分類
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="關於 頁">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</nav>
+
+    </div>
+    <div class="bg-black-60 headerbar-wrap">
+      <nav class="pv1 ph3 ph4-ns" role="navigation">
+  <script>
+    function showList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');    
+      if(eList.style.display == 'grid')
+      {
+        hideList();
+        return;
+      }
+      eParent.classList.toggle("change");  
+      eList.style.display = 'grid'
+      var oParentRect = eParent.getBoundingClientRect();
+      var oTipRect = eList.getBoundingClientRect();
+      var fOriginalX = oParentRect.x;
+      var fOriginalY = oParentRect.y + oParentRect.height;
+  
+      eList.style.left = '0px';
+      eList.style.top = fOriginalY + 'px';
+      window.addEventListener("scroll", hideList);
+      window.addEventListener('resize', hideList);
+    }
+    function hideList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');
+      eParent.classList.toggle("change");  
+      window.removeEventListener("scroll", hideList);
+      window.removeEventListener('resize', hideList);
+      eList.style.display = 'none';
+    }
+  </script>
+  <style>
+    .mobile-mainmenu-btn {
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 4px;
+      background-color: aliceblue;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+    </style>
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        NewPlayer
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </button>
+        <ul id="mobile-mainmenu-list" class="mobile-menu-list">
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/" title="Home 頁" onclick="">
+              Home
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/posts/" title="Posts 頁" onclick="">
+              Posts
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/categories/" title="分類 頁" onclick="">
+              分類
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/about/" title="關於 頁" onclick="">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+        <ul class="pl0 mr3 pc-menu-items">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="Home 頁">
+              Home
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts 頁">
+              Posts
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分類 頁">
+              分類
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="關於 頁">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main role="main">
+      
+  <div style="min-height: calc(100vh - 8rem);">
+    
+    <article class="flex-l flex-wrap justify-between mw8 center ph3 single-page">
+      <header class="mt4 w-100">
+        <aside class="instapaper_ignoref b helvetica tracked">
+            
+        </aside>
+        
+
+
+
+
+
+
+
+
+
+
+
+        <h1 class="f1 athelas mt3 mb1">在 VirtualBox 中安裝 Ubuntu</h1>
+        <div class="categories">
+          📁 
+          
+            
+              <a style="text-decoration: none;" href="/categories/VirtualBox">VirtualBox</a>
+            
+              <a style="text-decoration: none;" href="/categories/Ubuntu">Ubuntu</a>
+            
+          
+        </div>
+        
+        
+        
+        <time class="f6 mv4 dib tracked" datetime="2024-07-20T17:23:23+08:00">七月 20, 2024</time>
+        
+
+        
+        
+      </header>
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><h3 id="前置準備">前置準備</h3>
+<ul>
+<li>前往 <a href="https://www.virtualbox.org/">VirtualBox 官網</a> 下載 EXE 安裝，下載完成安裝起來</li>
+<li>前往 <a href="https://ubuntu.com/download/desktop/">Ubuntu 官網</a> 下載印象檔
+<ul>
+<li>此範例使用 24.04 LTS 版本</li>
+</ul>
+</li>
+</ul>
+<h3 id="開始安裝">開始安裝</h3>
+<p>Step1: 開啟安裝好的 VirtualBox<br>
+<img src="/images/VirtualBox/Start_Screen.jpg" alt="VirtualBox Start Screen" title="VirtualBox Start Screen"><br>
+Step2: 點選右上角的新增按鈕<br>
+<img src="/images/VirtualBox/Insert.jpg" alt="VirtualBox Insert" title="VirtualBox Insert"><br>
+Step3: 輸入參數，以下是說明<br>
+a. 名稱: 打 Ubuntu 即可，這是之後用來是別虛機的名稱<br>
+b. 資料夾: 是建立起的虛機檔案存放路徑，如果沒有特別需要預設即可<br>
+c. 印象檔: 使用<em>剛剛 Ubuntu 下載下來的 ISO 檔案</em><br>
+d. 略個無人職守安裝: 有點像之後自動幫你安裝到系統起來，不過他要填的訊息也比較多，先勾起來，用一般安裝<br>
+<img src="/images/VirtualBox/Ubuntu_Parameter1.jpg" alt="VirtualBox Ubuntu Parameter1" title="VirtualBox Ubuntu Parameter1"><br>
+Step4: 設定記憶體和 CPU 大小，一需求設定<br>
+<img src="/images/VirtualBox/Ubuntu_Parameter2.jpg" alt="VirtualBox Ubuntu Parameter2" title="VirtualBox Ubuntu Parameter2"><br>
+Step5: 設定虛擬硬碟，這個有點像系統要跑在多大的硬碟上<br>
+選項 1. 建立一個，但就算你輸入 100G 也不會直接吃掉你硬碟的 100G，除非你勾選的<strong>預設配置完整大小</strong><br>
+選項 2. 指的是使用已建立好的<br>
+選項 3. 先不處理，之後也可以到<strong>設定</strong>那邊處理<br>
+建議如果第一次用的話，先選擇 1.<br>
+<img src="/images/VirtualBox/Ubuntu_Parameter3.jpg" alt="VirtualBox Ubuntu Parameter3" title="VirtualBox Ubuntu Parameter3"><br>
+Strp6: 確認剛剛輸入的值，沒問題直接按<strong>完成</strong><br>
+<img src="/images/VirtualBox/Ubuntu_Confirm.jpg" alt="VirtualBox Ubuntu Confirm" title="VirtualBox Ubuntu Confirm"><br>
+<img src="/images/VirtualBox/Ubuntu_Init.jpg" alt="VirtualBox Ubuntu Init" title="VirtualBox Ubuntu Init"><br>
+Step7: 先別急著啟動，先進行初始設定，點選剛剛建立的虛機，再按<strong>設定</strong><br>
+<img src="/images/VirtualBox/Ubuntu_Setting1.jpg" alt="VirtualBox Ubuntu Setting1" title="VirtualBox Ubuntu Setting1"><br>
+點選<strong>一般</strong>&gt;<strong>進階</strong>將共用剪貼簿和拖拉設定成雙向，這能讓之後複製和拖拉更方便。<br>
+<img src="/images/VirtualBox/Ubuntu_Setting2.jpg" alt="VirtualBox Ubuntu Setting2" title="VirtualBox Ubuntu Setting2"><br>
+點選<strong>儲存裝置</strong>&gt;<strong>控制器</strong>，勾選固態硬碟<br>
+<img src="/images/VirtualBox/Ubuntu_Setting3.jpg" alt="VirtualBox Ubuntu Setting3" title="VirtualBox Ubuntu Setting3"><br>
+點選<strong>網路</strong>增加新的網卡2，<strong>僅限主機</strong>，顧名思義就是宿主能連近來而已，網卡2，選擇橋接介面卡，這能把虛機放到內網裡，其他電腦能 Ping 的到<br>
+<img src="/images/VirtualBox/Ubuntu_Setting4.jpg" alt="VirtualBox Ubuntu Setting4" title="VirtualBox Ubuntu Setting4"><br>
+<img src="/images/VirtualBox/Ubuntu_Setting5.jpg" alt="VirtualBox Ubuntu Setting5" title="VirtualBox Ubuntu Setting5"><br>
+備註: 共用資料夾，就是讓宿主和虛機能共用的資料夾，之後有需要再設定即可<br>
+沒問題先按<strong>確定</strong><br>
+Step8: 啟動<br>
+<img src="/images/VirtualBox/Ubuntu_Run.jpg" alt="VirtualBox Ubuntu Run" title="VirtualBox Ubuntu Run"><br>
+Step9: 安裝 Ubuntu，選擇第一項<br>
+<img src="/images/VirtualBox/Ubuntu_Install1.jpg" alt="VirtualBox Ubuntu Install1" title="VirtualBox Ubuntu Install1"> <br>
+<img src="/images/VirtualBox/Ubuntu_Install2.jpg" alt="VirtualBox Ubuntu Install2" title="VirtualBox Ubuntu Install2"><br>
+選擇語系<br>
+<img src="/images/VirtualBox/Ubuntu_Install3.jpg" alt="VirtualBox Ubuntu Install3" title="VirtualBox Ubuntu Install3"><br>
+無障礙功能<br>
+<img src="/images/VirtualBox/Ubuntu_Install4.jpg" alt="VirtualBox Ubuntu Install4" title="VirtualBox Ubuntu Install4"><br>
+鍵盤配置<br>
+<img src="/images/VirtualBox/Ubuntu_Install5.jpg" alt="VirtualBox Ubuntu Install5" title="VirtualBox Ubuntu Install5"><br>
+網路配置<br>
+<img src="/images/VirtualBox/Ubuntu_Install6.jpg" alt="VirtualBox Ubuntu Install6" title="VirtualBox Ubuntu Install6"><br>
+檢查 Ubuntu 更新，這裡可以略過，安裝完後再更新
+<img src="/images/VirtualBox/Ubuntu_Install7.jpg" alt="VirtualBox Ubuntu Install7" title="VirtualBox Ubuntu Install7"><br>
+選擇<strong>安裝 Ubuntu</strong>
+<img src="/images/VirtualBox/Ubuntu_Install8.jpg" alt="VirtualBox Ubuntu Install8" title="VirtualBox Ubuntu Install8"><br>
+選擇<strong>互動是安裝</strong>
+<img src="/images/VirtualBox/Ubuntu_Install9.jpg" alt="VirtualBox Ubuntu Install9" title="VirtualBox Ubuntu Install9"><br>
+是否按裝推薦軟體，依需求安裝<br>
+<img src="/images/VirtualBox/Ubuntu_Install10.jpg" alt="VirtualBox Ubuntu Install10" title="VirtualBox Ubuntu Install10"><br>
+硬碟是否要切割?基本上預設即可<br>
+<img src="/images/VirtualBox/Ubuntu_Install11.jpg" alt="VirtualBox Ubuntu Install11" title="VirtualBox Ubuntu Install11"><br>
+設定帳密<br>
+<img src="/images/VirtualBox/Ubuntu_Install12.jpg" alt="VirtualBox Ubuntu Install12" title="VirtualBox Ubuntu Install12"><br>
+設定時區，系統會自己抓<br>
+<img src="/images/VirtualBox/Ubuntu_Install13.jpg" alt="VirtualBox Ubuntu Install13" title="VirtualBox Ubuntu Install13"><br>
+確認剛剛的設定<br>
+<img src="/images/VirtualBox/Ubuntu_Install14.jpg" alt="VirtualBox Ubuntu Install14" title="VirtualBox Ubuntu Install14"><br>
+安裝 Ubuntu 中<br>
+<img src="/images/VirtualBox/Ubuntu_Install15.jpg" alt="VirtualBox Ubuntu Install15" title="VirtualBox Ubuntu Install15"><br>
+等待一下就安裝完畢
+<img src="/images/VirtualBox/Ubuntu.jpg" alt="VirtualBox Ubuntu" title="VirtualBox Ubuntu"></p>
+<h3 id="共享設置">共享設置</h3>
+<p>Step 1: 插入 Guest Additions CD<br>
+<img src="/images/VirtualBox/Insert_Guest_Additions_CD.jpg" alt="Insert Guest Additions CD" title="Insert Guest Additions CD"><br>
+Step 2: 打開終端機<br>
+<img src="/images/VirtualBox/Install_Guest_Additions_CD1.jpg" alt="Install Guest Additions CD1" title="Install Guest Additions CD1"><br>
+Step 3: 安裝 Guest Additions CD，輸入</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo ./VBoxLinuxAdditions.run
+</span></span></code></pre></div><p><img src="/images/VirtualBox/Install_Guest_Additions_CD2.jpg" alt="Install Guest Additions CD2" title="Install Guest Additions CD2"><br>
+Step 4: 發現他還要安裝 bzip2，那先安裝起來</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo apt-get install bzip2
+</span></span></code></pre></div><p><img src="/images/VirtualBox/Install_Guest_Additions_CD3.jpg" alt="Install Guest Additions CD3" title="Install Guest Additions CD3"><br>
+Step 5: 安裝完後再是一次，這次應該可以順利安裝了</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo ./VBoxLinuxAdditions.run
+</span></span></code></pre></div><p><img src="/images/VirtualBox/Install_Guest_Additions_CD4.jpg" alt="Install Guest Additions CD4" title="Install Guest Additions CD4"><br>
+Step 6: 重新開機，開完機應該可以發現，視窗可以依比例伸縮</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>reboot
+</span></span></code></pre></div><p>Step 7: 設定共用剪貼簿和共用資料夾，如果前面有設定這裡可以跳過，共用資料夾一樣需要再來設定也可以<br>
+<img src="/images/VirtualBox/Public_Scrapbook.jpg" alt="Public Scrapbook" title="Public Scrapbook"></p>
+<h3 id="共用資料夾">共用資料夾</h3>
+<p>設定
+<img src="/images/VirtualBox/Public_Folder1.jpg" alt="Public Folder1" title="Public Folder1"><br>
+設定完成後，會發現 <strong>/media</strong> 底下，多了剛剛設定的資料夾，這是可以和宿主戶通的資料夾</p>
+<h3 id="一般套件安裝和更新">一般套件安裝和更新</h3>
+<ul>
+<li>更新</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo apt-get update
+</span></span><span style="display:flex;"><span>sudo apt-get upgrade 
+</span></span></code></pre></div><ul>
+<li>安裝 vim</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo apt-get install -y vim 
+</span></span></code></pre></div><ul>
+<li>安裝 openssh server</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo apt-get install -y openssh-server 
+</span></span></code></pre></div><ul>
+<li>安裝 net tools</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo apt-get install net-tools 
+</span></span></code></pre></div><h3 id="參考">參考</h3>
+<ul>
+<li><a href="https://learningsky.io/install-ubuntu-on-oracle-virtualbox/">【 VM 】如何在 Oracle VirtualBox 中安裝 Ubuntu</a></li>
+<li><a href="https://medium.com/@zeroro247/linux-virtualbox-ubuntu-22-04-%E5%AE%89%E8%A3%9D%E8%88%87%E8%A8%AD%E5%AE%9A-part-2-guest-additions%E8%88%87%E5%85%B1%E4%BA%AB%E8%A8%AD%E7%BD%AE%E7%AF%87-6138e71e9ba">[Linux] VirtualBox Ubuntu 22.04 安裝與設定 Part.2 Guest Additions與共享設置篇</a></li>
+<li><a href="https://askubuntu.com/questions/692223/apt-method-bzip2-doesnt-exist">APT method bzip2 doesn&rsquo;t exist</a></li>
+</ul>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+        
+        </div>
+      </div>
+
+      <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+    </article>
+  </div>
+
+    </main>
+    <footer class="custom-gradient1 bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://chechih.github.io/" >
+    &copy;  NewPlayer 2025 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    <a href="https://github.com/Chechih" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      </a>
+  
+    <a href="https://www.linkedin.com/in/%E5%93%B2%E8%AA%8C-%E5%BC%B5-2a3377245/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      </a>
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

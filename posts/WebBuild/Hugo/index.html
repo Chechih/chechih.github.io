@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Hugo 建置 | NewPlayer</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="雖然架 GitHub 網站時，我有發現有 Jekyll ,Hexo, Hugo，不過 Jekyll 裝完發現太舊，Hexo, Hugo 選了好久，發現用 Hugo 的人比較多，而且 Hugo 如果文章多，建置似乎比較快，就選">
+    <meta name="generator" content="Hugo 0.116.1">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+
+  <link rel="stylesheet" href="/web/css/custom.css?bust=202310120125">
+
+
+
+<script src="/web/js/jparticles@3.4.0/browser/jparticles.base.js"></script>
+
+<script src="/web/js/jparticles@3.4.0/browser/particle.js"></script>
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Hugo 建置" />
+<meta property="og:description" content="雖然架 GitHub 網站時，我有發現有 Jekyll ,Hexo, Hugo，不過 Jekyll 裝完發現太舊，Hexo, Hugo 選了好久，發現用 Hugo 的人比較多，而且 Hugo 如果文章多，建置似乎比較快，就選" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chechih.github.io/posts/WebBuild/Hugo/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-07-30T21:20:33+08:00" />
+<meta property="article:modified_time" content="2022-07-30T21:20:33+08:00" />
+<meta itemprop="name" content="Hugo 建置">
+<meta itemprop="description" content="雖然架 GitHub 網站時，我有發現有 Jekyll ,Hexo, Hugo，不過 Jekyll 裝完發現太舊，Hexo, Hugo 選了好久，發現用 Hugo 的人比較多，而且 Hugo 如果文章多，建置似乎比較快，就選"><meta itemprop="datePublished" content="2022-07-30T21:20:33+08:00" />
+<meta itemprop="dateModified" content="2022-07-30T21:20:33+08:00" />
+<meta itemprop="wordCount" content="966">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo 建置"/>
+<meta name="twitter:description" content="雖然架 GitHub 網站時，我有發現有 Jekyll ,Hexo, Hugo，不過 Jekyll 裝完發現太舊，Hexo, Hugo 選了好久，發現用 Hugo 的人比較多，而且 Hugo 如果文章多，建置似乎比較快，就選"/>
+
+	
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDSDRE73T9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VDSDRE73T9');
+    </script>
+  </head>
+
+  <body class="ma0 avenir bg-near-white" style="background-color: #E7E9EB;">
+    <div class="particle-background" style="width: 100%; height: 100%; position: fixed;"></div>
+    <script>
+      
+      new JParticles.Particle(".particle-background", {
+        color: "#25bfff",
+        
+        proximity: 90,
+        
+        range: 100,
+    });
+      </script>
+    
+   
+  
+
+  <header>
+    <div class="custom-gradient1 navbar-fixed-top">
+      <nav class="pv1 ph3 ph4-ns" role="navigation">
+  <script>
+    function showList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');    
+      if(eList.style.display == 'grid')
+      {
+        hideList();
+        return;
+      }
+      eParent.classList.toggle("change");  
+      eList.style.display = 'grid'
+      var oParentRect = eParent.getBoundingClientRect();
+      var oTipRect = eList.getBoundingClientRect();
+      var fOriginalX = oParentRect.x;
+      var fOriginalY = oParentRect.y + oParentRect.height;
+  
+      eList.style.left = '0px';
+      eList.style.top = fOriginalY + 'px';
+      window.addEventListener("scroll", hideList);
+      window.addEventListener('resize', hideList);
+    }
+    function hideList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');
+      eParent.classList.toggle("change");  
+      window.removeEventListener("scroll", hideList);
+      window.removeEventListener('resize', hideList);
+      eList.style.display = 'none';
+    }
+  </script>
+  <style>
+    .mobile-mainmenu-btn {
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 4px;
+      background-color: aliceblue;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+    </style>
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        NewPlayer
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </button>
+        <ul id="mobile-mainmenu-list" class="mobile-menu-list">
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/" title="Home 頁" onclick="">
+              Home
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/posts/" title="Posts 頁" onclick="">
+              Posts
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/categories/" title="分類 頁" onclick="">
+              分類
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/about/" title="關於 頁" onclick="">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+        <ul class="pl0 mr3 pc-menu-items">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="Home 頁">
+              Home
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts 頁">
+              Posts
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分類 頁">
+              分類
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="關於 頁">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</nav>
+
+    </div>
+    <div class="bg-black-60 headerbar-wrap">
+      <nav class="pv1 ph3 ph4-ns" role="navigation">
+  <script>
+    function showList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');    
+      if(eList.style.display == 'grid')
+      {
+        hideList();
+        return;
+      }
+      eParent.classList.toggle("change");  
+      eList.style.display = 'grid'
+      var oParentRect = eParent.getBoundingClientRect();
+      var oTipRect = eList.getBoundingClientRect();
+      var fOriginalX = oParentRect.x;
+      var fOriginalY = oParentRect.y + oParentRect.height;
+  
+      eList.style.left = '0px';
+      eList.style.top = fOriginalY + 'px';
+      window.addEventListener("scroll", hideList);
+      window.addEventListener('resize', hideList);
+    }
+    function hideList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');
+      eParent.classList.toggle("change");  
+      window.removeEventListener("scroll", hideList);
+      window.removeEventListener('resize', hideList);
+      eList.style.display = 'none';
+    }
+  </script>
+  <style>
+    .mobile-mainmenu-btn {
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 4px;
+      background-color: aliceblue;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+    </style>
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        NewPlayer
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </button>
+        <ul id="mobile-mainmenu-list" class="mobile-menu-list">
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/" title="Home 頁" onclick="">
+              Home
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/posts/" title="Posts 頁" onclick="">
+              Posts
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/categories/" title="分類 頁" onclick="">
+              分類
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/about/" title="關於 頁" onclick="">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+        <ul class="pl0 mr3 pc-menu-items">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="Home 頁">
+              Home
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts 頁">
+              Posts
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分類 頁">
+              分類
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="關於 頁">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main role="main">
+      
+  <div style="min-height: calc(100vh - 8rem);">
+    
+    <article class="flex-l flex-wrap justify-between mw8 center ph3 single-page">
+      <header class="mt4 w-100">
+        <aside class="instapaper_ignoref b helvetica tracked">
+            
+        </aside>
+        
+
+
+
+
+
+
+
+
+
+
+
+        <h1 class="f1 athelas mt3 mb1">Hugo 建置</h1>
+        <div class="categories">
+          📁 
+          
+            
+              <a style="text-decoration: none;" href="/categories/%E7%B6%B2%E7%AB%99%E5%BB%BA%E7%BD%AE">網站建置</a>
+            
+          
+        </div>
+        
+        
+        
+        <time class="f6 mv4 dib tracked" datetime="2022-07-30T21:20:33+08:00">七月 30, 2022</time>
+        
+
+        
+        
+      </header>
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><p>雖然架 GitHub 網站時，我有發現有 Jekyll ,Hexo, Hugo，不過 Jekyll 裝完發現太舊，Hexo, Hugo 選了好久，發現用 Hugo 的人比較多，而且 Hugo 如果文章多，建置似乎比較快，就選他了XDDDD</p>
+<p>這會介紹基本 Hugo 建置，因為我是用 Windows 版的，我只介紹 Windows 版的安裝方法</p>
+<h2 id="安裝套件管理器-chocolatey">安裝套件管理器 Chocolatey</h2>
+<p>先到開始右鍵，選擇 Windows PowerShell(系統管理員)<br>
+<img src="/images/Hugo/Windows_PowerShell.jpg" alt="Windows PowerShell" title="Windows PowerShell"><br>
+執行下方指令</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Set-ExecutionPolicy Bypass -Scope <span style="color:#66d9ef">Process</span> -Force; [<span style="color:#66d9ef">System.Net.ServicePointManager</span>]::SecurityProtocol =[<span style="color:#66d9ef">System.Net.ServicePointManager</span>]::SecurityProtocol <span style="color:#f92672">-bor</span> <span style="color:#ae81ff">3072</span>; iex ((New-Object System.Net.WebClient).DownloadString(<span style="color:#e6db74">&#39;https://chocolatey.org/install.ps1&#39;</span>))
+</span></span></code></pre></div><p>若沒有錯誤，在執行 choco</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>&gt; choco
+</span></span><span style="display:flex;"><span>Chocolatey v1.1.0
+</span></span><span style="display:flex;"><span>Please run <span style="color:#e6db74">&#39;choco -?&#39;</span> or <span style="color:#e6db74">&#39;choco &lt;command&gt; -?&#39;</span> <span style="color:#66d9ef">for</span> help menu.
+</span></span></code></pre></div><p>如果出現版本資訊就可以了。</p>
+<h2 id="安裝-hugo">安裝 Hugo</h2>
+<p>之後的流程可以在 Windows PowerShell 或是 命令提示字元 執行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>choco install hugo -confirm
+</span></span></code></pre></div><p>如果沒有錯誤，恭喜你 Hugo 安裝完成了!!!</p>
+<h2 id="hugo-架網站">Hugo 架網站</h2>
+<p>先把位子移到一個資料夾裡面</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>cd XXXXX
+</span></span></code></pre></div><p>在執行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>hugo new site myweb
+</span></span></code></pre></div><p>後面 myweb 是會在資料夾裡面再建一個 myweb 的資料夾，裡面包含基本的 Hugo 檔案
+再來執行，進入資料夾中</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>cd myweb
+</span></span></code></pre></div><p>最後執行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>hugo server
+</span></span></code></pre></div><p>讓 Hugo 網站起來，在瀏覽器輸入 <a href="http://localhost:1313/">http://localhost:1313/</a> 輸入後如果是一片白，代表成功拉!!!
+之後就可以選擇風格</p>
+<h2 id="選擇風格">選擇風格</h2>
+<p>到 <a href="https://jamstackthemes.dev/ssg/hugo/">Hugo Theme</a> 網站裡面選擇一個喜歡的風格，假設你選到一個風格叫 <a href="https://github.com/theNewDynamic/gohugo-theme-ananke">Ananke</a> 選他的 GitHub 把他的檔案下載下來，
+<img src="/images/Hugo/AnankeGitHub.jpg" alt="Ananke GitHub" title="Ananke GitHub"><br>
+解壓縮到一個資料夾裡面，並把他命名成 Ananke (這名稱可以制定，指示之後會用到記得就好)，資料夾內容如下<br>
+<img src="/images/Hugo/AnankeFolder.jpg" alt="Ananke 資料夾" title="Ananke 資料夾"><br>
+之後把這個資料夾剪下，貼到剛剛 hugo new site myweb 產生的資料夾裡面的 themes 資料夾裡面<br>
+<img src="/images/Hugo/HugoThemes.jpg" alt="HugoThemes" title="HugoThemes"><br>
+再到 myweb\themes\Ananke\exampleSite 資料夾裡的 config.toml 剪下，這是範例的 config
+<img src="/images/Hugo/AnankeExe.jpg" alt="Hugo exampleSite" title="Ananke exampleSite"><br>
+貼到 myweb 資料夾裡面覆蓋上去<br>
+<img src="/images/Hugo/myweb.jpg" alt="myweb 資料夾" title="myweb 資料夾"><br>
+之後用記事本打開剛剛貼上去的 config.toml  ， 將裡面的 theme = [&ldquo;github.com/theNewDynamic/gohugo-theme-ananke&rdquo;] 修改成 theme = &ldquo;Ananke&rdquo;，這是要把風格修改成找資料夾裡面的<br>
+<img src="/images/Hugo/AnankeConfigOre.jpg" alt="myweb Config" title="myweb Config"><br>
+<img src="/images/Hugo/AnankeConfigEd.jpg" alt="myweb Config" title="myweb Config"><br>
+最後一樣執行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>cd myweb
+</span></span><span style="display:flex;"><span>hugo server
+</span></span></code></pre></div><p>出現選定的風格就可以了<br>
+<img src="/images/Hugo/AnankeWeb.jpg" alt="Ananke" title="Ananke"></p>
+<h2 id="修改風格">修改風格</h2>
+<p>這裡開始需要用到一些 HTML 技巧<br>
+執行後如果想修改風格的 html 檔案，其實只要找到他的 html 檔案位子，一般在 themes/XXX， XXX 是對應的風格，舉個例子來說，你想改 themes\Ananke\layouts 裡面的 index.html 你不用直接改他，你可以到 myweb (剛剛 hugo new site myweb 路徑)的資料夾底下，找到 layouts 資料夾，裡面加上 index.html 的檔案，這樣 Hugo 就會自動把那個黨按取代掉了，執行完就是要的結果~~
+<img src="/images/Hugo/AnankeLayoutsIndex.jpg" alt="Ananke Layouts Index" title="Ananke Layouts Index"><br>
+<img src="/images/Hugo/mywebLayouts.jpg" alt="myweb Layouts" title="myweb Layouts"><br>
+<img src="/images/Hugo/mywebLayoutsTest.jpg" alt="myweb Layouts Test" title="myweb Layouts Test"><br>
+<img src="/images/Hugo/AnankeTest.jpg" alt="Ananke Test" title="Ananke Test"><br>
+這樣至少不會直接改到原檔案，後面改壞了還有救XDDDD<br>
+不過修改時，要小心，裡面會有 Go 的語法在裡面，像剛剛改<br>
+<img src="/images/Hugo/mywebLayoutsTest2.jpg" alt="myweb Layouts Test" title="myweb Layouts Test"><br>
+要改在 define &ldquo;main&rdquo; 裡面，是因為這是一個 Ananke 切的區塊，如果整個蓋掉，那應該看不到效果，被坑過(X)<br>
+參考資料:<br>
+<a href="https://www.zoeydc.com/zh/posts/2021-05-23-hugo-website_github-pages_custom-domain/">網站開張！在 GitHub Pages 架設 Hugo 靜態網站</a><br>
+實作時參考:</p>
+<ul>
+<li><a href="https://blog.dontjudge.cn/post/hugo-%E4%B8%BB%E9%A2%98-even-%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE/">Hugo 主题 Even 的自定义配置</a></li>
+<li><a href="https://ithelp.ithome.com.tw/users/20142010/ironman/4917">iT邦幫忙-Louissu</a></li>
+<li><a href="https://ithelp.ithome.com.tw/users/20106430/ironman/3613">iT邦幫忙-littlebookboy</a></li>
+<li><a href="https://gohugo.io/templates/template-debugging/">Hugo debugging</a></li>
+<li><a href="https://www.jianshu.com/p/0b9aecff290c?u_atoken=a09bd15b-2942-41ed-a27b-585048916162&amp;u_asession=01ibeTyrO0b-6soyY1ZVMVGetyXOcp72Z3tXvLUl7J27MwyRyOO7wcvKk1rOcT6qCPX0KNBwm7Lovlpxjd_P_q4JsKWYrT3W_NKPr8w6oU7K8rUuPXhSrGGE4IwwVDMLj1Ppcarp92QKzyJKyYjREPlmBkFo3NEHBv0PZUm6pbxQU&amp;u_asig=05Q8crcoTkvttMf0fF8w8Fcc2y4y4tT8lYu_jNa7kiriMJPjFLc6Rsfk9yqcYP2seQLvl3F4DoBp_7wYs2eYi6rc7qNOA6xS6-C85Fu3qMSg1insEUE569p-b7Kn9z_Z0hKAroHTU-RaOUotdHF_ZIgyPPdXkooD-2X5soVadGhaT9JS7q8ZD7Xtz2Ly-b0kmuyAKRFSVJkkdwVUnyHAIJzR6W9xF9UQazkic-9JULeE1aaz5yacafDrtqp8_tndodWPRPQyB_SKrj-61LB_f61u3h9VXwMyh6PgyDIVSG1W-qGsCDEK9a3JgjBJp_mk7CS0gA-YCVD9qXtlq4leRItEc80rs_RyY2cZX2NhtSF7Gg1wJ3Vtk1_ug0vJ12v-qsmWspDxyAEEo4kbsryBKb9Q&amp;u_aref=CspdvuBywZCBZszC%2F5e83W%2FYa8s%3D">如何创建自己的hugo主题</a></li>
+<li><a href="https://jimmylin212.github.io/post/0002_hugo_content_management_dir_structure/">Hugo 的文件管理 - 資料夾結構</a></li>
+<li><a href="https://coreychen71.github.io/posts/2019-05/hugoadddisqus/">Hugo 加入 Disqus 整合性留言管理系統</a></li>
+</ul>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+        
+        </div>
+      </div>
+
+      <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+    </article>
+  </div>
+
+    </main>
+    <footer class="custom-gradient1 bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://chechih.github.io/" >
+    &copy;  NewPlayer 2025 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    <a href="https://github.com/Chechih" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      </a>
+  
+    <a href="https://www.linkedin.com/in/%E5%93%B2%E8%AA%8C-%E5%BC%B5-2a3377245/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      </a>
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

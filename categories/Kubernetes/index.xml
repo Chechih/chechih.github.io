@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubernetes on NewPlayer</title>
+    <link>https://chechih.github.io/categories/Kubernetes/</link>
+    <description>Recent content in Kubernetes on NewPlayer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>NewPlayer</copyright>
+    <lastBuildDate>Sun, 08 Dec 2024 23:30:58 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/Kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker Desktop 上啟動 Kubernetes</title>
+      <link>https://chechih.github.io/posts/20241208/</link>
+      <pubDate>Sun, 08 Dec 2024 23:30:58 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20241208/</guid>
+      <description>前置作業 請先安裝好 Docker Desktop，如未安裝，可以參考 Docker Desktop 安裝 啟動 打開 Docker Desktop，選擇右上繳的設定 選擇左側的 Kubernetes 勾選 Enable Kubernetes 到這邊他就開始安</description>
+    </item>
+    
+  </channel>
+</rss>

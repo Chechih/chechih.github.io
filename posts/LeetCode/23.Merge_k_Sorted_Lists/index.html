@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>23. Merge k Sorted Lists | NewPlayer</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="問題 You are given an array of k linked-lists lists, each linked-list is sorted in ascending order. Merge all the linked-lists into one sorted linked-list and return it. 翻譯 你被給予一個包含 k 個鏈結串列的陣列 lists，每個鏈結串列都按升序排序。 將所有">
+    <meta name="generator" content="Hugo 0.116.1">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+
+  <link rel="stylesheet" href="/web/css/custom.css?bust=202310120125">
+
+
+
+<script src="/web/js/jparticles@3.4.0/browser/jparticles.base.js"></script>
+
+<script src="/web/js/jparticles@3.4.0/browser/particle.js"></script>
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="23. Merge k Sorted Lists" />
+<meta property="og:description" content="問題 You are given an array of k linked-lists lists, each linked-list is sorted in ascending order. Merge all the linked-lists into one sorted linked-list and return it. 翻譯 你被給予一個包含 k 個鏈結串列的陣列 lists，每個鏈結串列都按升序排序。 將所有" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chechih.github.io/posts/LeetCode/23.Merge_k_Sorted_Lists/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-10-12T00:13:43+08:00" />
+<meta property="article:modified_time" content="2023-10-12T00:13:43+08:00" />
+<meta itemprop="name" content="23. Merge k Sorted Lists">
+<meta itemprop="description" content="問題 You are given an array of k linked-lists lists, each linked-list is sorted in ascending order. Merge all the linked-lists into one sorted linked-list and return it. 翻譯 你被給予一個包含 k 個鏈結串列的陣列 lists，每個鏈結串列都按升序排序。 將所有"><meta itemprop="datePublished" content="2023-10-12T00:13:43+08:00" />
+<meta itemprop="dateModified" content="2023-10-12T00:13:43+08:00" />
+<meta itemprop="wordCount" content="809">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="23. Merge k Sorted Lists"/>
+<meta name="twitter:description" content="問題 You are given an array of k linked-lists lists, each linked-list is sorted in ascending order. Merge all the linked-lists into one sorted linked-list and return it. 翻譯 你被給予一個包含 k 個鏈結串列的陣列 lists，每個鏈結串列都按升序排序。 將所有"/>
+
+	
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDSDRE73T9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VDSDRE73T9');
+    </script>
+  </head>
+
+  <body class="ma0 avenir bg-near-white" style="background-color: #E7E9EB;">
+    <div class="particle-background" style="width: 100%; height: 100%; position: fixed;"></div>
+    <script>
+      
+      new JParticles.Particle(".particle-background", {
+        color: "#25bfff",
+        
+        proximity: 90,
+        
+        range: 100,
+    });
+      </script>
+    
+   
+  
+
+  <header>
+    <div class="custom-gradient1 navbar-fixed-top">
+      <nav class="pv1 ph3 ph4-ns" role="navigation">
+  <script>
+    function showList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');    
+      if(eList.style.display == 'grid')
+      {
+        hideList();
+        return;
+      }
+      eParent.classList.toggle("change");  
+      eList.style.display = 'grid'
+      var oParentRect = eParent.getBoundingClientRect();
+      var oTipRect = eList.getBoundingClientRect();
+      var fOriginalX = oParentRect.x;
+      var fOriginalY = oParentRect.y + oParentRect.height;
+  
+      eList.style.left = '0px';
+      eList.style.top = fOriginalY + 'px';
+      window.addEventListener("scroll", hideList);
+      window.addEventListener('resize', hideList);
+    }
+    function hideList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');
+      eParent.classList.toggle("change");  
+      window.removeEventListener("scroll", hideList);
+      window.removeEventListener('resize', hideList);
+      eList.style.display = 'none';
+    }
+  </script>
+  <style>
+    .mobile-mainmenu-btn {
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 4px;
+      background-color: aliceblue;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+    </style>
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        NewPlayer
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </button>
+        <ul id="mobile-mainmenu-list" class="mobile-menu-list">
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/" title="Home 頁" onclick="">
+              Home
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/posts/" title="Posts 頁" onclick="">
+              Posts
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/categories/" title="分類 頁" onclick="">
+              分類
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/about/" title="關於 頁" onclick="">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+        <ul class="pl0 mr3 pc-menu-items">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="Home 頁">
+              Home
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts 頁">
+              Posts
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分類 頁">
+              分類
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="關於 頁">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</nav>
+
+    </div>
+    <div class="bg-black-60 headerbar-wrap">
+      <nav class="pv1 ph3 ph4-ns" role="navigation">
+  <script>
+    function showList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');    
+      if(eList.style.display == 'grid')
+      {
+        hideList();
+        return;
+      }
+      eParent.classList.toggle("change");  
+      eList.style.display = 'grid'
+      var oParentRect = eParent.getBoundingClientRect();
+      var oTipRect = eList.getBoundingClientRect();
+      var fOriginalX = oParentRect.x;
+      var fOriginalY = oParentRect.y + oParentRect.height;
+  
+      eList.style.left = '0px';
+      eList.style.top = fOriginalY + 'px';
+      window.addEventListener("scroll", hideList);
+      window.addEventListener('resize', hideList);
+    }
+    function hideList() {
+      var eParent = document.getElementById('mobile-mainmenu-btn');
+      var eList = document.getElementById('mobile-mainmenu-list');
+      eParent.classList.toggle("change");  
+      window.removeEventListener("scroll", hideList);
+      window.removeEventListener('resize', hideList);
+      eList.style.display = 'none';
+    }
+  </script>
+  <style>
+    .mobile-mainmenu-btn {
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .bar1, .bar2, .bar3 {
+      width: 35px;
+      height: 4px;
+      background-color: aliceblue;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    
+    .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+    }
+    </style>
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        NewPlayer
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <button type="button" id="mobile-mainmenu-btn" class="mobile-menu-btn" onclick="showList()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </button>
+        <ul id="mobile-mainmenu-list" class="mobile-menu-list">
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/" title="Home 頁" onclick="">
+              Home
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/posts/" title="Posts 頁" onclick="">
+              Posts
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/categories/" title="分類 頁" onclick="">
+              分類
+            </a>
+          </li>
+          
+          <li class="mobile-menu-item list f4-ns">
+            <a class="no-underline" href="/about/" title="關於 頁" onclick="">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+        <ul class="pl0 mr3 pc-menu-items">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="Home 頁">
+              Home
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts 頁">
+              Posts
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/categories/" title="分類 頁">
+              分類
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="關於 頁">
+              關於
+            </a>
+          </li>
+          
+        </ul>
+      
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main role="main">
+      
+  <div style="min-height: calc(100vh - 8rem);">
+    
+    <article class="flex-l flex-wrap justify-between mw8 center ph3 single-page">
+      <header class="mt4 w-100">
+        <aside class="instapaper_ignoref b helvetica tracked">
+            
+        </aside>
+        
+
+
+
+
+
+
+
+
+
+
+
+        <h1 class="f1 athelas mt3 mb1">23. Merge k Sorted Lists</h1>
+        <div class="categories">
+          📁 
+          
+            
+              <a style="text-decoration: none;" href="/categories/LeetCode_%E8%A7%A3%E9%A1%8C">LeetCode_解題</a>
+            
+          
+        </div>
+        
+        
+        
+        <time class="f6 mv4 dib tracked" datetime="2023-10-12T00:13:43+08:00">十月 12, 2023</time>
+        
+
+        
+        
+      </header>
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><h3 id="問題">問題</h3>
+<p>You are given an array of <strong>k</strong> linked-lists <strong>lists</strong>, each linked-list is sorted in ascending order.</p>
+<p>Merge all the linked-lists into one sorted linked-list and return it.</p>
+<h3 id="翻譯">翻譯</h3>
+<p>你被給予一個包含 <strong>k</strong> 個鏈結串列的陣列 <strong>lists</strong>，每個鏈結串列都按升序排序。</p>
+<p>將所有的鏈結串列合併成一個按升序排序的鏈結串列，然後返回它。</p>
+<h5 id="example-1">Example 1:</h5>
+<pre><code>Input: lists = [[1,4,5],[1,3,4],[2,6]]
+Output: [1,1,2,3,4,4,5,6]
+Explanation: The linked-lists are:
+[
+1-&gt;4-&gt;5,
+1-&gt;3-&gt;4,
+2-&gt;6
+]
+merging them into one sorted list:
+1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4-&gt;5-&gt;6
+</code></pre>
+<h5 id="example-2">Example 2:</h5>
+<pre><code>Input: lists = []
+Output: []
+</code></pre>
+<h5 id="example-3">Example 3:</h5>
+<pre><code>Input: lists = [[]]
+Output: []
+</code></pre>
+<h5 id="constraints">Constraints:</h5>
+<ul>
+<li>k == lists.length</li>
+<li>0 &lt;= k &lt;= 10<sup>4</sup></li>
+<li>0 &lt;= lists[i].length &lt;= 500</li>
+<li>-10<sup>4</sup> &lt;= lists[i][j] &lt;= 10<sup>4</sup></li>
+<li>lists[i] is sorted in <strong>ascending order</strong>.</li>
+<li>The sum of lists[i].length will not exceed 10<sup>4</sup></li>
+</ul>
+<h3 id="想法-1">想法 1</h3>
+<p>這題最簡易的解法就是利用之前 <a href="https://github.com/Chechih/LeetCode_Py/tree/master/21.Merge_Two_Sorted_Lists">21. Merge Two Sorted Lists</a> 的 Function 下去延伸，將<strong>鏈結串列</strong>兩兩下去合併，Ex: A1 和 A2 合併成 B1， A3 和 A4 合併成 B2， A5 和 A6 合併成 B3&hellip; B1 和 B2 合併成 C1 &hellip; 這樣下去合併。其實也可以 B1 和 A3 合併，在和 A4 一直合併下去，只是這樣主要的<strong>鏈結串列</strong>會越來越長，導致效能不好。</p>
+<h3 id="解法-1">解法 1</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">mergeTwoLists</span>(self, list1: Optional[ListNode], list2: Optional[ListNode]) <span style="color:#f92672">-&gt;</span> Optional[ListNode]:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> list1 <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> list2:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>        newList <span style="color:#f92672">=</span> ListNode()
+</span></span><span style="display:flex;"><span>        rlt <span style="color:#f92672">=</span> newList
+</span></span><span style="display:flex;"><span>        previous <span style="color:#f92672">=</span> newList <span style="color:#75715e"># 清除掉最後面多餘的節點用的</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> list1 <span style="color:#f92672">or</span> list2:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> list1 <span style="color:#f92672">and</span> (<span style="color:#f92672">not</span> list2 <span style="color:#f92672">or</span> list1<span style="color:#f92672">.</span>val <span style="color:#f92672">&lt;=</span> list2<span style="color:#f92672">.</span>val):
+</span></span><span style="display:flex;"><span>                newList<span style="color:#f92672">.</span>val <span style="color:#f92672">=</span> list1<span style="color:#f92672">.</span>val
+</span></span><span style="display:flex;"><span>                list1 <span style="color:#f92672">=</span> list1<span style="color:#f92672">.</span>next
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                newList<span style="color:#f92672">.</span>val <span style="color:#f92672">=</span> list2<span style="color:#f92672">.</span>val
+</span></span><span style="display:flex;"><span>                list2 <span style="color:#f92672">=</span> list2<span style="color:#f92672">.</span>next
+</span></span><span style="display:flex;"><span>            previous <span style="color:#f92672">=</span> newList
+</span></span><span style="display:flex;"><span>            newList<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> ListNode()
+</span></span><span style="display:flex;"><span>            newList <span style="color:#f92672">=</span> newList<span style="color:#f92672">.</span>next
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> previous:
+</span></span><span style="display:flex;"><span>            previous<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> rlt
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">mergeKLists</span>(self, lists: List[Optional[ListNode]]) <span style="color:#f92672">-&gt;</span> Optional[ListNode]:
+</span></span><span style="display:flex;"><span>        left <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        right <span style="color:#f92672">=</span> len(lists) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> len(lists) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> left <span style="color:#f92672">&lt;</span> right:
+</span></span><span style="display:flex;"><span>                lists[left] <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>mergeTwoLists(lists[left], lists[right])
+</span></span><span style="display:flex;"><span>                lists<span style="color:#f92672">.</span>remove(lists[right])
+</span></span><span style="display:flex;"><span>                left <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                right <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                left <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>                right <span style="color:#f92672">=</span> len(lists) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> lists[<span style="color:#ae81ff">0</span>] <span style="color:#66d9ef">if</span> len(lists) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">None</span> 
+</span></span></code></pre></div><h3 id="想法-2">想法 2</h3>
+<p>網路上參考其他人作法時，有些人是使用<strong>優先佇列(Priority Queue)<strong>的做法，這東西可以自動排序裡面存在的值，所以你可以把所有的</strong>鏈結串列</strong>讀出，塞到<strong>優先佇列(Priority Queue)<strong>裡面，然後，再把所有的</strong>優先佇列(Priority Queue)<strong>讀出，建一個新的</strong>鏈結串列</strong>即是題目要求的東西了。</p>
+<h3 id="解法-2">解法 2</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">mergeKLists</span>(self, lists: List[Optional[ListNode]]) <span style="color:#f92672">-&gt;</span> Optional[ListNode]:
+</span></span><span style="display:flex;"><span>        q <span style="color:#f92672">=</span> queue<span style="color:#f92672">.</span>PriorityQueue()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(lists)):
+</span></span><span style="display:flex;"><span>            l <span style="color:#f92672">=</span> lists[i]
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span>(l <span style="color:#f92672">!=</span> <span style="color:#66d9ef">None</span>):
+</span></span><span style="display:flex;"><span>                q<span style="color:#f92672">.</span>put(l<span style="color:#f92672">.</span>val)
+</span></span><span style="display:flex;"><span>                l <span style="color:#f92672">=</span> l<span style="color:#f92672">.</span>next
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> q<span style="color:#f92672">.</span>empty():
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>        rlt <span style="color:#f92672">=</span> ListNode()
+</span></span><span style="display:flex;"><span>        rlt<span style="color:#f92672">.</span>val <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span>get()
+</span></span><span style="display:flex;"><span>        rlt<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        new_node <span style="color:#f92672">=</span> rlt
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> <span style="color:#f92672">not</span> q<span style="color:#f92672">.</span>empty():
+</span></span><span style="display:flex;"><span>            new_node<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> ListNode()
+</span></span><span style="display:flex;"><span>            new_node <span style="color:#f92672">=</span> new_node<span style="color:#f92672">.</span>next
+</span></span><span style="display:flex;"><span>            new_node<span style="color:#f92672">.</span>val <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span>get()
+</span></span><span style="display:flex;"><span>            new_node<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> rlt
+</span></span></code></pre></div><h3 id="想法-3">想法 3</h3>
+<p>你一定想說<strong>優先佇列(Priority Queue)<strong>都可以了，那我直接用個 Array 存</strong>鏈結串列</strong>所有的值，在 Sort(排序)，再轉出新的<strong>鏈結串列</strong>，應該也可以，我去時做的發現也可以過XDDD</p>
+<h3 id="解法-3">解法 3</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">mergeKLists</span>(self, lists: List[Optional[ListNode]]) <span style="color:#f92672">-&gt;</span> Optional[ListNode]:
+</span></span><span style="display:flex;"><span>        all_vals <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(lists)):
+</span></span><span style="display:flex;"><span>            l <span style="color:#f92672">=</span> lists[i]
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span>(l <span style="color:#f92672">!=</span> <span style="color:#66d9ef">None</span>):
+</span></span><span style="display:flex;"><span>                all_vals<span style="color:#f92672">.</span>append(l<span style="color:#f92672">.</span>val)
+</span></span><span style="display:flex;"><span>                l <span style="color:#f92672">=</span> l<span style="color:#f92672">.</span>next
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> len(all_vals) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>        all_vals<span style="color:#f92672">.</span>sort()
+</span></span><span style="display:flex;"><span>        all_vals<span style="color:#f92672">.</span>reverse()
+</span></span><span style="display:flex;"><span>        rlt <span style="color:#f92672">=</span> ListNode()
+</span></span><span style="display:flex;"><span>        rlt<span style="color:#f92672">.</span>val <span style="color:#f92672">=</span> all_vals<span style="color:#f92672">.</span>pop()
+</span></span><span style="display:flex;"><span>        rlt<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        new_node <span style="color:#f92672">=</span> rlt
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> len(all_vals) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>            new_node<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> ListNode()
+</span></span><span style="display:flex;"><span>            new_node <span style="color:#f92672">=</span> new_node<span style="color:#f92672">.</span>next
+</span></span><span style="display:flex;"><span>            new_node<span style="color:#f92672">.</span>val <span style="color:#f92672">=</span> all_vals<span style="color:#f92672">.</span>pop()
+</span></span><span style="display:flex;"><span>            new_node<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> rlt
+</span></span></code></pre></div><p>Github 同步網址:<br>
+<a href="https://github.com/Chechih/LeetCode_Py/tree/master/23.Merge_k_Sorted_Lists">https://github.com/Chechih/LeetCode_Py/tree/master/23.Merge_k_Sorted_Lists</a></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+        
+        </div>
+      </div>
+
+      <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+    </article>
+  </div>
+
+    </main>
+    <footer class="custom-gradient1 bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://chechih.github.io/" >
+    &copy;  NewPlayer 2025 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    <a href="https://github.com/Chechih" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      </a>
+  
+    <a href="https://www.linkedin.com/in/%E5%93%B2%E8%AA%8C-%E5%BC%B5-2a3377245/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      </a>
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

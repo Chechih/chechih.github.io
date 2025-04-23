@@ -1,0 +1,273 @@
+.card-item{
+  box-shadow: rgb(136 165 191 / 48%) 6px 2px 16px 0px, rgb(255 255 255 / 80%) -6px -2px 16px 0px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.description-title-text{
+  word-break:break-all;
+}
+
+.pagination-container{
+  text-align: center;
+}
+
+.pagination-container .pagination{
+  margin: 0;
+}
+
+.pagination-container .page-item a{
+  overflow: hidden;
+  border-radius: 3px;
+  color: #4285f4;
+}
+
+.pagination-container .page-item.active a{
+  color: #202124;
+  background: aliceblue;
+}
+
+.summary-container, .summarybox-container{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.readmore-container{
+  color: #3273dc;
+}
+
+.readmore-container:hover {
+    color: #363636;
+}
+
+.title-post-box{
+  box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.allposts-btn-container{
+  display: flex;
+  justify-content: end;
+}
+
+.flex-l {
+  display: flex;
+}
+
+.blockquote{
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #eee;
+  color: gray;
+  font-style: italic;
+  font-size: .95em;
+  margin: 20px 0 20px;
+}
+
+.about-text-container{
+  display: inline-block;
+  width: 70%;
+}
+
+.about-img-container{
+  display: inline-block;
+  width: 29%;
+}
+
+.about-img-container img{
+  border-radius: 50%;
+}
+
+.mobile-menu-btn{
+  padding: 3px 7px;
+  border: 1px ;
+  border-radius: 4px;
+  border-style: revert;
+  background: transparent;
+  display: none;
+  padding: 0.5rem;
+}
+
+.mobile-menu-list{
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  background: #f8f8f8;
+  width: 100%;
+  display: none;
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu-item{
+    height: 3rem;
+}
+
+.mobile-menu-item:hover{
+  opacity: .5;
+}
+
+.mobile-menu-item a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-menu-btn-fa{
+  width: 1rem;
+}
+
+.category-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-img{
+  display: inline-block;
+  text-align: center;
+}
+
+.category-title{
+  display: inline-block;
+  width: 76%;
+}
+
+.category-title h1{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.category-item:hover{
+  opacity: .5;
+}
+
+.hover-white:hover {
+  color: #dddddd;
+}
+
+nav, footer, .description-title-text{
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -o-user-select:none;
+  user-select:none;
+  /*禁止反白*/
+}
+
+.navbar-fixed-top{
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  border-bottom: 2px solid rgba(99,99,99,0.4);
+  box-shadow: 0 1px 6px 1px rgba(0,0,0,0.2);
+}
+
+.link:focus{
+  outline: none;
+}
+
+.title-post-box:hover{
+  box-shadow: rgb(50 50 93 / 75%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
+}
+
+.card-item:hover{
+  box-shadow: rgb(136 165 191 / 75%) 6px 2px 16px 0px, rgb(255 255 255 / 80%) -6px -2px 16px 0px;
+}
+
+.allposts-btn-container, footer, header, .page-link{
+  position: relative;
+}
+.single-page, .about-container{
+  background: #f9f9fb;
+  position: relative;
+  padding: 20px;
+  box-shadow: 0 0 15px 5px #aaa;
+}
+main{
+  padding: 15px 10px;
+}
+@keyframes typing {
+  from { width: 0; }
+}
+@keyframes caret {
+  50% { border-color: transparent; }
+}
+h1.description-title-text {
+  width: 8em;
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+  border-right: .05em solid;
+  animation: typing 3s steps(8),
+             caret 1s steps(1) infinite;
+}
+
+.title-background {
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 0.9;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 0.9;}
+}
+
+@media (max-width: 768px)
+{ 
+
+  .about-text-container{
+    display: block;
+    width: 100%;
+  }
+  .about-img-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .about-img-container img{
+    width: 20rem;
+  }
+  .mobile-menu-btn{
+    display: block;
+    border: none;
+  }  
+  .mobile-menu-list{
+    z-index: 1;
+  }
+  .pc-menu-items{
+    display: none;
+  }  
+}
+
+sub {
+  vertical-align: -0.6em;
+  font-size: 0.6em;
+}
+
+sup {
+  vertical-align: 0.6em;
+  font-size: 0.6em;
+}
+
+.serif {
+  font-family: "Segoe UI","微軟正黑體"!important;
+}
+
+.custom-gradient1{
+  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+}

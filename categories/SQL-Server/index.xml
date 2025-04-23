@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SQL Server on NewPlayer</title>
+    <link>https://chechih.github.io/categories/SQL-Server/</link>
+    <description>Recent content in SQL Server on NewPlayer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>NewPlayer</copyright>
+    <lastBuildDate>Wed, 26 Mar 2025 00:32:11 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/SQL-Server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQL Server 設定管理員功能紀錄</title>
+      <link>https://chechih.github.io/posts/20250326/</link>
+      <pubDate>Wed, 26 Mar 2025 00:32:11 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250326/</guid>
+      <description>前言 這邊紀錄SQL Server 設定管理員畫面的一些用途 正篇 服務位置 對外開放連入資料庫</description>
+    </item>
+    
+  </channel>
+</rss>

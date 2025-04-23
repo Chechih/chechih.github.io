@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IIS on NewPlayer</title>
+    <link>https://chechih.github.io/categories/IIS/</link>
+    <description>Recent content in IIS on NewPlayer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>NewPlayer</copyright>
+    <lastBuildDate>Wed, 02 Oct 2024 17:43:49 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/IIS/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 Web Deploy 發佈程式到 IIS 上</title>
+      <link>https://chechih.github.io/posts/20241002/</link>
+      <pubDate>Wed, 02 Oct 2024 17:43:49 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20241002/</guid>
+      <description>前言 如果在開發時，部屬的 IIS (下面簡稱 A 電腦)和開發程式 (下面簡稱 B 電腦)是在不同機器上面時，這時就可以使用 Web Deploy 將程式碼從 B 電腦發佈到 A 電腦上</description>
+    </item>
+    
+    <item>
+      <title>IIS 上部屬 ASP.NET Core</title>
+      <link>https://chechih.github.io/posts/IIS/Publish/</link>
+      <pubDate>Tue, 24 Sep 2024 00:50:03 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/IIS/Publish/</guid>
+      <description>前言 本範例使用 Windows Server 2022，要安裝的 ASP.NET Core 版本使用 8，專案的話選擇 Visual Studio 2022 的 ASP.NET Web 應用程式(Model-View-Controller)，專案名T</description>
+    </item>
+    
+    <item>
+      <title>開啟 IIS By Windows Server 2022</title>
+      <link>https://chechih.github.io/posts/IIS/Install/</link>
+      <pubDate>Wed, 04 Sep 2024 23:48:22 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/IIS/Install/</guid>
+      <description>安裝 開啟伺服器管理員 選擇新增角色及功能 會跳出新增角色及功能精靈，直接點選下一步 安裝類型選擇角色型或功能型安裝 目的地伺服器選擇從伺服器集區選取</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PowerShell on NewPlayer</title>
+    <link>https://chechih.github.io/categories/PowerShell/</link>
+    <description>Recent content in PowerShell on NewPlayer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>NewPlayer</copyright>
+    <lastBuildDate>Thu, 02 Jan 2025 00:36:17 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/PowerShell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>連線測試</title>
+      <link>https://chechih.github.io/posts/20250102/</link>
+      <pubDate>Thu, 02 Jan 2025 00:36:17 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250102/</guid>
+      <description>前言 以前在測試某個 IP Port 能不能使用時，都是使用 telnet 測試 telnet &amp;lt;server_ip&amp;gt; &amp;lt;port_no&amp;gt; 成功時，會一片黑 失敗時，有訊息 而且假設你只想測試 Port 有沒有開，不想知道上面有沒有部屬東</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,18 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://chechih.github.io/categories/C#/</loc>
+    <lastmod>2025-04-27T23:17:02+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://chechih.github.io/categories/</loc>
-    <lastmod>2025-04-24T00:01:28+08:00</lastmod>
+    <lastmod>2025-04-27T23:17:02+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/posts/20250427/</loc>
+    <lastmod>2025-04-27T23:17:02+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://chechih.github.io/</loc>
-    <lastmod>2025-04-24T00:01:28+08:00</lastmod>
+    <lastmod>2025-04-27T23:17:02+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://chechih.github.io/posts/</loc>
-    <lastmod>2025-04-24T00:01:28+08:00</lastmod>
+    <lastmod>2025-04-27T23:17:02+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>

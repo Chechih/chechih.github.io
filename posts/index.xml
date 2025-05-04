@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Sun, 27 Apr 2025 23:17:02 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 May 2025 23:19:36 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 Vagrant 在 VirtualBox 上快速建立 Ubuntu</title>
+      <link>https://chechih.github.io/posts/20250504/</link>
+      <pubDate>Sun, 04 May 2025 23:19:36 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250504/</guid>
+      <description>前言 作業系統: Windows 10 使用工具: VirtualBox Vagrant 其他資源: 可以從 Vagrant Cloud 下載現成的 Box (虛擬環境模板)，其實這上面就只是別人安裝好的環境，你直接拿別人的環境來用而</description>
+    </item>
+    
     <item>
       <title>GetHashCode,  Equals 和等於運算子簡介</title>
       <link>https://chechih.github.io/posts/20250427/</link>

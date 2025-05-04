@@ -7,22 +7,31 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Sun, 27 Apr 2025 23:17:02 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 May 2025 23:19:36 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>C#</title>
-      <link>https://chechih.github.io/categories/C#/</link>
-      <pubDate>Sun, 27 Apr 2025 23:17:02 +0800</pubDate>
+      <title>Ubuntu</title>
+      <link>https://chechih.github.io/categories/Ubuntu/</link>
+      <pubDate>Sun, 04 May 2025 23:19:36 +0800</pubDate>
       
-      <guid>https://chechih.github.io/categories/C#/</guid>
+      <guid>https://chechih.github.io/categories/Ubuntu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>VirtualBox</title>
       <link>https://chechih.github.io/categories/VirtualBox/</link>
-      <pubDate>Thu, 24 Apr 2025 00:01:28 +0800</pubDate>
+      <pubDate>Sun, 04 May 2025 23:19:36 +0800</pubDate>
       
       <guid>https://chechih.github.io/categories/VirtualBox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C#</title>
+      <link>https://chechih.github.io/categories/C#/</link>
+      <pubDate>Sun, 27 Apr 2025 23:17:02 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/C#/</guid>
       <description></description>
     </item>
     
@@ -140,15 +149,6 @@
       <pubDate>Wed, 04 Sep 2024 23:48:22 +0800</pubDate>
       
       <guid>https://chechih.github.io/categories/%E7%B6%B2%E7%AB%99%E5%BB%BA%E7%BD%AE/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ubuntu</title>
-      <link>https://chechih.github.io/categories/Ubuntu/</link>
-      <pubDate>Mon, 12 Aug 2024 01:02:01 +0800</pubDate>
-      
-      <guid>https://chechih.github.io/categories/Ubuntu/</guid>
       <description></description>
     </item>
     

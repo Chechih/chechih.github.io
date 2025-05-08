@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SSH on NewPlayer</title>
+    <link>https://chechih.github.io/categories/SSH/</link>
+    <description>Recent content in SSH on NewPlayer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>NewPlayer</copyright>
+    <lastBuildDate>Thu, 08 May 2025 23:39:48 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/SSH/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu SSH 連線教學</title>
+      <link>https://chechih.github.io/posts/20250508/</link>
+      <pubDate>Thu, 08 May 2025 23:39:48 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250508/</guid>
+      <description>簡介 SSH(Secure Shell) 是一種用來建立加密連線的方式，讓你能夠遠端登入到另一台電腦、執行指令、維護伺服器或傳送檔案等操作。 學會之後，你就可以帥氣地說一句: &amp;</description>
+    </item>
+    
+  </channel>
+</rss>

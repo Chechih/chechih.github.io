@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Thu, 08 May 2025 23:39:48 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 May 2025 15:47:11 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 OpenSSL 建立自製 CA 憑證</title>
+      <link>https://chechih.github.io/posts/20250511/</link>
+      <pubDate>Sun, 11 May 2025 15:47:11 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250511/</guid>
+      <description>本文章將使用 OpenSSL 建立自己的 CA（Certificate Authority）憑證，非常適合用在本地端的測試。 實作 步驟一: 產生 CA 私鑰 openssl genpkey -algorithm RSA -out ca.key 此</description>
+    </item>
+    
     <item>
       <title>Ubuntu SSH 連線教學</title>
       <link>https://chechih.github.io/posts/20250508/</link>

@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>NewPlayer</title>
+    <title>使用 OpenSSL 建立自製 CA 憑證 | NewPlayer</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="The last theme you&#39;ll ever need. Maybe.">
+    <meta name="description" content="本文章將使用 OpenSSL 建立自己的 CA（Certificate Authority）憑證，非常適合用在本地端的測試。 實作 步驟一: 產生 CA 私鑰 openssl genpkey -algorithm RSA -out ca.key 此">
     <meta name="generator" content="Hugo 0.116.1">
     
     
@@ -39,19 +39,19 @@
 
     
     
-      <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="NewPlayer" />
-      <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="NewPlayer" />
-      
-    
-    
-    <meta property="og:title" content="Posts" />
-<meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://chechih.github.io/posts/" />
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
+    <meta property="og:title" content="使用 OpenSSL 建立自製 CA 憑證" />
+<meta property="og:description" content="本文章將使用 OpenSSL 建立自己的 CA（Certificate Authority）憑證，非常適合用在本地端的測試。 實作 步驟一: 產生 CA 私鑰 openssl genpkey -algorithm RSA -out ca.key 此" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chechih.github.io/posts/20250511/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-05-11T15:47:11+08:00" />
+<meta property="article:modified_time" content="2025-05-11T15:47:11+08:00" />
+<meta itemprop="name" content="使用 OpenSSL 建立自製 CA 憑證">
+<meta itemprop="description" content="本文章將使用 OpenSSL 建立自己的 CA（Certificate Authority）憑證，非常適合用在本地端的測試。 實作 步驟一: 產生 CA 私鑰 openssl genpkey -algorithm RSA -out ca.key 此"><meta itemprop="datePublished" content="2025-05-11T15:47:11+08:00" />
+<meta itemprop="dateModified" content="2025-05-11T15:47:11+08:00" />
+<meta itemprop="wordCount" content="368">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用 OpenSSL 建立自製 CA 憑證"/>
+<meta name="twitter:description" content="本文章將使用 OpenSSL 建立自己的 CA（Certificate Authority）憑證，非常適合用在本地端的測試。 實作 步驟一: 產生 CA 私鑰 openssl genpkey -algorithm RSA -out ca.key 此"/>
 
 	
     
@@ -78,6 +78,8 @@
     });
       </script>
     
+   
+  
 
   <header>
     <div class="custom-gradient1 navbar-fixed-top">
@@ -342,97 +344,91 @@
 </nav>
 
     </div>
-    
   </header>
+
+
 
     <main role="main">
       
   <div style="min-height: calc(100vh - 8rem);">
-    <article class="mw8 center">
-      <section class="ph4 pa4">
+    
+    <article class="flex-l flex-wrap justify-between mw8 center ph3 single-page">
+      <header class="mt4 w-100">
+        <aside class="instapaper_ignoref b helvetica tracked">
+            
+        </aside>
         
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/25.Reverse_Nodes_in_k-Group/" class="link black dim">
-        25. Reverse Nodes in k-Group
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Given the head of a linked list, reverse the nodes of the list k at a time, and return the modified list. k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes, in the end, should remain as it is. You may not alter the values
-    </div>
-    <a href="/posts/LeetCode/25.Reverse_Nodes_in_k-Group/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
-        
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/24.Swap_Nodes_in_Pairs/" class="link black dim">
-        24. Swap Nodes in Pairs
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Given a linked list, swap every two adjacent nodes and return its head. You must solve the problem without modifying the values in the list&rsquo;s nodes (i.e., only nodes themselves may be changed.) 翻譯 給定一個鏈結串列，交換每兩個相鄰的節點，然後返回新的鏈結串列的頭部
-    </div>
-    <a href="/posts/LeetCode/24.Swap_Nodes_in_Pairs/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
-        
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/23.Merge_k_Sorted_Lists/" class="link black dim">
-        23. Merge k Sorted Lists
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 You are given an array of k linked-lists lists, each linked-list is sorted in ascending order. Merge all the linked-lists into one sorted linked-list and return it. 翻譯 你被給予一個包含 k 個鏈結串列的陣列 lists，每個鏈結串列都按升序排序。 將所有
-    </div>
-    <a href="/posts/LeetCode/23.Merge_k_Sorted_Lists/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
+
+
+
+
+
+
+
+
+        <h1 class="f1 athelas mt3 mb1">使用 OpenSSL 建立自製 CA 憑證</h1>
+        <div class="categories">
+          📁 
+          
+            
+              <a style="text-decoration: none;" href="/categories/Ubuntu">Ubuntu</a>
+            
+              <a style="text-decoration: none;" href="/categories/SSL">SSL</a>
+            
+          
+        </div>
         
-      </section>
-      <div class="pagination-container">
-    <ul class="pagination pagination-default">
-      <li class="page-item">
-        <a href="/posts/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/14/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/13/" aria-label="Page 13" class="page-link" role="button">13</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/14/" aria-label="Page 14" class="page-link" role="button">14</a>
-      </li>
-      <li class="page-item active">
-        <a aria-current="page" aria-label="Page 15" class="page-link" role="button">15</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/16/" aria-label="Page 16" class="page-link" role="button">16</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/17/" aria-label="Page 17" class="page-link" role="button">17</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/16/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/25/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
-      </li>
-    </ul></div>
+        
+        
+        <time class="f6 mv4 dib tracked" datetime="2025-05-11T15:47:11+08:00">五月 11, 2025</time>
+        
+
+        
+        
+      </header>
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><p>本文章將使用 OpenSSL 建立自己的 CA（Certificate Authority）憑證，非常適合用在本地端的測試。</p>
+<h3 id="實作">實作</h3>
+<h4 id="步驟一-產生-ca-私鑰">步驟一: 產生 CA 私鑰</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>openssl genpkey -algorithm RSA -out ca.key  
+</span></span></code></pre></div><p>此指令會產生一個 RSA 私鑰，存成 ca.key 檔案。<br>
+<img src="/images/20250511/1.jpg" alt="CA Key" title="ca_key"></p>
+<h4 id="步驟二-產生自簽名-ca-憑證">步驟二: 產生自簽名 CA 憑證</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>openssl req -new -x509 -key ca.key -out ca.crt
+</span></span></code></pre></div><p>此指令會根據剛剛產生的私鑰來建立自簽名憑證 ca.crt。<br>
+執行後會要求你輸入一些資訊如下:<br>
+<img src="/images/20250511/2.jpg" alt="CA Cet" title="ca_cet"><br>
+📌 各欄位說明:</p>
+<ul>
+<li>Common Name (CN)：通常填網域名稱。若是本地測試可填 localhost 或任意名稱。⚠️ 務必要與日後的使用環境一致，否則可能導致憑證無效。</li>
+<li>Organization (O)：組織名稱。可隨意填寫。</li>
+<li>Organizational Unit (OU)：組織單位，如部門名稱。也可隨意填。</li>
+<li>Locality (L)：城市名稱，可自由填寫。</li>
+<li>State (ST)：省／州名，可自由填寫。</li>
+<li>Country (C)：填寫國家兩碼，如台灣為 TW。
+備註: 地區可以參考此<a href="https://zh.wikipedia.org/zh-tw/ISO_3166-1">ISO 3166-1</a></li>
+</ul>
+<h4 id="步驟三確認憑證資訊可選">步驟三：確認憑證資訊（可選）</h4>
+<p>這步驟僅用來查看剛剛建立的憑證內容，確認資訊是否正確。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>openssl x509 -text -noout -in ca.crt
+</span></span></code></pre></div><p><img src="/images/20250511/3.jpg" alt="CA Content" title="ca_content"></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+        
+        </div>
+      </div>
+
+      <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
     </article>
   </div>
 

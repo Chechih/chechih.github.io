@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>NewPlayer</title>
+    <title>使用 PuTTY 從遠端 [Ubuntu] 傳檔案到本機 [Windows] | NewPlayer</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="The last theme you&#39;ll ever need. Maybe.">
+    <meta name="description" content="前置準備 請先到官網下載並安裝 ✨開始變魔術！ 打開 Windows CMD 視窗 切換目錄到剛剛安裝 PuTTY 的資料夾 輸入傳檔咒語: pscp &lt;ubuntu_user&gt;@&lt;ubuntu_ip&gt;:&lt;ubuntu_file_path&gt; &lt;windows_file_download_path&gt; 各欄位說明: &lt;ubuntu_user&gt;: Ubuntu 的使用者名稱(如 root) &lt;ubuntu_ip&gt;: Ubuntu">
     <meta name="generator" content="Hugo 0.116.1">
     
     
@@ -39,19 +39,19 @@
 
     
     
-      <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="NewPlayer" />
-      <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="NewPlayer" />
-      
-    
-    
-    <meta property="og:title" content="Posts" />
-<meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://chechih.github.io/posts/" />
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
+    <meta property="og:title" content="使用 PuTTY 從遠端 [Ubuntu] 傳檔案到本機 [Windows]" />
+<meta property="og:description" content="前置準備 請先到官網下載並安裝 ✨開始變魔術！ 打開 Windows CMD 視窗 切換目錄到剛剛安裝 PuTTY 的資料夾 輸入傳檔咒語: pscp &lt;ubuntu_user&gt;@&lt;ubuntu_ip&gt;:&lt;ubuntu_file_path&gt; &lt;windows_file_download_path&gt; 各欄位說明: &lt;ubuntu_user&gt;: Ubuntu 的使用者名稱(如 root) &lt;ubuntu_ip&gt;: Ubuntu" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chechih.github.io/posts/20250513/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-05-13T00:38:11+08:00" />
+<meta property="article:modified_time" content="2025-05-13T00:38:11+08:00" />
+<meta itemprop="name" content="使用 PuTTY 從遠端 [Ubuntu] 傳檔案到本機 [Windows]">
+<meta itemprop="description" content="前置準備 請先到官網下載並安裝 ✨開始變魔術！ 打開 Windows CMD 視窗 切換目錄到剛剛安裝 PuTTY 的資料夾 輸入傳檔咒語: pscp &lt;ubuntu_user&gt;@&lt;ubuntu_ip&gt;:&lt;ubuntu_file_path&gt; &lt;windows_file_download_path&gt; 各欄位說明: &lt;ubuntu_user&gt;: Ubuntu 的使用者名稱(如 root) &lt;ubuntu_ip&gt;: Ubuntu"><meta itemprop="datePublished" content="2025-05-13T00:38:11+08:00" />
+<meta itemprop="dateModified" content="2025-05-13T00:38:11+08:00" />
+<meta itemprop="wordCount" content="246">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用 PuTTY 從遠端 [Ubuntu] 傳檔案到本機 [Windows]"/>
+<meta name="twitter:description" content="前置準備 請先到官網下載並安裝 ✨開始變魔術！ 打開 Windows CMD 視窗 切換目錄到剛剛安裝 PuTTY 的資料夾 輸入傳檔咒語: pscp &lt;ubuntu_user&gt;@&lt;ubuntu_ip&gt;:&lt;ubuntu_file_path&gt; &lt;windows_file_download_path&gt; 各欄位說明: &lt;ubuntu_user&gt;: Ubuntu 的使用者名稱(如 root) &lt;ubuntu_ip&gt;: Ubuntu"/>
 
 	
     
@@ -78,6 +78,8 @@
     });
       </script>
     
+   
+  
 
   <header>
     <div class="custom-gradient1 navbar-fixed-top">
@@ -342,97 +344,113 @@
 </nav>
 
     </div>
-    
   </header>
+
+
 
     <main role="main">
       
   <div style="min-height: calc(100vh - 8rem);">
-    <article class="mw8 center">
-      <section class="ph4 pa4">
+    
+    <article class="flex-l flex-wrap justify-between mw8 center ph3 single-page">
+      <header class="mt4 w-100">
+        <aside class="instapaper_ignoref b helvetica tracked">
+            
+        </aside>
         
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/5.Longest_Palindromic_Substring/" class="link black dim">
-        5. Longest Palindromic Substring
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Given a string s, return the longest palindromic substring in s. 翻譯 給定一個字符串 s，請返回 s 中最長的回文字串。 Example 1: Input: s = &quot;babad&quot; Output: &quot;bab&quot; Explanation: &quot;aba&quot; is also a valid answer. Example 2: Input: s = &quot;cbbd&quot; Output: &quot;bb&quot; Constraints: 1 &lt;= s.length &lt;= 1000 s consist of only
-    </div>
-    <a href="/posts/LeetCode/5.Longest_Palindromic_Substring/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
-        
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/4.Median_of_Two_Sorted_Arrays/" class="link black dim">
-        4. Median of Two Sorted Arrays
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)). 翻譯 給定兩個已排序的數組 nums1 和 nums2，它們的大小分別為 m 和 n。請返回這兩個
-    </div>
-    <a href="/posts/LeetCode/4.Median_of_Two_Sorted_Arrays/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
-        
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/3.Longest_Substring_Without_Repeating_Characters/" class="link black dim">
-        3. Longest Substring Without Repeating Characters
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Given a string s, find the length of the longest substring without repeating characters. 翻譯 給定一個字符串s，找到最長的不含重複字符的子串的長度。 Example 1: Input: s = &quot;abcabcbb&quot; Output: 3 Explanation: The answer is &quot;abc&quot;, with the length of 3. Example 2: Input: s = &quot;bbbbb&quot; Output:
-    </div>
-    <a href="/posts/LeetCode/3.Longest_Substring_Without_Repeating_Characters/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
+
+
+
+
+
+
+
+
+        <h1 class="f1 athelas mt3 mb1">使用 PuTTY 從遠端 [Ubuntu] 傳檔案到本機 [Windows]</h1>
+        <div class="categories">
+          📁 
+          
+            
+              <a style="text-decoration: none;" href="/categories/Windows">Windows</a>
+            
+              <a style="text-decoration: none;" href="/categories/Ubuntu">Ubuntu</a>
+            
+              <a style="text-decoration: none;" href="/categories/SSH">SSH</a>
+            
+              <a style="text-decoration: none;" href="/categories/Tool">Tool</a>
+            
+              <a style="text-decoration: none;" href="/categories/CMD">CMD</a>
+            
+          
+        </div>
         
-      </section>
-      <div class="pagination-container">
-    <ul class="pagination pagination-default">
-      <li class="page-item">
-        <a href="/posts/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/21/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/20/" aria-label="Page 20" class="page-link" role="button">20</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/21/" aria-label="Page 21" class="page-link" role="button">21</a>
-      </li>
-      <li class="page-item active">
-        <a aria-current="page" aria-label="Page 22" class="page-link" role="button">22</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/23/" aria-label="Page 23" class="page-link" role="button">23</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/24/" aria-label="Page 24" class="page-link" role="button">24</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/23/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/25/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
-      </li>
-    </ul></div>
+        
+        
+        <time class="f6 mv4 dib tracked" datetime="2025-05-13T00:38:11+08:00">五月 13, 2025</time>
+        
+
+        
+        
+      </header>
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><h3 id="前置準備">前置準備</h3>
+<p>請先到<a href="https://www.putty.org/">官網</a>下載並安裝<br>
+<img src="/images/20250513/1.jpg" alt="PuTTY Tool" title="putty_tool"></p>
+<h3 id="開始變魔術">✨開始變魔術！</h3>
+<ol>
+<li>打開 Windows CMD 視窗</li>
+<li>切換目錄到剛剛安裝 PuTTY 的資料夾<br>
+<img src="/images/20250513/2.jpg" alt="CD PuTTY Path" title="cd_putty_path"></li>
+<li>輸入傳檔咒語:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>pscp &lt;ubuntu_user&gt;@&lt;ubuntu_ip&gt;:&lt;ubuntu_file_path&gt; &lt;windows_file_download_path&gt;
+</span></span></code></pre></div><h4 id="各欄位說明">各欄位說明:</h4>
+<ul>
+<li>&lt;ubuntu_user&gt;: Ubuntu 的使用者名稱(如 root)</li>
+<li>&lt;ubuntu_ip&gt;: Ubuntu 主機的 IP 位址</li>
+<li>&lt;ubuntu_file_path&gt;: Ubuntu 上檔案的完整路徑</li>
+<li>&lt;windows_file_download_path&gt;: 要存放在 Windows 的完整路徑 (含檔名)</li>
+</ul>
+<p>範例:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>pscp newplayer@XXX.XXX.XXX.XXX:/home/newplayer/test.txt D:<span style="color:#ae81ff">\T</span>emp<span style="color:#ae81ff">\t</span>est.txt
+</span></span></code></pre></div><p>執行畫面參考:<br>
+<img src="/images/20250513/3.jpg" alt="PSCP SAMPLE" title="pscp_sample"><br>
+<img src="/images/20250513/4.jpg" alt="Transfer Success" title="transfer_success"></p>
+<h3 id="從-windows-傳檔案到-ubuntu">從 Windows 傳檔案到 Ubuntu</h3>
+<p>你也可以反過來，將檔案從 Windows 傳到 Ubuntu，只要把咒語稍微調整一下:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>pscp &lt;windows_file_path&gt; &lt;ubuntu_user&gt;@&lt;ubuntu_ip&gt;:&lt;ubuntu_file_path&gt;
+</span></span></code></pre></div><p>各欄位說明:</p>
+<ul>
+<li>&lt;windows_file_path&gt;: Windows 上檔案的完整路徑</li>
+<li>&lt;ubuntu_user&gt;: Ubuntu 使用者名稱</li>
+<li>&lt;ubuntu_ip&gt;: Ubuntu 主機 IP 位址</li>
+<li>&lt;ubuntu_file_path&gt;: 想儲存在 Ubuntu 的路徑 (含檔名)
+範例:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>pscp D:<span style="color:#ae81ff">\T</span>emp<span style="color:#ae81ff">\t</span>est.txt newplayer@XXX.XXX.XXX.XXX:/home/newplayer/test.txt
+</span></span></code></pre></div><p>執行畫面參考:<br>
+<img src="/images/20250513/5.jpg" alt="PSCP SAMPLE2" title="pscp_sample2"></p>
+<h3 id="參考">參考</h3>
+<ul>
+<li><a href="https://jeremysu0131.github.io/Tool-Putty-%E4%BD%BF%E7%94%A8PSCP%E5%9C%A8Linux%E8%88%87Windows%E9%96%93%E5%82%B3%E9%80%81%E6%AA%94%E6%A1%88/">[Tool] Putty - 使用PSCP在Linux與Windows間傳送檔案</a></li>
+</ul>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+        
+        </div>
+      </div>
+
+      <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
     </article>
   </div>
 

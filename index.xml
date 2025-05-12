@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Sun, 11 May 2025 15:47:11 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 May 2025 00:38:11 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 PuTTY 從遠端 [Ubuntu] 傳檔案到本機 [Windows]</title>
+      <link>https://chechih.github.io/posts/20250513/</link>
+      <pubDate>Tue, 13 May 2025 00:38:11 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250513/</guid>
+      <description>前置準備 請先到官網下載並安裝 ✨開始變魔術！ 打開 Windows CMD 視窗 切換目錄到剛剛安裝 PuTTY 的資料夾 輸入傳檔咒語: pscp &amp;lt;ubuntu_user&amp;gt;@&amp;lt;ubuntu_ip&amp;gt;:&amp;lt;ubuntu_file_path&amp;gt; &amp;lt;windows_file_download_path&amp;gt; 各欄位說明: &amp;lt;ubuntu_user&amp;gt;: Ubuntu 的使用者名稱(如 root) &amp;lt;ubuntu_ip&amp;gt;: Ubuntu</description>
+    </item>
+    
     <item>
       <title>使用 OpenSSL 建立自製 CA 憑證</title>
       <link>https://chechih.github.io/posts/20250511/</link>

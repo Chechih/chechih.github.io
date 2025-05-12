@@ -7,31 +7,58 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Sun, 11 May 2025 15:47:11 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 May 2025 00:38:11 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>SSL</title>
-      <link>https://chechih.github.io/categories/SSL/</link>
-      <pubDate>Sun, 11 May 2025 15:47:11 +0800</pubDate>
+      <title>CMD</title>
+      <link>https://chechih.github.io/categories/CMD/</link>
+      <pubDate>Tue, 13 May 2025 00:38:11 +0800</pubDate>
       
-      <guid>https://chechih.github.io/categories/SSL/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ubuntu</title>
-      <link>https://chechih.github.io/categories/Ubuntu/</link>
-      <pubDate>Sun, 11 May 2025 15:47:11 +0800</pubDate>
-      
-      <guid>https://chechih.github.io/categories/Ubuntu/</guid>
+      <guid>https://chechih.github.io/categories/CMD/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SSH</title>
       <link>https://chechih.github.io/categories/SSH/</link>
-      <pubDate>Thu, 08 May 2025 23:39:48 +0800</pubDate>
+      <pubDate>Tue, 13 May 2025 00:38:11 +0800</pubDate>
       
       <guid>https://chechih.github.io/categories/SSH/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tool</title>
+      <link>https://chechih.github.io/categories/Tool/</link>
+      <pubDate>Tue, 13 May 2025 00:38:11 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/Tool/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://chechih.github.io/categories/Ubuntu/</link>
+      <pubDate>Tue, 13 May 2025 00:38:11 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/Ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://chechih.github.io/categories/Windows/</link>
+      <pubDate>Tue, 13 May 2025 00:38:11 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/Windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SSL</title>
+      <link>https://chechih.github.io/categories/SSL/</link>
+      <pubDate>Sun, 11 May 2025 15:47:11 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/SSL/</guid>
       <description></description>
     </item>
     
@@ -149,15 +176,6 @@
       <pubDate>Wed, 02 Oct 2024 17:43:49 +0800</pubDate>
       
       <guid>https://chechih.github.io/categories/NET/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Windows</title>
-      <link>https://chechih.github.io/categories/Windows/</link>
-      <pubDate>Wed, 02 Oct 2024 17:43:49 +0800</pubDate>
-      
-      <guid>https://chechih.github.io/categories/Windows/</guid>
       <description></description>
     </item>
     

@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>NewPlayer</title>
+    <title>從 Harbor Push / Pull Image | NewPlayer</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="The last theme you&#39;ll ever need. Maybe.">
+    <meta name="description" content="Push Image 到 Harbor 設定 Docker 為允許非安全連線 (Insecure Registry) Linux 系統操作，編輯 Docker 設定檔 vim /etc/docker/daemon.json 輸入 { &#34;insecure-registries&#34;:[&#34;&lt;harbor_ip&gt;:&lt;harbor_port&gt;&#34;] } # ex: # { &#34;insecure-registries&#34;:[&#34;XXX.XXX.XXX.XXX:XXX&#34;] } 儲存並離開: ESC → :wq 重新啟動 Docker: sudo systemctl stop docker sudo systemctl start docker Docker Desktop 操作 點選">
     <meta name="generator" content="Hugo 0.116.1">
     
     
@@ -39,19 +39,19 @@
 
     
     
-      <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="NewPlayer" />
-      <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="NewPlayer" />
-      
-    
-    
-    <meta property="og:title" content="Posts" />
-<meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://chechih.github.io/posts/" />
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
+    <meta property="og:title" content="從 Harbor Push / Pull Image" />
+<meta property="og:description" content="Push Image 到 Harbor 設定 Docker 為允許非安全連線 (Insecure Registry) Linux 系統操作，編輯 Docker 設定檔 vim /etc/docker/daemon.json 輸入 { &#34;insecure-registries&#34;:[&#34;&lt;harbor_ip&gt;:&lt;harbor_port&gt;&#34;] } # ex: # { &#34;insecure-registries&#34;:[&#34;XXX.XXX.XXX.XXX:XXX&#34;] } 儲存並離開: ESC → :wq 重新啟動 Docker: sudo systemctl stop docker sudo systemctl start docker Docker Desktop 操作 點選" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chechih.github.io/posts/20250514/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-05-14T21:55:16+08:00" />
+<meta property="article:modified_time" content="2025-05-14T21:55:16+08:00" />
+<meta itemprop="name" content="從 Harbor Push / Pull Image">
+<meta itemprop="description" content="Push Image 到 Harbor 設定 Docker 為允許非安全連線 (Insecure Registry) Linux 系統操作，編輯 Docker 設定檔 vim /etc/docker/daemon.json 輸入 { &#34;insecure-registries&#34;:[&#34;&lt;harbor_ip&gt;:&lt;harbor_port&gt;&#34;] } # ex: # { &#34;insecure-registries&#34;:[&#34;XXX.XXX.XXX.XXX:XXX&#34;] } 儲存並離開: ESC → :wq 重新啟動 Docker: sudo systemctl stop docker sudo systemctl start docker Docker Desktop 操作 點選"><meta itemprop="datePublished" content="2025-05-14T21:55:16+08:00" />
+<meta itemprop="dateModified" content="2025-05-14T21:55:16+08:00" />
+<meta itemprop="wordCount" content="219">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="從 Harbor Push / Pull Image"/>
+<meta name="twitter:description" content="Push Image 到 Harbor 設定 Docker 為允許非安全連線 (Insecure Registry) Linux 系統操作，編輯 Docker 設定檔 vim /etc/docker/daemon.json 輸入 { &#34;insecure-registries&#34;:[&#34;&lt;harbor_ip&gt;:&lt;harbor_port&gt;&#34;] } # ex: # { &#34;insecure-registries&#34;:[&#34;XXX.XXX.XXX.XXX:XXX&#34;] } 儲存並離開: ESC → :wq 重新啟動 Docker: sudo systemctl stop docker sudo systemctl start docker Docker Desktop 操作 點選"/>
 
 	
     
@@ -78,6 +78,8 @@
     });
       </script>
     
+   
+  
 
   <header>
     <div class="custom-gradient1 navbar-fixed-top">
@@ -342,97 +344,121 @@
 </nav>
 
     </div>
-    
   </header>
+
+
 
     <main role="main">
       
   <div style="min-height: calc(100vh - 8rem);">
-    <article class="mw8 center">
-      <section class="ph4 pa4">
+    
+    <article class="flex-l flex-wrap justify-between mw8 center ph3 single-page">
+      <header class="mt4 w-100">
+        <aside class="instapaper_ignoref b helvetica tracked">
+            
+        </aside>
         
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/20241002/" class="link black dim">
-        使用 Web Deploy 發佈程式到 IIS 上
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      前言 如果在開發時，部屬的 IIS (下面簡稱 A 電腦)和開發程式 (下面簡稱 B 電腦)是在不同機器上面時，這時就可以使用 Web Deploy 將程式碼從 B 電腦發佈到 A 電腦上
-    </div>
-    <a href="/posts/20241002/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
-        
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/IIS/Publish/" class="link black dim">
-        IIS 上部屬 ASP.NET Core
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      前言 本範例使用 Windows Server 2022，要安裝的 ASP.NET Core 版本使用 8，專案的話選擇 Visual Studio 2022 的 ASP.NET Web 應用程式(Model-View-Controller)，專案名T
-    </div>
-    <a href="/posts/IIS/Publish/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
-        
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/IIS/Install/" class="link black dim">
-        開啟 IIS By Windows Server 2022
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      安裝 開啟伺服器管理員 選擇新增角色及功能 會跳出新增角色及功能精靈，直接點選下一步 安裝類型選擇角色型或功能型安裝 目的地伺服器選擇從伺服器集區選取
-    </div>
-    <a href="/posts/IIS/Install/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
+
+
+
+
+
+
+
+
+        <h1 class="f1 athelas mt3 mb1">從 Harbor Push / Pull Image</h1>
+        <div class="categories">
+          📁 
+          
+            
+              <a style="text-decoration: none;" href="/categories/Docker">Docker</a>
+            
+              <a style="text-decoration: none;" href="/categories/Harbor">Harbor</a>
+            
+          
+        </div>
         
-      </section>
-      <div class="pagination-container">
-    <ul class="pagination pagination-default">
-      <li class="page-item">
-        <a href="/posts/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/6/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/5/" aria-label="Page 5" class="page-link" role="button">5</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/6/" aria-label="Page 6" class="page-link" role="button">6</a>
-      </li>
-      <li class="page-item active">
-        <a aria-current="page" aria-label="Page 7" class="page-link" role="button">7</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/8/" aria-label="Page 8" class="page-link" role="button">8</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/9/" aria-label="Page 9" class="page-link" role="button">9</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/8/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/25/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
-      </li>
-    </ul></div>
+        
+        
+        <time class="f6 mv4 dib tracked" datetime="2025-05-14T21:55:16+08:00">五月 14, 2025</time>
+        
+
+        
+        
+      </header>
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><h3 id="push-image-到-harbor">Push Image 到 Harbor</h3>
+<ol>
+<li>設定 Docker 為允許非安全連線 (Insecure Registry)</li>
+</ol>
+<ul>
+<li>Linux 系統操作，編輯 Docker 設定檔</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>vim  /etc/docker/daemon.json  
+</span></span></code></pre></div><p>輸入</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{ <span style="color:#f92672">&#34;insecure-registries&#34;</span>:[<span style="color:#e6db74">&#34;&lt;harbor_ip&gt;:&lt;harbor_port&gt;&#34;</span>] } 
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#960050;background-color:#1e0010">ex:</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span> { <span style="color:#f92672">&#34;insecure-registries&#34;</span>:[<span style="color:#e6db74">&#34;XXX.XXX.XXX.XXX:XXX&#34;</span>] } 
+</span></span></code></pre></div><ul>
+<li>儲存並離開: ESC → :wq</li>
+<li>重新啟動 Docker:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo systemctl stop docker
+</span></span><span style="display:flex;"><span>sudo systemctl start docker
+</span></span></code></pre></div><p>Docker Desktop 操作<br>
+點選右上角齒輪 (⚙ 設定) ⨠ 選擇 Docker Engine
+<img src="/images/20250514/1.jpg" alt="Docker Desktop Setting" title="docker_desktop_setting"></p>
+<ol>
+<li>Docker 登入 Harbor</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker login -u &lt;user&gt; -p &lt;password&gt; &lt;harbor_ip&gt;:&lt;harbor_port&gt;
+</span></span></code></pre></div><p><img src="/images/20250514/2.jpg" alt="Docker Login Harbor" title="docker_login_harbor"></p>
+<ol>
+<li>對 Image 加上 Harbor 的標籤 (tag)</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker tag &lt;image_tag&gt; &lt;harbor_ip&gt;:&lt;harbor_port&gt;/&lt;item_name&gt;/&lt;image_tag&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ex:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># docker tag mcr.microsoft.com/dotnet/aspnet:8.0 XXX.XXX.XXX.XXX:XXX/library/mcr.microsoft.com/dotnet/aspnet:8.0</span>
+</span></span></code></pre></div><p>item_name 就是 Harbor 上專案名稱
+<img src="/images/20250514/3.jpg" alt="Harbor Item Name" title="harbor_item_name"></p>
+<ol>
+<li>上傳 Image 到 Harbor</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker push &lt;harbor_ip&gt;:&lt;harbor_port&gt;/&lt;item_name&gt;/&lt;image_tag&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ex:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># docker push XXX.XXX.XXX.XXX:XXX/library/mcr.microsoft.com/dotnet/aspnet:8.0</span>
+</span></span></code></pre></div><p><img src="/images/20250514/4.jpg" alt="Docker Push" title="docker_push"></p>
+<ol>
+<li>開啟 Harbor 網頁，查看 Image 是否成功上傳
+<img src="/images/20250514/5.jpg" alt="Check Harbor" title="check_harbor"></li>
+</ol>
+<h3 id="pull-image-從-harbor">Pull Image 從 Harbor</h3>
+<p>登入後執行以下指令</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker pull &lt;harbor_ip&gt;:&lt;harbor_port&gt;/&lt;item_name&gt;/&lt;image_tag&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ex:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># docker pull XXX.XXX.XXX.XXX:XXX/library/mcr.microsoft.com/dotnet/aspnet:8.0</span>
+</span></span></code></pre></div><p><img src="/images/20250514/6.jpg" alt="Docker Pull" title="docker_pull"></p>
+<h3 id="參考">參考</h3>
+<ul>
+<li><a href="https://ithelp.ithome.com.tw/m/articles/10336513">配置docker能推送image到私有的Harbor上、以及pull到docker</a></li>
+</ul>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+        
+        </div>
+      </div>
+
+      <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
     </article>
   </div>
 

@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Tue, 13 May 2025 00:38:11 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 May 2025 21:55:16 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>從 Harbor Push / Pull Image</title>
+      <link>https://chechih.github.io/posts/20250514/</link>
+      <pubDate>Wed, 14 May 2025 21:55:16 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250514/</guid>
+      <description>Push Image 到 Harbor 設定 Docker 為允許非安全連線 (Insecure Registry) Linux 系統操作，編輯 Docker 設定檔 vim /etc/docker/daemon.json 輸入 { &amp;#34;insecure-registries&amp;#34;:[&amp;#34;&amp;lt;harbor_ip&amp;gt;:&amp;lt;harbor_port&amp;gt;&amp;#34;] } # ex: # { &amp;#34;insecure-registries&amp;#34;:[&amp;#34;XXX.XXX.XXX.XXX:XXX&amp;#34;] } 儲存並離開: ESC → :wq 重新啟動 Docker: sudo systemctl stop docker sudo systemctl start docker Docker Desktop 操作 點選</description>
+    </item>
+    
     <item>
       <title>使用 PuTTY 從遠端 [Ubuntu] 傳檔案到本機 [Windows]</title>
       <link>https://chechih.github.io/posts/20250513/</link>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Harbor on NewPlayer</title>
+    <link>https://chechih.github.io/categories/Harbor/</link>
+    <description>Recent content in Harbor on NewPlayer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>NewPlayer</copyright>
+    <lastBuildDate>Wed, 14 May 2025 21:55:16 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/Harbor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>從 Harbor Push / Pull Image</title>
+      <link>https://chechih.github.io/posts/20250514/</link>
+      <pubDate>Wed, 14 May 2025 21:55:16 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250514/</guid>
+      <description>Push Image 到 Harbor 設定 Docker 為允許非安全連線 (Insecure Registry) Linux 系統操作，編輯 Docker 設定檔 vim /etc/docker/daemon.json 輸入 { &amp;#34;insecure-registries&amp;#34;:[&amp;#34;&amp;lt;harbor_ip&amp;gt;:&amp;lt;harbor_port&amp;gt;&amp;#34;] } # ex: # { &amp;#34;insecure-registries&amp;#34;:[&amp;#34;XXX.XXX.XXX.XXX:XXX&amp;#34;] } 儲存並離開: ESC → :wq 重新啟動 Docker: sudo systemctl stop docker sudo systemctl start docker Docker Desktop 操作 點選</description>
+    </item>
+    
+  </channel>
+</rss>

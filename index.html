@@ -389,6 +389,33 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/posts/20250514/" class="color-inherit dim link">
+            從 Harbor Push / Pull Image
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links summary-container">
+          Push Image 到 Harbor 設定 Docker 為允許非安全連線 (Insecure Registry) Linux 系統操作，編輯 Docker 設定檔 vim /etc/docker/daemon.json 輸入 { &#34;insecure-registries&#34;:[&#34;&lt;harbor_ip&gt;:&lt;harbor_port&gt;&#34;] } # ex: # { &#34;insecure-registries&#34;:[&#34;XXX.XXX.XXX.XXX:XXX&#34;] } 儲存並離開: ESC → :wq 重新啟動 Docker: sudo systemctl stop docker sudo systemctl start docker Docker Desktop 操作 點選
+        </div>
+          <a href="/posts/20250514/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+              </div>
+            
+              <div class="relative w-100 mb4">
+                
+
+
+
+<article class="title-posts">
+  <div class="db pv4 ph3 ph0-l no-underline bg-white title-post-box">
+    <div class="flex flex-column flex-row-ns bg-white ph4 overflow-hidden">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/posts/20250513/" class="color-inherit dim link">
             使用 PuTTY 從遠端 [Ubuntu] 傳檔案到本機 [Windows]
             </a>
@@ -424,33 +451,6 @@
           本文章將使用 OpenSSL 建立自己的 CA（Certificate Authority）憑證，非常適合用在本地端的測試。 實作 步驟一: 產生 CA 私鑰 openssl genpkey -algorithm RSA -out ca.key 此
         </div>
           <a href="/posts/20250511/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-              </div>
-            
-              <div class="relative w-100 mb4">
-                
-
-
-
-<article class="title-posts">
-  <div class="db pv4 ph3 ph0-l no-underline bg-white title-post-box">
-    <div class="flex flex-column flex-row-ns bg-white ph4 overflow-hidden">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/20250508/" class="color-inherit dim link">
-            Ubuntu SSH 連線教學
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links summary-container">
-          簡介 SSH(Secure Shell) 是一種用來建立加密連線的方式，讓你能夠遠端登入到另一台電腦、執行指令、維護伺服器或傳送檔案等操作。 學會之後，你就可以帥氣地說一句: &
-        </div>
-          <a href="/posts/20250508/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
         
       </div>
     </div>

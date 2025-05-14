@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Tue, 13 May 2025 00:38:11 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 May 2025 21:55:16 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker</title>
+      <link>https://chechih.github.io/categories/Docker/</link>
+      <pubDate>Wed, 14 May 2025 21:55:16 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/Docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Harbor</title>
+      <link>https://chechih.github.io/categories/Harbor/</link>
+      <pubDate>Wed, 14 May 2025 21:55:16 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/Harbor/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>CMD</title>
       <link>https://chechih.github.io/categories/CMD/</link>
@@ -77,15 +95,6 @@
       <pubDate>Sun, 27 Apr 2025 23:17:02 +0800</pubDate>
       
       <guid>https://chechih.github.io/categories/C#/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>https://chechih.github.io/categories/Docker/</link>
-      <pubDate>Wed, 16 Apr 2025 01:06:47 +0800</pubDate>
-      
-      <guid>https://chechih.github.io/categories/Docker/</guid>
       <description></description>
     </item>
     

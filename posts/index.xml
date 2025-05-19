@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Wed, 14 May 2025 21:55:16 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 May 2025 01:31:33 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Ubuntu 上建立 NFS 檔案系統</title>
+      <link>https://chechih.github.io/posts/20250520/</link>
+      <pubDate>Tue, 20 May 2025 01:31:33 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250520/</guid>
+      <description>前言 有一台讀寫效能強的電腦，想讓它變成網路硬碟伺服器，讓其他設備共享檔案，可以使用 NFS (Network File System) 在&amp;rsquo;資料分享主機&amp;rsquo;(暫稱 A</description>
+    </item>
+    
     <item>
       <title>從 Harbor Push / Pull Image</title>
       <link>https://chechih.github.io/posts/20250514/</link>

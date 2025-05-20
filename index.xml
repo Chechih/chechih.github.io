@@ -81,6 +81,15 @@
     </item>
     
     <item>
+      <title>Harbor 安裝</title>
+      <link>https://chechih.github.io/posts/20250421/</link>
+      <pubDate>Mon, 21 Apr 2025 22:16:17 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250421/</guid>
+      <description>前言 Harbor 有點像 Docker Registry 的升級版，除了基本的容器映像儲存功能，還提供了更多的安全性和管理功能，例如用戶權限控制和版本控制。簡單來說，Harbor 比 Docker</description>
+    </item>
+    
+    <item>
       <title>為 Ollama 建立一個聊天介面</title>
       <link>https://chechih.github.io/posts/20250416/</link>
       <pubDate>Wed, 16 Apr 2025 01:06:47 +0800</pubDate>

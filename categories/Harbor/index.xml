@@ -17,5 +17,14 @@
       <description>Push Image 到 Harbor 設定 Docker 為允許非安全連線 (Insecure Registry) Linux 系統操作，編輯 Docker 設定檔 vim /etc/docker/daemon.json 輸入 { &amp;#34;insecure-registries&amp;#34;:[&amp;#34;&amp;lt;harbor_ip&amp;gt;:&amp;lt;harbor_port&amp;gt;&amp;#34;] } # ex: # { &amp;#34;insecure-registries&amp;#34;:[&amp;#34;XXX.XXX.XXX.XXX:XXX&amp;#34;] } 儲存並離開: ESC → :wq 重新啟動 Docker: sudo systemctl stop docker sudo systemctl start docker Docker Desktop 操作 點選</description>
     </item>
     
+    <item>
+      <title>Harbor 安裝</title>
+      <link>https://chechih.github.io/posts/20250421/</link>
+      <pubDate>Mon, 21 Apr 2025 22:16:17 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250421/</guid>
+      <description>前言 Harbor 有點像 Docker Registry 的升級版，除了基本的容器映像儲存功能，還提供了更多的安全性和管理功能，例如用戶權限控制和版本控制。簡單來說，Harbor 比 Docker</description>
+    </item>
+    
   </channel>
 </rss>

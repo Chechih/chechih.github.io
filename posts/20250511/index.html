@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>使用 OpenSSL 建立自製 CA 憑證 | NewPlayer</title>
+    <title>使用 OpenSSL 建立自製 CA 憑證與簽發伺服器憑證教學 | NewPlayer</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="本文章將使用 OpenSSL 建立自己的 CA（Certificate Authority）憑證，非常適合用在本地端的測試。 實作 步驟一: 產生 CA 私鑰 openssl genpkey -algorithm RSA -out ca.key 此">
+    <meta name="description" content="2025-05-22 增加「簽發伺服器憑證」 本文將示範如何使用 OpenSSL 建立自製的 CA (Certificate Authority) 憑證，並使用該 CA 簽發伺服器憑證，適用於本地端測試環境。 實作步驟 步驟一: 產生 CA 私鑰">
     <meta name="generator" content="Hugo 0.116.1">
     
     
@@ -39,19 +39,19 @@
 
     
     
-    <meta property="og:title" content="使用 OpenSSL 建立自製 CA 憑證" />
-<meta property="og:description" content="本文章將使用 OpenSSL 建立自己的 CA（Certificate Authority）憑證，非常適合用在本地端的測試。 實作 步驟一: 產生 CA 私鑰 openssl genpkey -algorithm RSA -out ca.key 此" />
+    <meta property="og:title" content="使用 OpenSSL 建立自製 CA 憑證與簽發伺服器憑證教學" />
+<meta property="og:description" content="2025-05-22 增加「簽發伺服器憑證」 本文將示範如何使用 OpenSSL 建立自製的 CA (Certificate Authority) 憑證，並使用該 CA 簽發伺服器憑證，適用於本地端測試環境。 實作步驟 步驟一: 產生 CA 私鑰" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://chechih.github.io/posts/20250511/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2025-05-11T15:47:11+08:00" />
 <meta property="article:modified_time" content="2025-05-11T15:47:11+08:00" />
-<meta itemprop="name" content="使用 OpenSSL 建立自製 CA 憑證">
-<meta itemprop="description" content="本文章將使用 OpenSSL 建立自己的 CA（Certificate Authority）憑證，非常適合用在本地端的測試。 實作 步驟一: 產生 CA 私鑰 openssl genpkey -algorithm RSA -out ca.key 此"><meta itemprop="datePublished" content="2025-05-11T15:47:11+08:00" />
+<meta itemprop="name" content="使用 OpenSSL 建立自製 CA 憑證與簽發伺服器憑證教學">
+<meta itemprop="description" content="2025-05-22 增加「簽發伺服器憑證」 本文將示範如何使用 OpenSSL 建立自製的 CA (Certificate Authority) 憑證，並使用該 CA 簽發伺服器憑證，適用於本地端測試環境。 實作步驟 步驟一: 產生 CA 私鑰"><meta itemprop="datePublished" content="2025-05-11T15:47:11+08:00" />
 <meta itemprop="dateModified" content="2025-05-11T15:47:11+08:00" />
-<meta itemprop="wordCount" content="368">
+<meta itemprop="wordCount" content="964">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="使用 OpenSSL 建立自製 CA 憑證"/>
-<meta name="twitter:description" content="本文章將使用 OpenSSL 建立自己的 CA（Certificate Authority）憑證，非常適合用在本地端的測試。 實作 步驟一: 產生 CA 私鑰 openssl genpkey -algorithm RSA -out ca.key 此"/>
+<meta name="twitter:title" content="使用 OpenSSL 建立自製 CA 憑證與簽發伺服器憑證教學"/>
+<meta name="twitter:description" content="2025-05-22 增加「簽發伺服器憑證」 本文將示範如何使用 OpenSSL 建立自製的 CA (Certificate Authority) 憑證，並使用該 CA 簽發伺服器憑證，適用於本地端測試環境。 實作步驟 步驟一: 產生 CA 私鑰"/>
 
 	
     
@@ -369,7 +369,7 @@
 
 
 
-        <h1 class="f1 athelas mt3 mb1">使用 OpenSSL 建立自製 CA 憑證</h1>
+        <h1 class="f1 athelas mt3 mb1">使用 OpenSSL 建立自製 CA 憑證與簽發伺服器憑證教學</h1>
         <div class="categories">
           📁 
           
@@ -389,31 +389,67 @@
         
         
       </header>
-      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><p>本文章將使用 OpenSSL 建立自己的 CA（Certificate Authority）憑證，非常適合用在本地端的測試。</p>
-<h3 id="實作">實作</h3>
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><p><em>2025-05-22 增加「簽發伺服器憑證」</em><br>
+本文將示範如何使用 OpenSSL 建立自製的 CA (Certificate Authority) 憑證，並使用該 CA 簽發伺服器憑證，適用於本地端測試環境。</p>
+<h3 id="實作步驟">實作步驟</h3>
 <h4 id="步驟一-產生-ca-私鑰">步驟一: 產生 CA 私鑰</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>openssl genpkey -algorithm RSA -out ca.key  
-</span></span></code></pre></div><p>此指令會產生一個 RSA 私鑰，存成 ca.key 檔案。<br>
+</span></span></code></pre></div><p>此指令會產生一個 RSA 私鑰，並將其儲存為 ca.key 檔案
 <img src="/images/20250511/1.jpg" alt="CA Key" title="ca_key"></p>
 <h4 id="步驟二-產生自簽名-ca-憑證">步驟二: 產生自簽名 CA 憑證</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>openssl req -new -x509 -key ca.key -out ca.crt
 </span></span></code></pre></div><p>此指令會根據剛剛產生的私鑰來建立自簽名憑證 ca.crt。<br>
 執行後會要求你輸入一些資訊如下:<br>
-<img src="/images/20250511/2.jpg" alt="CA Cet" title="ca_cet"><br>
-📌 各欄位說明:</p>
+<img src="/images/20250511/2.jpg" alt="CA Cert" title="ca_cert"><br>
+各欄位說明:</p>
 <ul>
-<li>Common Name (CN)：通常填網域名稱。若是本地測試可填 localhost 或任意名稱。⚠️ 務必要與日後的使用環境一致，否則可能導致憑證無效。</li>
-<li>Organization (O)：組織名稱。可隨意填寫。</li>
-<li>Organizational Unit (OU)：組織單位，如部門名稱。也可隨意填。</li>
-<li>Locality (L)：城市名稱，可自由填寫。</li>
-<li>State (ST)：省／州名，可自由填寫。</li>
-<li>Country (C)：填寫國家兩碼，如台灣為 TW。
+<li>Common Name (CN): CA 的名稱，代表簽發憑證的認證機構身份，可自由填寫</li>
+<li>Organization (O): 組織名稱，可自由填寫</li>
+<li>Organizational Unit (OU): 組織單位（如部門名稱），可自由填寫</li>
+<li>Locality (L): 城市名稱，可自由填寫</li>
+<li>State (ST): 省／州名，可自由填寫</li>
+<li>Country (C): 填寫國家兩碼，例如台灣為 TW
 備註: 地區可以參考此<a href="https://zh.wikipedia.org/zh-tw/ISO_3166-1">ISO 3166-1</a></li>
 </ul>
-<h4 id="步驟三確認憑證資訊可選">步驟三：確認憑證資訊（可選）</h4>
+<h4 id="步驟三-確認憑證資訊可選">步驟三: 確認憑證資訊（可選）</h4>
 <p>這步驟僅用來查看剛剛建立的憑證內容，確認資訊是否正確。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>openssl x509 -text -noout -in ca.crt
 </span></span></code></pre></div><p><img src="/images/20250511/3.jpg" alt="CA Content" title="ca_content"></p>
+<h4 id="ca-憑證-結束">CA 憑證 結束</h4>
+<h4 id="步驟四-產生伺服器私鑰">步驟四: 產生伺服器私鑰</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>openssl genpkey -algorithm RSA -out server.key
+</span></span></code></pre></div><p>這會產生伺服器的 RSA 私鑰 server.key</p>
+<h4 id="步驟五-產生伺服器憑證簽署請求">步驟五: 產生伺服器憑證簽署請求</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>openssl req -new -key server.key -out server.csr
+</span></span></code></pre></div><p>此指令會使用剛剛產生的私鑰 server.key，建立憑證簽署請求 server.csr。<br>
+輸入時請注意:</p>
+<ul>
+<li>Common Name (CN): 請填寫伺服器的網域名稱 (例如 abc.test.com)，此名稱必須與日後使用環境一致，否則憑證會失效。若用於 localhost，請填寫 localhost 或加 SAN</li>
+<li>其餘輸入: 可自由填寫
+<img src="/images/20250511/4.jpg" alt="Server_Csr" title="server_csr"></li>
+</ul>
+<h4 id="步驟六-使用-ca-來簽署伺服器憑證">步驟六: 使用 CA 來簽署伺服器憑證</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>openssl x509 -req -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt -days <span style="color:#ae81ff">365</span>
+</span></span></code></pre></div><p>說明:</p>
+<ul>
+<li>-in server.csr : 指定剛剛建立的 CSR</li>
+<li>-CA ca.crt 和 -CAkey ca.key : 使用先前建立的自簽 CA 憑證和私鑰簽署</li>
+<li>-CAcreateserial: 若沒有序號檔案，會自動建立一個。序號檔案名稱預設為 <em>ca.srl</em>。只是我測的時候都沒有看到檔案&hellip;</li>
+<li>-out server.crt: 輸出簽署完成的伺服器憑證。這就是最終的伺服器憑證 <em>server.crt</em></li>
+<li>-days 365: 憑證有效期 365 天，可自行調整</li>
+</ul>
+<h4 id="步驟七-確認伺服器憑證資訊-可選">步驟七: 確認伺服器憑證資訊 (可選)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>openssl x509 -text -noout -in server.crt
+</span></span></code></pre></div><p>檢視 server.crt 內容，確認 CN、有效期等資訊是否正確</p>
+<p>補充說明:</p>
+<ul>
+<li>ca.key 是自行建立的 CA 私鑰，必須妥善保管，若洩漏將導致所有簽發的憑證失效</li>
+<li>ca.crt 是自簽名的 CA 憑證，所有用戶端（瀏覽器或應用程式）若要信任你簽發的伺服器憑證，必須先信任這個 CA 憑證</li>
+<li>server.key 是伺服器的私鑰，用於建立安全連線，必須保密</li>
+<li>server.csr 是伺服器的憑證簽署請求（Certificate Signing Request），用來請求 CA 簽署憑證。該檔案通常只在簽署過程中使用</li>
+<li>server.crt 是由 CA 簽發的伺服器憑證，部署在伺服器上，用於 HTTPS 等通訊中進行身份驗證與加密</li>
+<li>憑證鏈為: server.crt → ca.crt。用戶端需信任 ca.crt，才會認可 server.crt 為有效憑證</li>
+</ul>
 <ul class="pa0">
   
 </ul>

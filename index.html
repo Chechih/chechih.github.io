@@ -389,6 +389,33 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/posts/20250525/" class="color-inherit dim link">
+            Docker-compose 安裝
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links summary-container">
+          安裝步驟 下載安裝檔 前往 Github 查看對應版本 以下以 v2.27.1 為例執行下載指令: curl -L &#34;https://github.com/docker/compose/releases/download/{docker-compose_version}/docker-compose-$(uname -s)-$(uname -m)&#34; -o /usr/local/bin/docker-compose # curl -L &#34;https://github.com/docker/compose/releases/download/v2.27.1/docker-compose-$(uname -s)-$(uname -m)&#34; -o /usr/local/bin/docker-compose 2 給予執行權限 sudo chmod +x /usr/local/bin/docker-compose 建立符號連結 (讓系統能找到
+        </div>
+          <a href="/posts/20250525/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+              </div>
+            
+              <div class="relative w-100 mb4">
+                
+
+
+
+<article class="title-posts">
+  <div class="db pv4 ph3 ph0-l no-underline bg-white title-post-box">
+    <div class="flex flex-column flex-row-ns bg-white ph4 overflow-hidden">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="/posts/20250520/" class="color-inherit dim link">
             在 Ubuntu 上建立 NFS 檔案系統
             </a>
@@ -424,33 +451,6 @@
           Push Image 到 Harbor 設定 Docker 為允許非安全連線 (Insecure Registry) Linux 系統操作，編輯 Docker 設定檔 vim /etc/docker/daemon.json 輸入 { &#34;insecure-registries&#34;:[&#34;&lt;harbor_ip&gt;:&lt;harbor_port&gt;&#34;] } # ex: # { &#34;insecure-registries&#34;:[&#34;XXX.XXX.XXX.XXX:XXX&#34;] } 儲存並離開: ESC → :wq 重新啟動 Docker: sudo systemctl stop docker sudo systemctl start docker Docker Desktop 操作 點選
         </div>
           <a href="/posts/20250514/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
-
-              </div>
-            
-              <div class="relative w-100 mb4">
-                
-
-
-
-<article class="title-posts">
-  <div class="db pv4 ph3 ph0-l no-underline bg-white title-post-box">
-    <div class="flex flex-column flex-row-ns bg-white ph4 overflow-hidden">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/20250513/" class="color-inherit dim link">
-            使用 PuTTY 從遠端 [Ubuntu] 傳檔案到本機 [Windows]
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links summary-container">
-          前置準備 請先到官網下載並安裝 ✨開始變魔術！ 打開 Windows CMD 視窗 切換目錄到剛剛安裝 PuTTY 的資料夾 輸入傳檔咒語: pscp &lt;ubuntu_user&gt;@&lt;ubuntu_ip&gt;:&lt;ubuntu_file_path&gt; &lt;windows_file_download_path&gt; 各欄位說明: &lt;ubuntu_user&gt;: Ubuntu 的使用者名稱(如 root) &lt;ubuntu_ip&gt;: Ubuntu
-        </div>
-          <a href="/posts/20250513/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
         
       </div>
     </div>

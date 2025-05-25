@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Tue, 20 May 2025 01:31:33 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 May 2025 23:42:54 +0800</lastBuildDate><atom:link href="https://chechih.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker-compose 安裝</title>
+      <link>https://chechih.github.io/posts/20250525/</link>
+      <pubDate>Sun, 25 May 2025 23:42:54 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250525/</guid>
+      <description>安裝步驟 下載安裝檔 前往 Github 查看對應版本 以下以 v2.27.1 為例執行下載指令: curl -L &amp;#34;https://github.com/docker/compose/releases/download/{docker-compose_version}/docker-compose-$(uname -s)-$(uname -m)&amp;#34; -o /usr/local/bin/docker-compose # curl -L &amp;#34;https://github.com/docker/compose/releases/download/v2.27.1/docker-compose-$(uname -s)-$(uname -m)&amp;#34; -o /usr/local/bin/docker-compose 2 給予執行權限 sudo chmod +x /usr/local/bin/docker-compose 建立符號連結 (讓系統能找到</description>
+    </item>
+    
     <item>
       <title>在 Ubuntu 上建立 NFS 檔案系統</title>
       <link>https://chechih.github.io/posts/20250520/</link>

@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>NewPlayer</title>
+    <title>Git 從 Repository 只抓取單一資料夾下來 | NewPlayer</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="The last theme you&#39;ll ever need. Maybe.">
+    <meta name="description" content="前言 有時候我們只需要 Git 儲存庫中的部分資料夾內容（例如 docs/），不想下載整個專案。這時可以透過 Git 的 sparse-checkout 功能實現這個需求，並保證後續的 git pull 也能">
     <meta name="generator" content="Hugo 0.116.1">
     
     
@@ -39,19 +39,19 @@
 
     
     
-      <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="NewPlayer" />
-      <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="NewPlayer" />
-      
-    
-    
-    <meta property="og:title" content="Posts" />
-<meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://chechih.github.io/posts/" />
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
+    <meta property="og:title" content="Git 從 Repository 只抓取單一資料夾下來" />
+<meta property="og:description" content="前言 有時候我們只需要 Git 儲存庫中的部分資料夾內容（例如 docs/），不想下載整個專案。這時可以透過 Git 的 sparse-checkout 功能實現這個需求，並保證後續的 git pull 也能" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chechih.github.io/posts/20250527/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-05-27T23:54:08+08:00" />
+<meta property="article:modified_time" content="2025-05-27T23:54:08+08:00" />
+<meta itemprop="name" content="Git 從 Repository 只抓取單一資料夾下來">
+<meta itemprop="description" content="前言 有時候我們只需要 Git 儲存庫中的部分資料夾內容（例如 docs/），不想下載整個專案。這時可以透過 Git 的 sparse-checkout 功能實現這個需求，並保證後續的 git pull 也能"><meta itemprop="datePublished" content="2025-05-27T23:54:08+08:00" />
+<meta itemprop="dateModified" content="2025-05-27T23:54:08+08:00" />
+<meta itemprop="wordCount" content="237">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Git 從 Repository 只抓取單一資料夾下來"/>
+<meta name="twitter:description" content="前言 有時候我們只需要 Git 儲存庫中的部分資料夾內容（例如 docs/），不想下載整個專案。這時可以透過 Git 的 sparse-checkout 功能實現這個需求，並保證後續的 git pull 也能"/>
 
 	
     
@@ -78,6 +78,8 @@
     });
       </script>
     
+   
+  
 
   <header>
     <div class="custom-gradient1 navbar-fixed-top">
@@ -342,97 +344,92 @@
 </nav>
 
     </div>
-    
   </header>
+
+
 
     <main role="main">
       
   <div style="min-height: calc(100vh - 8rem);">
-    <article class="mw8 center">
-      <section class="ph4 pa4">
+    
+    <article class="flex-l flex-wrap justify-between mw8 center ph3 single-page">
+      <header class="mt4 w-100">
+        <aside class="instapaper_ignoref b helvetica tracked">
+            
+        </aside>
         
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/46.Permutations/" class="link black dim">
-        46. Permutations
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order. 翻譯 給定一個由不同整數組成的數組 nums，返回所有可能的排列。你可以以任意順序返回答案。 Example 1: Input: nums
-    </div>
-    <a href="/posts/LeetCode/46.Permutations/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
-        
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/20241002/" class="link black dim">
-        使用 Web Deploy 發佈程式到 IIS 上
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      前言 如果在開發時，部屬的 IIS (下面簡稱 A 電腦)和開發程式 (下面簡稱 B 電腦)是在不同機器上面時，這時就可以使用 Web Deploy 將程式碼從 B 電腦發佈到 A 電腦上
-    </div>
-    <a href="/posts/20241002/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
-        
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/IIS/Publish/" class="link black dim">
-        IIS 上部屬 ASP.NET Core
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      前言 本範例使用 Windows Server 2022，要安裝的 ASP.NET Core 版本使用 8，專案的話選擇 Visual Studio 2022 的 ASP.NET Web 應用程式(Model-View-Controller)，專案名T
-    </div>
-    <a href="/posts/IIS/Publish/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
+
+
+
+
+
+
+
+
+        <h1 class="f1 athelas mt3 mb1">Git 從 Repository 只抓取單一資料夾下來</h1>
+        <div class="categories">
+          📁 
+          
+            
+              <a style="text-decoration: none;" href="/categories/Git">Git</a>
+            
+          
+        </div>
         
-      </section>
-      <div class="pagination-container">
-    <ul class="pagination pagination-default">
-      <li class="page-item">
-        <a href="/posts/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/7/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/6/" aria-label="Page 6" class="page-link" role="button">6</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/7/" aria-label="Page 7" class="page-link" role="button">7</a>
-      </li>
-      <li class="page-item active">
-        <a aria-current="page" aria-label="Page 8" class="page-link" role="button">8</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/9/" aria-label="Page 9" class="page-link" role="button">9</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/10/" aria-label="Page 10" class="page-link" role="button">10</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/9/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/27/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
-      </li>
-    </ul></div>
+        
+        
+        <time class="f6 mv4 dib tracked" datetime="2025-05-27T23:54:08+08:00">五月 27, 2025</time>
+        
+
+        
+        
+      </header>
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><h3 id="前言">前言</h3>
+<p>有時候我們只需要 Git 儲存庫中的部分資料夾內容（例如 docs/），不想下載整個專案。這時可以透過 Git 的 sparse-checkout 功能實現這個需求，並保證後續的 git pull 也能更新這部分內容。</p>
+<h3 id="實作步驟">實作步驟</h3>
+<p>假設儲存庫的結構如下:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>project-root/
+</span></span><span style="display:flex;"><span>├── backend/
+</span></span><span style="display:flex;"><span>├── frontend/
+</span></span><span style="display:flex;"><span>└── docs/
+</span></span></code></pre></div><p>我們只想抓取 docs/ 資料夾，操作步驟如下:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 1. Git Clone</span>
+</span></span><span style="display:flex;"><span>git clone --filter<span style="color:#f92672">=</span>blob:none --no-checkout &lt;git_repository_url&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ex:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># git clone--filters=blob:none-no-checkout https:/github.com/&lt;user_id&gt;/&lt;repository_name&gt;.git</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># git clone--filters=blob:none-no-checkout file:&lt;repository_path&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 進入儲存庫資料夾</span>
+</span></span><span style="display:flex;"><span>cd project-root
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 啟用 sparse-checkout 模式</span>
+</span></span><span style="display:flex;"><span>git sparse-checkout init --cone
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 4. 設定要下載的資料夾 (例如 docs)</span>
+</span></span><span style="display:flex;"><span>git sparse-checkout set docs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 5. 取得資料</span>
+</span></span><span style="display:flex;"><span>git checkout
+</span></span></code></pre></div><h3 id="成果">成果</h3>
+<p>完成以上步驟後，儲存庫中只會有 docs/ 資料夾，之後使用 git pull 也會持續同步更新該資料夾的內容。</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+        
+        </div>
+      </div>
+
+      <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
     </article>
   </div>
 

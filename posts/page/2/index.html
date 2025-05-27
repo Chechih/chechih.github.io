@@ -355,6 +355,23 @@
             <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
   <div class="bg-white pa4 gray overflow-hidden">
     <h1 class="f3 near-black">
+      <a href="/posts/20250514/" class="link black dim">
+        從 Harbor Push / Pull Image
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
+      Push Image 到 Harbor 設定 Docker 為允許非安全連線 (Insecure Registry) Linux 系統操作，編輯 Docker 設定檔 vim /etc/docker/daemon.json 輸入 { &#34;insecure-registries&#34;:[&#34;&lt;harbor_ip&gt;:&lt;harbor_port&gt;&#34;] } # ex: # { &#34;insecure-registries&#34;:[&#34;XXX.XXX.XXX.XXX:XXX&#34;] } 儲存並離開: ESC → :wq 重新啟動 Docker: sudo systemctl stop docker sudo systemctl start docker Docker Desktop 操作 點選
+    </div>
+    <a href="/posts/20250514/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
+  </div>
+</div>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
+  <div class="bg-white pa4 gray overflow-hidden">
+    <h1 class="f3 near-black">
       <a href="/posts/20250513/" class="link black dim">
         使用 PuTTY 從遠端 [Ubuntu] 傳檔案到本機 [Windows]
       </a>
@@ -380,23 +397,6 @@
       2025-05-22 增加「簽發伺服器憑證」 本文將示範如何使用 OpenSSL 建立自製的 CA (Certificate Authority) 憑證，並使用該 CA 簽發伺服器憑證，適用於本地端測試環境。 實作步驟 步驟一: 產生 CA 私鑰
     </div>
     <a href="/posts/20250511/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
-
-          </div>
-        
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/20250508/" class="link black dim">
-        Ubuntu SSH 連線教學
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      簡介 SSH(Secure Shell) 是一種用來建立加密連線的方式，讓你能夠遠端登入到另一台電腦、執行指令、維護伺服器或傳送檔案等操作。 學會之後，你就可以帥氣地說一句: &
-    </div>
-    <a href="/posts/20250508/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
   </div>
 </div>
 
@@ -430,7 +430,7 @@
         <a href="/posts/page/3/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/posts/page/26/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/posts/page/27/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul></div>
     </article>

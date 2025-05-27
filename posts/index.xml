@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Sun, 25 May 2025 23:42:54 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 May 2025 23:54:08 +0800</lastBuildDate><atom:link href="https://chechih.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git 從 Repository 只抓取單一資料夾下來</title>
+      <link>https://chechih.github.io/posts/20250527/</link>
+      <pubDate>Tue, 27 May 2025 23:54:08 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250527/</guid>
+      <description>前言 有時候我們只需要 Git 儲存庫中的部分資料夾內容（例如 docs/），不想下載整個專案。這時可以透過 Git 的 sparse-checkout 功能實現這個需求，並保證後續的 git pull 也能</description>
+    </item>
+    
     <item>
       <title>Docker-compose 安裝</title>
       <link>https://chechih.github.io/posts/20250525/</link>

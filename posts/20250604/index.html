@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>NewPlayer</title>
+    <title>MiniKube 指令 | NewPlayer</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="The last theme you&#39;ll ever need. Maybe.">
+    <meta name="description" content="前言 本文記錄了我用過的 MiniKube 指令，方便之後查閱。 指令集 插件指令 minikube addons list 2. 套件啟動指令 minikube addons enable &lt;ADDON_NAME&gt; # 例如: # minikube addons enable dashboard # minikube addons enable ingress 套件關閉指令 minikube addons disable &lt;ADDON_NAME&gt; # 例如">
     <meta name="generator" content="Hugo 0.116.1">
     
     
@@ -39,19 +39,19 @@
 
     
     
-      <link href="/posts/index.xml" rel="alternate" type="application/rss+xml" title="NewPlayer" />
-      <link href="/posts/index.xml" rel="feed" type="application/rss+xml" title="NewPlayer" />
-      
-    
-    
-    <meta property="og:title" content="Posts" />
-<meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://chechih.github.io/posts/" />
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
+    <meta property="og:title" content="MiniKube 指令" />
+<meta property="og:description" content="前言 本文記錄了我用過的 MiniKube 指令，方便之後查閱。 指令集 插件指令 minikube addons list 2. 套件啟動指令 minikube addons enable &lt;ADDON_NAME&gt; # 例如: # minikube addons enable dashboard # minikube addons enable ingress 套件關閉指令 minikube addons disable &lt;ADDON_NAME&gt; # 例如" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chechih.github.io/posts/20250604/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-06-04T23:49:33+08:00" />
+<meta property="article:modified_time" content="2025-06-04T23:49:33+08:00" />
+<meta itemprop="name" content="MiniKube 指令">
+<meta itemprop="description" content="前言 本文記錄了我用過的 MiniKube 指令，方便之後查閱。 指令集 插件指令 minikube addons list 2. 套件啟動指令 minikube addons enable &lt;ADDON_NAME&gt; # 例如: # minikube addons enable dashboard # minikube addons enable ingress 套件關閉指令 minikube addons disable &lt;ADDON_NAME&gt; # 例如"><meta itemprop="datePublished" content="2025-06-04T23:49:33+08:00" />
+<meta itemprop="dateModified" content="2025-06-04T23:49:33+08:00" />
+<meta itemprop="wordCount" content="321">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MiniKube 指令"/>
+<meta name="twitter:description" content="前言 本文記錄了我用過的 MiniKube 指令，方便之後查閱。 指令集 插件指令 minikube addons list 2. 套件啟動指令 minikube addons enable &lt;ADDON_NAME&gt; # 例如: # minikube addons enable dashboard # minikube addons enable ingress 套件關閉指令 minikube addons disable &lt;ADDON_NAME&gt; # 例如"/>
 
 	
     
@@ -78,6 +78,8 @@
     });
       </script>
     
+   
+  
 
   <header>
     <div class="custom-gradient1 navbar-fixed-top">
@@ -342,97 +344,136 @@
 </nav>
 
     </div>
-    
   </header>
+
+
 
     <main role="main">
       
   <div style="min-height: calc(100vh - 8rem);">
-    <article class="mw8 center">
-      <section class="ph4 pa4">
+    
+    <article class="flex-l flex-wrap justify-between mw8 center ph3 single-page">
+      <header class="mt4 w-100">
+        <aside class="instapaper_ignoref b helvetica tracked">
+            
+        </aside>
         
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/9.Palindrome_Number/" class="link black dim">
-        9. Palindrome Number
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Given an integer x, return true if x is a palindrome, and false otherwise. Follow up: Could you solve it without converting the integer to a string? 翻譯 給定一個整數 x，如果 x 是一個 回文數(即正序和倒序讀都相同) ，則返回 true，否
-    </div>
-    <a href="/posts/LeetCode/9.Palindrome_Number/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
-        
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/8.String_to_Integeratoi/" class="link black dim">
-        8. String to Integer (atoi)
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer (similar to C/C++&rsquo;s atoi function). The algorithm for myAtoi(string s) is as follows: Read in and ignore any leading whitespace. Check if the next character (if not already at the end of the string) is &rsquo;-&rsquo; or &rsquo;+&rsquo;. Read this character in if it is either. This determines if the final result is negative
-    </div>
-    <a href="/posts/LeetCode/8.String_to_Integeratoi/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
-        
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/LeetCode/7.Reverse_Integer/" class="link black dim">
-        7. Reverse Integer
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      問題 Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231 , 231 - 1], then return 0. Assume the environment does not allow you to store 64-bit integers (signed or unsigned). 翻譯 給定一個帶符號的 32 位整數 x，請將其數
-    </div>
-    <a href="/posts/LeetCode/7.Reverse_Integer/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
 
-          </div>
+
+
+
+
+
+
+
+
+        <h1 class="f1 athelas mt3 mb1">MiniKube 指令</h1>
+        <div class="categories">
+          📁 
+          
+            
+              <a style="text-decoration: none;" href="/categories/MiniKube">MiniKube</a>
+            
+          
+        </div>
         
-      </section>
-      <div class="pagination-container">
-    <ul class="pagination pagination-default">
-      <li class="page-item">
-        <a href="/posts/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/22/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/21/" aria-label="Page 21" class="page-link" role="button">21</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/22/" aria-label="Page 22" class="page-link" role="button">22</a>
-      </li>
-      <li class="page-item active">
-        <a aria-current="page" aria-label="Page 23" class="page-link" role="button">23</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/24/" aria-label="Page 24" class="page-link" role="button">24</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/25/" aria-label="Page 25" class="page-link" role="button">25</a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/24/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/posts/page/27/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
-      </li>
-    </ul></div>
+        
+        
+        <time class="f6 mv4 dib tracked" datetime="2025-06-04T23:49:33+08:00">六月 4, 2025</time>
+        
+
+        
+        
+      </header>
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><h3 id="前言">前言</h3>
+<p>本文記錄了我用過的 MiniKube 指令，方便之後查閱。</p>
+<h3 id="指令集">指令集</h3>
+<ol>
+<li>插件指令</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>minikube addons list
+</span></span></code></pre></div><p><img src="/images/20250604/1.jpg" alt="Addons List" title="addons_list"><br>
+2. 套件啟動指令</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>minikube addons enable &lt;ADDON_NAME&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 例如:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># minikube addons enable dashboard</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># minikube addons enable ingress</span>
+</span></span></code></pre></div><ol start="3">
+<li>套件關閉指令</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>minikube addons disable &lt;ADDON_NAME&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 例如:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># minikube addons disable dashboard</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># minikube addons disable ingress</span>
+</span></span></code></pre></div><ol start="4">
+<li>開啟關閉 MiniKube</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>minikube start
+</span></span><span style="display:flex;"><span>minikube stop
+</span></span></code></pre></div><p><em>minikube start</em> 參數備註:</p>
+<ul>
+<li>&ndash;ports: 指定連到 minikube 的端口號
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>minikube start --driver<span style="color:#f92672">=</span>docker --ports<span style="color:#f92672">=</span>0.0.0.0:8443:8443
+</span></span></code></pre></div>這會將外部端口 8443 對應到 minikube 的 Kubernetes cluster (8443)。</li>
+<li>&ndash;insecure-registry: 設定 minikube 的私有倉儲
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>minikube start --driver<span style="color:#f92672">=</span>docker --insecure-registry<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;XXX.XXX.XXX.XXX:5000&#39;</span>
+</span></span></code></pre></div>詳細指令參考:<a href="https://minikube.sigs.k8s.io/docs/commands/start/">minikube start</a></li>
+</ul>
+<ol start="5">
+<li>刪除 minikube cluster</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>minikube delete
+</span></span></code></pre></div><ol start="6">
+<li>啟動 kubernetes API 伺服器，開啟 port 讓外部連接</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>kubectl proxy
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Starting to serve on 127.0.0.1:8001</span>
+</span></span></code></pre></div><p>可能會用到的參數:</p>
+<ul>
+<li>&ndash;port: 指定開放的端口號，如: <em>kubectl proxy &ndash;port=80</em></li>
+<li>&ndash;disable-filter: 測試時使用，避免請求被拒絕:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>kubectl proxy --address<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;0.0.0.0&#39;</span> --port<span style="color:#f92672">=</span><span style="color:#ae81ff">80</span> --disable-filter<span style="color:#f92672">=</span>true
+</span></span></code></pre></div><p>更多參數參考: <a href="https://kubernetes.kansea.com/docs/user-guide/kubectl/kubectl_proxy/">minikube kubectl proxy</a><br>
+7. minikube 資訊</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>minikube profile list
+</span></span></code></pre></div><p><img src="/images/20250604/2.jpg" alt="Profile List" title="profile_list"><br>
+8. 進入 Minikube 的虛擬機器</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>minikube ssh
+</span></span></code></pre></div><ol start="9">
+<li>Minikube IP</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>minikube ip
+</span></span></code></pre></div><ol start="10">
+<li>查看 Service 資訊</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>minikube service 
+</span></span></code></pre></div><h3 id="參考資料">參考資料</h3>
+<ul>
+<li><a href="https://stackoverflow.com/questions/47173463/how-to-access-local-kubernetes-minikube-dashboard-remotely">How to access local Kubernetes minikube dashboard remotely?</a></li>
+<li><a href="https://jhooq.com/message-services-https-kubernetes-dashboard-is-forbidden-user/">How to fix kubernetes dashboard forbidden 403 error – message services https kubernetes-dashboard is forbidden User</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/261722859">Kubernetes(minikube) 私有 registry 使用详解</a></li>
+<li><a href="https://faun.pub/kubernetes-does-not-have-permission-to-pull-image-from-harbor-1bc2e2781882">Kubernetes Does Not Have Permission to Pull Image From Harbor.</a></li>
+</ul>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+        
+        </div>
+      </div>
+
+      <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
     </article>
   </div>
 

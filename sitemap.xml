@@ -3,7 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://chechih.github.io/categories/</loc>
-    <lastmod>2025-05-30T13:05:06+08:00</lastmod>
+    <lastmod>2025-06-04T23:49:33+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/categories/MiniKube/</loc>
+    <lastmod>2025-06-04T23:49:33+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/posts/20250604/</loc>
+    <lastmod>2025-06-04T23:49:33+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/</loc>
+    <lastmod>2025-06-04T23:49:33+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/posts/</loc>
+    <lastmod>2025-06-04T23:49:33+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -12,22 +32,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://chechih.github.io/categories/MiniKube/</loc>
-    <lastmod>2025-05-30T13:05:06+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://chechih.github.io/posts/20250530/</loc>
-    <lastmod>2025-05-30T13:05:06+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://chechih.github.io/</loc>
-    <lastmod>2025-05-30T13:05:06+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://chechih.github.io/posts/</loc>
     <lastmod>2025-05-30T13:05:06+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

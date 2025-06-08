@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ingress on NewPlayer</title>
+    <link>https://chechih.github.io/categories/Ingress/</link>
+    <description>Recent content in Ingress on NewPlayer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>NewPlayer</copyright>
+    <lastBuildDate>Sun, 08 Jun 2025 14:32:08 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/Ingress/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Minikube 中使用 Ingress 設定反向代理</title>
+      <link>https://chechih.github.io/posts/20250608/</link>
+      <pubDate>Sun, 08 Jun 2025 14:32:08 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250608/</guid>
+      <description>前言 這篇筆記介紹如何在 Minikube 中使用 Ingress 來設定反向代理，讓不同路徑的請求轉發到不同的 Service。這對於在本機模擬開發環境或測試多服務架構特別有用</description>
+    </item>
+    
+  </channel>
+</rss>

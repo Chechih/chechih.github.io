@@ -3,26 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://chechih.github.io/categories/</loc>
-    <lastmod>2025-06-08T14:32:08+08:00</lastmod>
+    <lastmod>2025-06-09T22:39:11+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://chechih.github.io/categories/Ingress/</loc>
-    <lastmod>2025-06-08T14:32:08+08:00</lastmod>
+    <loc>https://chechih.github.io/posts/20250610/</loc>
+    <lastmod>2025-06-09T22:39:11+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://chechih.github.io/categories/MiniKube/</loc>
-    <lastmod>2025-06-08T14:32:08+08:00</lastmod>
+    <loc>https://chechih.github.io/categories/Minikube/</loc>
+    <lastmod>2025-06-09T22:39:11+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://chechih.github.io/</loc>
-    <lastmod>2025-06-08T14:32:08+08:00</lastmod>
+    <lastmod>2025-06-09T22:39:11+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://chechih.github.io/posts/</loc>
+    <lastmod>2025-06-09T22:39:11+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/categories/Ingress/</loc>
     <lastmod>2025-06-08T14:32:08+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

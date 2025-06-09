@@ -1,29 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>MiniKube on NewPlayer</title>
-    <link>https://chechih.github.io/categories/MiniKube/</link>
-    <description>Recent content in MiniKube on NewPlayer</description>
+    <title>Minikube on NewPlayer</title>
+    <link>https://chechih.github.io/categories/Minikube/</link>
+    <description>Recent content in Minikube on NewPlayer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Sun, 08 Jun 2025 14:32:08 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/MiniKube/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Jun 2025 22:39:11 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/Minikube/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>MiniKube 指令</title>
+      <title>Docker 版 Minikube Port 問題整理</title>
+      <link>https://chechih.github.io/posts/20250610/</link>
+      <pubDate>Mon, 09 Jun 2025 22:39:11 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250610/</guid>
+      <description>前言 在使用 Docker Driver 的 Minikube 測試時，常會遇到幾個問題: 明明有建立 Service，卻無法連線 Kubernetes Cluster 的 8443 port 無法從外部存取 無法從 Harbor 拉取 image 以下是我測試過的解法整</description>
+    </item>
+    
+    <item>
+      <title>在 Minikube 中使用 Ingress 設定反向代理</title>
+      <link>https://chechih.github.io/posts/20250608/</link>
+      <pubDate>Sun, 08 Jun 2025 14:32:08 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250608/</guid>
+      <description>前言 這篇筆記介紹如何在 Minikube 中使用 Ingress 來設定反向代理，讓不同路徑的請求轉發到不同的 Service。這對於在本機模擬開發環境或測試多服務架構特別有用</description>
+    </item>
+    
+    <item>
+      <title>Minikube 指令</title>
       <link>https://chechih.github.io/posts/20250604/</link>
       <pubDate>Wed, 04 Jun 2025 23:49:33 +0800</pubDate>
       
       <guid>https://chechih.github.io/posts/20250604/</guid>
-      <description>前言 本文記錄了我用過的 MiniKube 指令，方便之後查閱。 指令集 插件指令 minikube addons list 2. 套件啟動指令 minikube addons enable &amp;lt;ADDON_NAME&amp;gt; # 例如: # minikube addons enable dashboard # minikube addons enable ingress 套件關閉指令 minikube addons disable &amp;lt;ADDON_NAME&amp;gt; # 例如</description>
+      <description>前言 本文記錄了我用過的 Minikube 指令，方便之後查閱。 指令集 插件指令 minikube addons list 2. 套件啟動指令 minikube addons enable &amp;lt;ADDON_NAME&amp;gt; # 例如: # minikube addons enable dashboard # minikube addons enable ingress 套件關閉指令 minikube addons disable &amp;lt;ADDON_NAME&amp;gt; # 例如</description>
     </item>
     
     <item>
-      <title>MiniKube 安裝(使用 Docker)</title>
+      <title>Minikube 安裝(使用 Docker)</title>
       <link>https://chechih.github.io/posts/20250530/</link>
       <pubDate>Fri, 30 May 2025 13:05:06 +0800</pubDate>
       
       <guid>https://chechih.github.io/posts/20250530/</guid>
-      <description>前言 MiniKube 可透過 Docker 或 VirtualBox 安裝。 本教學使用 Docker (但提醒：建議使用 VirtualBox 避免踩坑)。 前置需求 已安裝 Docker 未安裝可參考 Docker 安裝 By Ubuntu 安裝 curl sudo apt install curl 下載和安裝 Minikube curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 &amp;amp;&amp;amp;</description>
+      <description>前言 Minikube 可透過 Docker 或 VirtualBox 安裝。 本教學使用 Docker (但提醒：建議使用 VirtualBox 避免踩坑)。 前置需求 已安裝 Docker 未安裝可參考 Docker 安裝 By Ubuntu 安裝 curl sudo apt install curl 下載和安裝 Minikube curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 &amp;amp;&amp;amp;</description>
     </item>
     
   </channel>

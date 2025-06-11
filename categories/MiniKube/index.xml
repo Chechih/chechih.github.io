@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Mon, 09 Jun 2025 22:39:11 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/Minikube/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Jun 2025 23:33:47 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/Minikube/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Minikube 使用 Ingress 設定 HTTPS</title>
+      <link>https://chechih.github.io/posts/20250611/</link>
+      <pubDate>Wed, 11 Jun 2025 23:33:47 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250611/</guid>
+      <description>前言 本文介紹如何在 Minikube 中利用 Ingress，透過相同 URL 分段路由多個 Service，並使用 HTTPS 連線。 若尚未建立 Ingress，可先參考 Ingress 設定反向代</description>
+    </item>
+    
     <item>
       <title>Docker 版 Minikube Port 問題整理</title>
       <link>https://chechih.github.io/posts/20250610/</link>

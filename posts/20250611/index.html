@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>NewPlayer</title>
+    <title>Minikube 使用 Ingress 設定 HTTPS | NewPlayer</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="The last theme you&#39;ll ever need. Maybe.">
+    <meta name="description" content="前言 本文介紹如何在 Minikube 中利用 Ingress，透過相同 URL 分段路由多個 Service，並使用 HTTPS 連線。 若尚未建立 Ingress，可先參考 Ingress 設定反向代">
     <meta name="generator" content="Hugo 0.116.1">
     
     
@@ -39,19 +39,19 @@
 
     
     
-      <link href="/index.xml" rel="alternate" type="application/rss+xml" title="NewPlayer" />
-      <link href="/index.xml" rel="feed" type="application/rss+xml" title="NewPlayer" />
-      
-    
-    
-    <meta property="og:title" content="NewPlayer" />
-<meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://chechih.github.io/" />
-<meta itemprop="name" content="NewPlayer">
-<meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="NewPlayer"/>
-<meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
+    <meta property="og:title" content="Minikube 使用 Ingress 設定 HTTPS" />
+<meta property="og:description" content="前言 本文介紹如何在 Minikube 中利用 Ingress，透過相同 URL 分段路由多個 Service，並使用 HTTPS 連線。 若尚未建立 Ingress，可先參考 Ingress 設定反向代" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chechih.github.io/posts/20250611/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-06-11T23:33:47+08:00" />
+<meta property="article:modified_time" content="2025-06-11T23:33:47+08:00" />
+<meta itemprop="name" content="Minikube 使用 Ingress 設定 HTTPS">
+<meta itemprop="description" content="前言 本文介紹如何在 Minikube 中利用 Ingress，透過相同 URL 分段路由多個 Service，並使用 HTTPS 連線。 若尚未建立 Ingress，可先參考 Ingress 設定反向代"><meta itemprop="datePublished" content="2025-06-11T23:33:47+08:00" />
+<meta itemprop="dateModified" content="2025-06-11T23:33:47+08:00" />
+<meta itemprop="wordCount" content="521">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Minikube 使用 Ingress 設定 HTTPS"/>
+<meta name="twitter:description" content="前言 本文介紹如何在 Minikube 中利用 Ingress，透過相同 URL 分段路由多個 Service，並使用 HTTPS 連線。 若尚未建立 Ingress，可先參考 Ingress 設定反向代"/>
 
 	
     
@@ -78,6 +78,8 @@
     });
       </script>
     
+   
+  
 
   <header>
     <div class="custom-gradient1 navbar-fixed-top">
@@ -342,139 +344,145 @@
 </nav>
 
     </div>
-    
-    
-      <div class="tc-l pv3 ph4-ns pb5-l title-background" style="background: url(&#39;/web/img/ISU_Landscape.jpg&#39;);text-align: center; background-size: cover; opacity: 0.9;">
-        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title description-title-text" style="color: white;">
-          小小工程師的日記
-        </h1>
-      </div>
-    
-  
   </header>
+
+
 
     <main role="main">
       
-  <div style="min-height: calc(100vh - 23rem);">
-    <article class="cf ph3 pv3 f4 tc-l center measure-wide lh-copy mid-gray">
-        
-      </article>
-      
-      
-      
-      
-      
-      
-      
-        
-        
-
-        <div class="mw8 center">
-          
-          
-
-          
-
-          <section class="ph4 pa4">
+  <div style="min-height: calc(100vh - 8rem);">
+    
+    <article class="flex-l flex-wrap justify-between mw8 center ph3 single-page">
+      <header class="mt4 w-100">
+        <aside class="instapaper_ignoref b helvetica tracked">
             
+        </aside>
+        
+
+
+
+
+
+
+
+
+
+
+
+        <h1 class="f1 athelas mt3 mb1">Minikube 使用 Ingress 設定 HTTPS</h1>
+        <div class="categories">
+          📁 
+          
             
-              <div class="relative w-100 mb4">
-                
-
-
-
-<article class="title-posts">
-  <div class="db pv4 ph3 ph0-l no-underline bg-white title-post-box">
-    <div class="flex flex-column flex-row-ns bg-white ph4 overflow-hidden">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/20250611/" class="color-inherit dim link">
-            Minikube 使用 Ingress 設定 HTTPS
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links summary-container">
-          前言 本文介紹如何在 Minikube 中利用 Ingress，透過相同 URL 分段路由多個 Service，並使用 HTTPS 連線。 若尚未建立 Ingress，可先參考 Ingress 設定反向代
+              <a style="text-decoration: none;" href="/categories/Minikube">Minikube</a>
+            
+          
         </div>
-          <a href="/posts/20250611/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
         
-      </div>
-    </div>
-  </div>
-</article>
+        
+        
+        <time class="f6 mv4 dib tracked" datetime="2025-06-11T23:33:47+08:00">六月 11, 2025</time>
+        
 
-              </div>
-            
-              <div class="relative w-100 mb4">
-                
-
-
-
-<article class="title-posts">
-  <div class="db pv4 ph3 ph0-l no-underline bg-white title-post-box">
-    <div class="flex flex-column flex-row-ns bg-white ph4 overflow-hidden">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/20250610/" class="color-inherit dim link">
-            Docker 版 Minikube Port 問題整理
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links summary-container">
-          前言 在使用 Docker Driver 的 Minikube 測試時，常會遇到幾個問題: 明明有建立 Service，卻無法連線 Kubernetes Cluster 的 8443 port 無法從外部存取 無法從 Harbor 拉取 image 以下是我測試過的解法整
+        
+        
+      </header>
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-100-l" style="width: 100%;"><h3 id="前言">前言</h3>
+<p>本文介紹如何在 Minikube 中利用 Ingress，透過相同 URL 分段路由多個 Service，並使用 HTTPS 連線。
+若尚未建立 Ingress，可先參考 <a href="/posts/20250608/">Ingress 設定反向代理</a>。
+使用前需確保已啟用 ingress 與 ingress-dns 套件，並設定好本機 DNS。</p>
+<h3 id="前置處理">前置處理</h3>
+<p>要啟用 HTTPS，必須有憑證。如果尚未有憑證，可以參考以下連結自行建立:
+<a href="/posts/20250511/">使用 OPENSSL 建置自製 CA 憑證</a>
+這裡示範使用以下憑證檔案 (僅作測試):</p>
+<ul>
+<li>ca.crt</li>
+<li>ca.key</li>
+<li>server.crt</li>
+<li>server.csr</li>
+<li>server.key
+注意: 自己產生的憑證所填寫的網域 (如 abc.test.com) 必須與實際使用的網域一致，否則 HTTPS 連線會失敗。</li>
+</ul>
+<h3 id="實作步驟">實作步驟</h3>
+<ol>
+<li>建立 TLS Secret
+由於 YAML 內容較長，這裡使用指令快速建立 TLS Secret:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>kubectl create secret tls &lt;SECRET_NAME&gt; --cert<span style="color:#f92672">=</span>&lt;CRT_FILE&gt; --key<span style="color:#f92672">=</span>&lt;KEY_FILE&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Ex:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># kubectl create secret tls secret-demo --cert=server.crt --key=server.key</span>
+</span></span></code></pre></div><ul>
+<li>&lt;CRT_FILE&gt;: 憑證檔案</li>
+<li>&lt;KEY_FILE&gt;: 私鑰檔案</li>
+</ul>
+<ol start="2">
+<li>建立支援 HTTPS 的 Ingress
+Ingress 設定範例如下，與 HTTP 版差異主要在 tls 區塊:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">networking.k8s.io/v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Ingress</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">demo-ingress</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">annotations</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">nginx.ingress.kubernetes.io/rewrite-target</span>: <span style="color:#ae81ff">/</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e"># 這裡就是把 /apache 和 /nginx 都變成了 /</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ingressClassName</span>: <span style="color:#ae81ff">nginx</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">tls</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">hosts</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">abc.test.com</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">secretName</span>: <span style="color:#ae81ff">secret-demo</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">rules</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">host</span>: <span style="color:#ae81ff">abc.test.com</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">http</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">paths</span>:
+</span></span><span style="display:flex;"><span>          - <span style="color:#f92672">path</span>: <span style="color:#ae81ff">/apache</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">pathType</span>: <span style="color:#ae81ff">Prefix</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">backend</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">service</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">name</span>: <span style="color:#ae81ff">test-apache</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">port</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">number</span>: <span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span>          - <span style="color:#f92672">path</span>: <span style="color:#ae81ff">/nginx</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">pathType</span>: <span style="color:#ae81ff">Prefix</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">backend</span>:
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">service</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">name</span>: <span style="color:#ae81ff">test-nginx</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">port</span>:
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">number</span>: <span style="color:#ae81ff">80</span>
+</span></span></code></pre></div><p>將上述 YAML 儲存為 create_ingress_https.yaml，並執行:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 若之前有建立，建議先刪除再建立</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># kubectl delete ingress demo-ingress</span>
+</span></span><span style="display:flex;"><span>kubectl apply -f ./create_ingress_https.yaml
+</span></span></code></pre></div><p>完成後，HTTPS Ingress 即成功設定。</p>
+<h3 id="測試方式">測試方式</h3>
+<p>因使用自製憑證，使用 curl 測試時須帶上 CA 憑證:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>curl --cacert &lt;ca_crt_file&gt; &lt;url&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Ex:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># curl --cacert ca.crt abc.test.com</span>
+</span></span></code></pre></div><h3 id="備註-curl-忽略-ssl-憑證驗證">備註: CURL 忽略 SSL 憑證驗證</h3>
+<p>測試時若不想驗證憑證，可以用 -k 參數忽略:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>curl -k &lt;url&gt;
+</span></span></code></pre></div><h3 id="參考">參考</h3>
+<ul>
+<li><a href="https://blog.51cto.com/wzlinux/2332908">Kubernetes 使用 ingress 配置 https 集群(十五)</a></li>
+</ul>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+        
         </div>
-          <a href="/posts/20250610/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-        
       </div>
-    </div>
-  </div>
-</article>
 
-              </div>
-            
-              <div class="relative w-100 mb4">
-                
+      <aside class="w-30-l mt6-l">
 
 
 
-<article class="title-posts">
-  <div class="db pv4 ph3 ph0-l no-underline bg-white title-post-box">
-    <div class="flex flex-column flex-row-ns bg-white ph4 overflow-hidden">
-      
-      <div class="blah w-100">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="/posts/20250608/" class="color-inherit dim link">
-            在 Minikube 中使用 Ingress 設定反向代理
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links summary-container">
-          前言 這篇筆記介紹如何在 Minikube 中使用 Ingress 來設定反向代理，讓不同路徑的請求轉發到不同的 Service。這對於在本機模擬開發環境或測試多服務架構特別有用
-        </div>
-          <a href="/posts/20250608/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-        
-      </div>
-    </div>
-  </div>
-</article>
 
-              </div>
-            
-          </section>
+</aside>
 
-          
-          <section class="pa3 w-100 allposts-btn-container">
-            
-            
-              
-                <a href="/posts/" class="link db f6 pa3 br3 bg-mid-gray white dim w5 tc" 
-                style="background: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);;">所有 Posts&nbsp;&nbsp;&nbsp;→</a>
-              
-            
-            </section>
-          
-
-          </div>
-      
+    </article>
   </div>
 
     </main>

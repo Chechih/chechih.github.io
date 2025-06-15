@@ -2,8 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://chechih.github.io/categories/Ansible/</loc>
+    <lastmod>2025-06-15T22:58:18+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/posts/20250615/</loc>
+    <lastmod>2025-06-15T22:58:18+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://chechih.github.io/categories/</loc>
-    <lastmod>2025-06-11T23:33:47+08:00</lastmod>
+    <lastmod>2025-06-15T22:58:18+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/</loc>
+    <lastmod>2025-06-15T22:58:18+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/posts/</loc>
+    <lastmod>2025-06-15T22:58:18+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://chechih.github.io/categories/Ubuntu/</loc>
+    <lastmod>2025-06-15T22:58:18+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -13,16 +38,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://chechih.github.io/posts/20250611/</loc>
-    <lastmod>2025-06-11T23:33:47+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://chechih.github.io/</loc>
-    <lastmod>2025-06-11T23:33:47+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://chechih.github.io/posts/</loc>
     <lastmod>2025-06-11T23:33:47+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -53,11 +68,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://chechih.github.io/posts/20250530/</loc>
-    <lastmod>2025-05-30T13:05:06+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://chechih.github.io/categories/Ubuntu/</loc>
     <lastmod>2025-05-30T13:05:06+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

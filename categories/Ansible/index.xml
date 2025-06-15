@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ansible on NewPlayer</title>
+    <link>https://chechih.github.io/categories/Ansible/</link>
+    <description>Recent content in Ansible on NewPlayer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>NewPlayer</copyright>
+    <lastBuildDate>Sun, 15 Jun 2025 22:58:18 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/Ansible/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ansible 簡介</title>
+      <link>https://chechih.github.io/posts/20250615/</link>
+      <pubDate>Sun, 15 Jun 2025 22:58:18 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/posts/20250615/</guid>
+      <description>Ansible 能解決什麼問題？ 適用於多台機器環境設定與套件部署的自動化。 比喻: 一家人換手機時，如果需要安裝相同 App 與設定，用 Ansible 一次搞定全部 基本概念 Ansible 是一個</description>
+    </item>
+    
+  </channel>
+</rss>

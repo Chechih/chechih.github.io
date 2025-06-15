@@ -355,6 +355,23 @@
             <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
   <div class="bg-white pa4 gray overflow-hidden">
     <h1 class="f3 near-black">
+      <a href="/posts/20250527/" class="link black dim">
+        Git 從 Repository 只抓取單一資料夾下來
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
+      前言 有時候我們只需要 Git 儲存庫中的部分資料夾內容（例如 docs/），不想下載整個專案。這時可以透過 Git 的 sparse-checkout 功能實現這個需求，並保證後續的 git pull 也能
+    </div>
+    <a href="/posts/20250527/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
+  </div>
+</div>
+
+          </div>
+        
+          <div class="relative w-100 mb4">
+            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
+  <div class="bg-white pa4 gray overflow-hidden">
+    <h1 class="f3 near-black">
       <a href="/posts/20250525/" class="link black dim">
         Docker-compose 安裝
       </a>
@@ -380,23 +397,6 @@
       前言 有一台讀寫效能強的電腦，想讓它變成網路硬碟伺服器，讓其他設備共享檔案，可以使用 NFS (Network File System) 在&rsquo;資料分享主機&rsquo;(暫稱 A
     </div>
     <a href="/posts/20250520/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
-  </div>
-</div>
-
-          </div>
-        
-          <div class="relative w-100 mb4">
-            <div class="relative w-100 mb4 bg-white nested-copy-line-height card-item">
-  <div class="bg-white pa4 gray overflow-hidden">
-    <h1 class="f3 near-black">
-      <a href="/posts/20250514/" class="link black dim">
-        從 Harbor Push / Pull Image
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height summarybox-container">
-      Push Image 到 Harbor 設定 Docker 為允許非安全連線 (Insecure Registry) Linux 系統操作，編輯 Docker 設定檔 vim /etc/docker/daemon.json 輸入 { &#34;insecure-registries&#34;:[&#34;&lt;harbor_ip&gt;:&lt;harbor_port&gt;&#34;] } # ex: # { &#34;insecure-registries&#34;:[&#34;XXX.XXX.XXX.XXX:XXX&#34;] } 儲存並離開: ESC → :wq 重新啟動 Docker: sudo systemctl stop docker sudo systemctl start docker Docker Desktop 操作 點選
-    </div>
-    <a href="/posts/20250514/" class="color-inherit dib f5 bg-moon-transparent link mt2 pv1 readmore-container">繼續閱讀</a>
   </div>
 </div>
 
@@ -430,7 +430,7 @@
         <a href="/posts/page/4/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/posts/page/28/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/posts/page/29/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul></div>
     </article>

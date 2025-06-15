@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>NewPlayer</copyright>
-    <lastBuildDate>Wed, 11 Jun 2025 23:33:47 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Jun 2025 22:58:18 +0800</lastBuildDate><atom:link href="https://chechih.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ansible</title>
+      <link>https://chechih.github.io/categories/Ansible/</link>
+      <pubDate>Sun, 15 Jun 2025 22:58:18 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/Ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://chechih.github.io/categories/Ubuntu/</link>
+      <pubDate>Sun, 15 Jun 2025 22:58:18 +0800</pubDate>
+      
+      <guid>https://chechih.github.io/categories/Ubuntu/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Minikube</title>
       <link>https://chechih.github.io/categories/Minikube/</link>
@@ -32,15 +50,6 @@
       <pubDate>Fri, 30 May 2025 13:05:06 +0800</pubDate>
       
       <guid>https://chechih.github.io/categories/Docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ubuntu</title>
-      <link>https://chechih.github.io/categories/Ubuntu/</link>
-      <pubDate>Fri, 30 May 2025 13:05:06 +0800</pubDate>
-      
-      <guid>https://chechih.github.io/categories/Ubuntu/</guid>
       <description></description>
     </item>
     
